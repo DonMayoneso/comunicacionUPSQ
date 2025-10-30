@@ -21,9 +21,8 @@ body {
 /* Video Popup Styles */
 .video-popup {
     position: fixed;
-    top: 50%;
+    bottom: 20px;
     right: 20px;
-    transform: translateY(-50%);
     width: 320px;
     z-index: 2000;
     background: white;
@@ -31,6 +30,7 @@ body {
     box-shadow: 0 5px 25px rgba(0,0,0,0.3);
     overflow: hidden;
     transition: all 0.3s ease;
+    display: none; /* Oculto por defecto */
 }
 
 .popup-content {
@@ -98,6 +98,7 @@ header.scrolled {
     display: flex;
     align-items: center;
     transition: all 0.3s ease;
+    height: 72px; /* Altura inicial del logo combinado */
 }
 
 .logo-combined {
@@ -107,17 +108,22 @@ header.scrolled {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    opacity: 1;
+    transform: scale(1);
 }
 
 .logo-combined img {
     height: 100%;
     width: 100%;
     object-fit: contain;
+    transition: all 0.3s ease;
 }
 
 header.scrolled .logo-combined {
     height: 50px; /* 5% más grande que 45px */
     width: 158px; /* 5% más grande que 150px */
+    opacity: 0;
+    transform: scale(0.8);
 }
 
 .logo-single {
@@ -126,7 +132,9 @@ header.scrolled .logo-combined {
     display: flex;
     align-items: center;
     justify-content: center;
-    display: none;
+    position: absolute;
+    opacity: 0;
+    transform: scale(0.8);
     transition: all 0.3s ease;
 }
 
@@ -134,14 +142,12 @@ header.scrolled .logo-combined {
     height: 100%;
     width: 100%;
     object-fit: contain;
-}
-
-header.scrolled .logo-combined {
-    display: none;
+    transition: all 0.3s ease;
 }
 
 header.scrolled .logo-single {
-    display: flex;
+    opacity: 1;
+    transform: scale(1);
 }
 
 /* Navbar styles */
@@ -505,6 +511,7 @@ header.scrolled + nav {
     .video-popup {
         width: 280px;
         right: 10px;
+        bottom: 10px;
     }
     
     .button-container {
