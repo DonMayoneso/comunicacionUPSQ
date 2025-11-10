@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "nombre": "Docente Ejemplo 1",
+        "cargo": "Profesor Titular",
+        "especialidad": "Comunicación Digital y Multimedia",
+        "materias": [
+            "Periodismo Digital",
+            "Narrativas Hipermediales",
+            "Diseño Multimedial"
+        ],
+        "cargo_administrativo": "Coordinador de Proyectos Digitales",
+        "correo": "docente1@upsq.edu.ec",
+        "foto": "../assets/imgtest.jpg",
+        "descripcion": "Especialista en comunicación digital con más de 10 años de experiencia en el desarrollo de proyectos multimedia. Investigador en nuevas narrativas digitales."
+    },
+    {
+        "id": 2,
+        "nombre": "Docente Ejemplo 2",
+        "cargo": "Profesor Asociado",
+        "especialidad": "Comunicación Organizacional",
+        "materias": [
+            "Comunicación Organizacional",
+            "Relaciones Públicas",
+            "Comunicación de Crisis"
+        ],
+        "cargo_administrativo": "Jefe de Vinculación con la Sociedad",
+        "correo": "docente2@upsq.edu.ec",
+        "foto": "../assets/imgtest2.jpg",
+        "descripcion": "Experto en comunicación corporativa y gestión de relaciones públicas. Consultor para diversas organizaciones nacionales e internacionales."
+    },
+    {
+        "id": 3,
+        "nombre": "Docente Ejemplo 3",
+        "cargo": "Profesor Auxiliar",
+        "especialidad": "Producción Audiovisual",
+        "materias": [
+            "Producción Videográfica",
+            "Narrativas Audiovisuales",
+            "Fotografía"
+        ],
+        "cargo_administrativo": null,
+        "correo": "docente3@upsq.edu.ec",
+        "foto": "../assets/imgtest3.jpg",
+        "descripcion": "Productor audiovisual con amplia experiencia en cine y televisión. Ganador de varios premios nacionales de producción audiovisual."
+    },
+    {
+        "id": 4,
+        "nombre": "Docente Ejemplo 4",
+        "cargo": "Profesor Titular",
+        "especialidad": "Teorías de la Comunicación",
+        "materias": [
+            "Teorías de la Comunicación I",
+            "Teorías de la Comunicación II",
+            "Epistemología de la Comunicación"
+        ],
+        "cargo_administrativo": "Director de Investigación",
+        "correo": "docente4@upsq.edu.ec",
+        "foto": "../assets/imgtest.jpg",
+        "descripcion": "Doctor en Ciencias de la Comunicación. Investigador principal en proyectos sobre teoría comunicacional latinoamericana."
+    },
+    {
+        "id": 5,
+        "nombre": "Docente Ejemplo 5",
+        "cargo": "Profesor Asociado",
+        "especialidad": "Periodismo de Investigación",
+        "materias": [
+            "Periodismo de Investigación",
+            "Géneros Interpretativos",
+            "Comunicación Política"
+        ],
+        "cargo_administrativo": "Coordinador del Club de Periodismo",
+        "correo": "docente5@upsq.edu.ec",
+        "foto": "../assets/imgtest2.jpg",
+        "descripcion": "Periodista investigativo con trayectoria en medios nacionales. Especialista en análisis político y periodismo de datos."
+    },
+    {
+        "id": 6,
+        "nombre": "Docente Ejemplo 6",
+        "cargo": "Profesor Auxiliar",
+        "especialidad": "Comunicación para el Desarrollo",
+        "materias": [
+            "Comunicación para el Cambio Social",
+            "Proyectos de Comunicación",
+            "Comunicación Intercultural"
+        ],
+        "cargo_administrativo": null,
+        "correo": "docente6@upsq.edu.ec",
+        "foto": "../assets/imgtest3.jpg",
+        "descripcion": "Especialista en comunicación comunitaria y proyectos de desarrollo social. Experiencia en trabajo con comunidades indígenas."
+    }
+]

@@ -40,13 +40,14 @@
         <div class="navbar">
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link dropdown-toggle">CARRERA DE COMUNICACIÓN UPSQ</a>
+                    <a href="#" class="nav-link dropdown-toggle">COMUNICACIÓN UPSQ</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#" class="dropdown-item">SOBRE NOSOTROS</a></li>
-                        <li><a href="#" class="dropdown-item">DOCENTES</a></li>
-                        <li><a href="#" class="dropdown-item">MALLA CURRICULAR</a></li>
-                        <li><a href="#" class="dropdown-item">HORARIOS PERIODO 64</a></li>
-                        <li><a href="#" class="dropdown-item">TOUR VIRTUAL</a></li>
+                        <li><a href="index.html" class="dropdown-item">Carrera de Comunicación</a></li>
+                        <li><a href="comunicacionupsq/sobre-nosotros.html" class="dropdown-item">Sobre Nosotros</a></li>
+                        <li><a href="comunicacionupsq/nuestros-docentes.html" class="dropdown-item">Nuestros Docentes</a></li>
+                        <li><a href="comunicacionupsq/malla-curricular.html" class="dropdown-item">Malla Curricular</a></li>
+                        <li><a href="comunicacionupsq/horarios-periodo-67.html" class="dropdown-item">Horarios Periodo 67</a></li>
+                        <li><a href="comunicacionupsq/tour-virtual.html" class="dropdown-item">Tour Virtual</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -89,7 +90,27 @@
     </nav>
 
     <main class="main-content">
-        <section class="hero-section">
+        <!-- SECCIÓN DE BOTONES MOVIDA ARRIBA -->
+        <section class="buttons-section">
+            <h2>Conoce más de la carrera</h2>
+            <div class="button-container">
+                <button class="career-button active" data-target="comunicacion-content">
+                    <div class="button-logo">
+                        <img src="assets/logocomunicacion.png" alt="Comunicación">
+                    </div>
+                    <span class="button-text">Comunicación</span>
+                </button>
+                <button class="career-button" data-target="infinito-content">
+                    <div class="button-logo">
+                        <img src="assets/indilogo.png" alt="Infinito Digital">
+                    </div>
+                    <span class="button-text">Infinito Digital</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- CONTENIDO DINÁMICO -->
+        <section id="comunicacion-content" class="content-section active">
             <div class="hero-container">
                 <div class="hero-content">
                     <h1 class="hero-title">Carrera de Comunicación UPSQ</h1>
@@ -102,9 +123,18 @@
                     
                     <div class="authorities">
                         <h3>AUTORIDADES Y ÁREAS:</h3>
-                        <p>XXXXXXXXXXXXXXX – Director de Carrera – XXXXXXXXXXXXXXX</p>
-                        <p>XXXXXXXXXXXXXXX – Jefe de Área Profesional – XXXXXXXXXXXXXXX</p>
-                        <p>XXXXXXXXXXXXXXX – Jefe de Área Básica  XXXXXXXXXXXXXXX</p>
+                        <div class="authority-item">
+                            <span class="authority-name">Nombre del Director</span>
+                            <span class="authority-position">– Director de Carrera –</span>
+                        </div>
+                        <div class="authority-item">
+                            <span class="authority-name">Nombre del Jefe Profesional</span>
+                            <span class="authority-position">– Jefe de Área Profesional –</span>
+                        </div>
+                        <div class="authority-item">
+                            <span class="authority-name">Nombre del Jefe Básica</span>
+                            <span class="authority-position">– Jefe de Área Básica –</span>
+                        </div>
                     </div>
                 </div>
                 
@@ -116,19 +146,46 @@
             </div>
         </section>
 
-        <section class="buttons-section">
-            <h2>Conoce más de la carrera</h2>
-            <div class="button-container">
-                <a href="#" class="career-button">
-                    <div class="button-logo">
-                        <img src="assets/logocomunicacion.png" alt="Comunicación">
+        <section id="infinito-content" class="content-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Infinito Digital</h1>
+                    <p class="hero-text">
+                        Infinito Digital es el espacio de innovación y creatividad de la Carrera de Comunicación de la UPSQ. Un laboratorio vivo donde convergen las nuevas tecnologías, el arte digital y las narrativas contemporáneas para formar comunicadores preparados para los desafíos del siglo XXI.
+                    </p>
+                    <p class="hero-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <p class="hero-text">
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    </p>
+                    
+                    <div class="authorities">
+                        <h3>PROYECTOS DESTACADOS:</h3>
+                        <div class="authority-item">
+                            <span class="authority-name">Editorial Digital</span>
+                            <span class="authority-position">– Publicaciones multimedia interactivas –</span>
+                        </div>
+                        <div class="authority-item">
+                            <span class="authority-name">Producción Sonora</span>
+                            <span class="authority-position">– Podcasts y narrativas auditivas –</span>
+                        </div>
+                        <div class="authority-item">
+                            <span class="authority-name">Laboratorio Visual</span>
+                            <span class="authority-position">– Fotografía y diseño digital –</span>
+                        </div>
+                        <div class="authority-item">
+                            <span class="authority-name">Estudios Audiovisuales</span>
+                            <span class="authority-position">– Cine y video experimental –</span>
+                        </div>
                     </div>
-                </a>
-                <a href="#" class="career-button">
-                    <div class="button-logo">
-                        <img src="assets/indilogo.png" alt="Infinito Digital">
-                    </div>
-                </a>
+                </div>
+                
+                <div class="hero-carousel">
+                    <div class="carousel-slide active" style="background-image: url('assets/imgtest.jpg');"></div>
+                    <div class="carousel-slide" style="background-image: url('assets/imgtest2.jpg');"></div>
+                    <div class="carousel-slide" style="background-image: url('assets/imgtest3.jpg');"></div>
+                </div>
             </div>
         </section>
 
