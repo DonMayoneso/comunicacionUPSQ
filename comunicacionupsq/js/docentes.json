@@ -1,92 +1,153 @@
 [
     {
         "id": 1,
-        "nombre": "Docente Ejemplo 1",
-        "cargo": "Profesor Titular",
-        "especialidad": "Comunicación Digital y Multimedia",
+        "nombre": "Roberto Miguel Sánchez Montoya",
+        "cargo": "Director de carrera",
+        "especialidad": "Doctor en Estudios Latinoamericanos, Investigación de la Comunicación, Producción de radio y televisión",
         "materias": [
-            "Periodismo Digital",
-            "Narrativas Hipermediales",
-            "Diseño Multimedial"
+            "Teorías de la Comunicación I y II", 
+            "Derechos de la Comunicación",
+            "Tutorías"
         ],
-        "cargo_administrativo": "Coordinador de Proyectos Digitales",
-        "correo": "docente1@upsq.edu.ec",
-        "foto": "../assets/imgtest.jpg",
-        "descripcion": "Especialista en comunicación digital con más de 10 años de experiencia en el desarrollo de proyectos multimedia. Investigador en nuevas narrativas digitales."
+
+        "cargo_administrativo": "Director de carrera",
+        "correo": "rsanchezm@ups.edu.ec",
+        "foto": "../assets/docentes/robertosanchez.png",
+        "descripcion": "Director de la Carrera de Comunicación (UPS Quito). Doctor en Ciencias Sociales (UASB). Investigador y autor de artículos académicos sobre comunicación y política."
     },
     {
         "id": 2,
-        "nombre": "Docente Ejemplo 2",
-        "cargo": "Profesor Asociado",
-        "especialidad": "Comunicación Organizacional",
+        "nombre": "Paola Verónica Cruz Jaramillo",
+        "cargo": "CoEditora, Animadora Revista Pastoral Universitaria Utopía",
+        "especialidad": "MsC. Periodismo y Lic. Comunicación Social para el Desarrollo",
         "materias": [
-            "Comunicación Organizacional",
-            "Relaciones Públicas",
-            "Comunicación de Crisis"
+            "Comunicación Oral y Escrita", 
+            "Expresión Oral y Escrita"
         ],
-        "cargo_administrativo": "Jefe de Vinculación con la Sociedad",
-        "correo": "docente2@upsq.edu.ec",
-        "foto": "../assets/imgtest2.jpg",
-        "descripcion": "Experto en comunicación corporativa y gestión de relaciones públicas. Consultor para diversas organizaciones nacionales e internacionales."
+        "cargo_administrativo": null,
+        "correo": "pcruz@ups.edu.ec",
+        "foto": "../assets/imgtest.jpg",
+        "descripcion": "Especialista en comunicación para el desarrollo, periodismo digital y edición de contenidos digitales e impresos."
     },
     {
         "id": 3,
-        "nombre": "Docente Ejemplo 3",
-        "cargo": "Profesor Auxiliar",
-        "especialidad": "Producción Audiovisual",
+        "nombre": "Marcela Alexandra Noboa Salazar",
+        "cargo": "Coordinación",
+        "especialidad": "Máster en Educación y Desarrollo Social, Fotografía",
         "materias": [
-            "Producción Videográfica",
-            "Narrativas Audiovisuales",
             "Fotografía"
         ],
-        "cargo_administrativo": null,
-        "correo": "docente3@upsq.edu.ec",
-        "foto": "../assets/imgtest3.jpg",
-        "descripcion": "Productor audiovisual con amplia experiencia en cine y televisión. Ganador de varios premios nacionales de producción audiovisual."
+        "cargo_administrativo": "Coordinadora Proyecto LALA, TEPES, Cátedra UNESCO",
+        "correo": "anoboa@ups.edu.ec",
+        "foto": "../assets/imgtest.jpg",
+        "descripcion": "Comunicadora visual, especialista en fotografía digital."
     },
     {
         "id": 4,
-        "nombre": "Docente Ejemplo 4",
-        "cargo": "Profesor Titular",
-        "especialidad": "Teorías de la Comunicación",
+        "nombre": "Patricio Iván Rosas Flórez",
+        "cargo": "Docente",
+        "especialidad": "Periodismo, Magíster en Interculturalidad",
         "materias": [
-            "Teorías de la Comunicación I",
-            "Teorías de la Comunicación II",
-            "Epistemología de la Comunicación"
+            "Comunicación oral y escrita", 
+            "periodismo digital", 
+            "comunicación e ideología"
         ],
-        "cargo_administrativo": "Director de Investigación",
-        "correo": "docente4@upsq.edu.ec",
+        "cargo_administrativo": null,
+        "correo": "prosas@ups.edu.ec",
         "foto": "../assets/imgtest.jpg",
-        "descripcion": "Doctor en Ciencias de la Comunicación. Investigador principal en proyectos sobre teoría comunicacional latinoamericana."
+        "descripcion": "Especialista en coberturas deportivas, culturales y de entretenimiento. Crítico de películas, conciertos y asesor de relaciones públicas."
     },
     {
         "id": 5,
-        "nombre": "Docente Ejemplo 5",
-        "cargo": "Profesor Asociado",
-        "especialidad": "Periodismo de Investigación",
+        "nombre": "María del Carmen Ramírez Soasti",
+        "cargo": "Docente",
+        "especialidad": "Doctora de Investigación en Ciencias Humanas, Doctora en Comunicación Social, Magíster en Comunicación",
         "materias": [
-            "Periodismo de Investigación",
-            "Géneros Interpretativos",
-            "Comunicación Política"
+            "Comunicación para el Cambio Social",
+            "Proyectos de Comunicación", 
+            "Comunicación Organizacional", 
+            "Lenguaje y Redacción"
         ],
-        "cargo_administrativo": "Coordinador del Club de Periodismo",
-        "correo": "docente5@upsq.edu.ec",
-        "foto": "../assets/imgtest2.jpg",
-        "descripcion": "Periodista investigativo con trayectoria en medios nacionales. Especialista en análisis político y periodismo de datos."
+        "cargo_administrativo": null,
+        "correo": "mramirezs@ups.edu.ec",
+        "foto": "../assets/docentes/mariadelcarmen.png",
+        "descripcion": "Especialista en planificación, comunicación para el desarrollo y proyectos, Experiencia con organismos de cooperación y comunidades indígenas."
     },
     {
         "id": 6,
-        "nombre": "Docente Ejemplo 6",
-        "cargo": "Profesor Auxiliar",
-        "especialidad": "Comunicación para el Desarrollo",
+        "nombre": "Edmundo Armando Grijalva Brito",
+        "cargo": "Docente",
+        "especialidad": "Comunicación Social, Radio, Narrativa sonora, Periodismo científico",
         "materias": [
-            "Comunicación para el Cambio Social",
-            "Proyectos de Comunicación",
-            "Comunicación Intercultural"
+            "Radio",
+            "Narrativas Sonoras",
+            "Educomunicación",
+            "Epistemología de la Comunicación",
+            "Historia de la Comunicación"
         ],
         "cargo_administrativo": null,
-        "correo": "docente6@upsq.edu.ec",
-        "foto": "../assets/imgtest3.jpg",
-        "descripcion": "Especialista en comunicación comunitaria y proyectos de desarrollo social. Experiencia en trabajo con comunidades indígenas."
+        "correo": "egrijalva@ups.edu.ec",
+        "foto": "../assets/imgtest.jpg",
+        "descripcion": "Especialista en Comunicación sonora, comunitaria y de la ciencia y la tecnología."
+    },
+        {
+        "id": 7,
+        "nombre": "Mónica Ruiz Vásquez",
+        "cargo": "Docente",
+        "especialidad": "Magíster en Comunicación (UASB), Redacción periodística y creativa, Nuevas narrativas, Creación de contenidos.",
+        "materias": [
+            "Lenguaje y redacción"
+        ],
+        "cargo_administrativo": "Editora de NOTIUPS",
+        "correo": "mruiz@ups.edu.ec",
+        "foto": "../assets/docentes/monicavasquez.png",
+        "descripcion": "Periodista y editora enfocada en redacción, guionización y narrativas digitales."
+    },
+        {
+        "id": 8,
+        "nombre": "Yadis Vanessa Vanegas Toala",
+        "cargo": "Docente",
+        "especialidad": "Doctora en Comunicación, Magíster en Estudios de la Cultura, ",
+        "materias": [
+            "Sociología y escenarios de la comunicación",
+            "Géneros Informativos"
+        ],
+        "cargo_administrativo": null,
+        "correo": "yvanegast@ups.edu.ec",
+        "foto": "../assets/imgtest.jpg",
+        "descripcion": "Docente e investigadora. Coordina el Grupo de Investigación en Comunicación y Derechos (GICDE). Premiada por su Tesis Doctoral en Bienestar Planetario."
+    },
+        {
+        "id": 9,
+        "nombre": "Cristina Satyavati Naranjo Delgado",
+        "cargo": "Docente",
+        "especialidad": "Magíster en Gestión de Educomunicacion, Producción Audiovisual.",
+        "materias": [
+            "Narrativas Audiovisuales",
+            "Producción Videográfica",
+            "Integración Curricular",
+            "Producción Educativa y Científica en Multimedia",
+            "Ecosistemas Digitales"
+
+        ],
+        "cargo_administrativo": "Jefe de Área Técnico Profesional",
+        "correo": "cnaranjo@ups.edu.ec",
+        "foto": "../assets/docentes/cristinanaranjo.png",
+        "descripcion": "."
+    },
+        {
+        "id": 10,
+        "nombre": "Sir Lechuguin Vegetal Soza",
+        "cargo": "Lechuga",
+        "especialidad": "Lechuguear",
+        "materias": [
+            "Ciencias de la vegetación",
+            "Ecología",
+            "Botánica aplicada"
+        ],
+        "cargo_administrativo": null,
+        "correo": "lechuguin@ups.edu.ec",
+        "foto": "../assets/imgtest2.jpg",
+        "descripcion": "Una lechuga esbelta, rapida y con gran capacidad de adaptación a diferentes climas."
     }
 ]

@@ -1,6 +1,6 @@
 /* ===== VARIABLES Y ESTILOS GLOBALES ===== */
 :root {
-    --primary-color: #87CEEB;
+    --primary-color: #76a4b6;
     --dark-color: #333;
     --light-color: #fff;
     --hover-color: #5fb3e0;
@@ -182,7 +182,7 @@ header.scrolled .logo-single {
 
 header.scrolled .isotipo-ups {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1.7);
 }
 
 /* Responsive Header */
@@ -273,7 +273,7 @@ header.scrolled + nav {
     position: absolute;
     background-color: var(--light-color);
     min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
     z-index: 1000;
     display: none;
     list-style: none;
