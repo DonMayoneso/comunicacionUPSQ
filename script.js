@@ -2,9 +2,11 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+}
 
 // Toggle dropdowns on mobile
 document.querySelectorAll('.dropdown-toggle').forEach(item => {
@@ -12,22 +14,26 @@ document.querySelectorAll('.dropdown-toggle').forEach(item => {
         if (window.innerWidth <= 768) {
             event.preventDefault();
             const dropdown = item.nextElementSibling;
-            dropdown.classList.toggle('active');
             
-            // Close other dropdowns
-            document.querySelectorAll('.dropdown-menu').forEach(otherDropdown => {
-                if (otherDropdown !== dropdown) {
-                    otherDropdown.classList.remove('active');
-                }
-            });
+            // Si el dropdown existe
+            if (dropdown) {
+                dropdown.classList.toggle('active');
+                
+                // Close other dropdowns
+                document.querySelectorAll('.dropdown-menu').forEach(otherDropdown => {
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.classList.remove('active');
+                    }
+                });
+            }
         }
     });
 });
 
 // Close menu when clicking outside on mobile
 document.addEventListener('click', (event) => {
-    if (window.innerWidth <= 768) {
-        const isClickInsideNav = navMenu.contains(event.target) || hamburger.contains(event.target);
+    if (window.innerWidth <= 768 && navMenu) {
+        const isClickInsideNav = navMenu.contains(event.target) || (hamburger && hamburger.contains(event.target));
         if (!isClickInsideNav && navMenu.classList.contains('active')) {
             navMenu.classList.remove('active');
             
@@ -40,43 +46,53 @@ document.addEventListener('click', (event) => {
 });
 
 // Header scroll effect
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+const header = document.querySelector('header');
+if (header) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+}
 
-// Video Popup functionality
+/*
+   VIDEO POPUP (SOLO HOME)
+   Se ejecuta solo si existe el popup
+ */
 const videoPopup = document.getElementById('videoPopup');
-const closePopup = document.getElementById('closePopup');
-const spotVideo = document.getElementById('spotVideo');
 
-// Close popup when clicking the X
-closePopup.addEventListener('click', () => {
-    videoPopup.style.display = 'none';
-    spotVideo.pause();
-});
+if (videoPopup) {
+    const closePopup = document.getElementById('closePopup');
+    const spotVideo = document.getElementById('spotVideo');
 
-// Show popup after a short delay when page loads
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        videoPopup.style.display = 'block';
-        spotVideo.play();
-    }, 2000);
-});
-
-// Close popup when clicking outside of it
-window.addEventListener('click', (event) => {
-    if (event.target === videoPopup) {
-        videoPopup.style.display = 'none';
-        spotVideo.pause();
+    // Close popup
+    if (closePopup) {
+        closePopup.addEventListener('click', () => {
+            videoPopup.style.display = 'none';
+            if (spotVideo) spotVideo.pause();
+        });
     }
-});
 
-// CARRUSEL MEJORADO - Maneja múltiples carruseles
+    // Show popup after delay
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            videoPopup.style.display = 'block';
+            if (spotVideo) spotVideo.play();
+        }, 2000);
+    });
+
+    // Close popup when clicking outside
+    window.addEventListener('click', (event) => {
+        if (event.target === videoPopup) {
+            videoPopup.style.display = 'none';
+            if (spotVideo) spotVideo.pause();
+        }
+    });
+}
+
+/* CARRUSEL Y TABS */
 let carouselIntervals = {};
 
 function initializeCarousel(sectionId) {
@@ -91,7 +107,6 @@ function initializeCarousel(sectionId) {
     
     let currentSlide = 0;
     
-    // Detener intervalo anterior si existe
     if (carouselIntervals[sectionId]) {
         clearInterval(carouselIntervals[sectionId]);
     }
@@ -106,42 +121,60 @@ function initializeCarousel(sectionId) {
         showSlide(currentSlide + 1);
     }
     
-    // Inicializar primer slide
     showSlide(0);
-    
-    // Configurar intervalo
     carouselIntervals[sectionId] = setInterval(nextSlide, 5000);
-    
     return carouselIntervals[sectionId];
 }
 
-// CONTENIDO DINÁMICO - Cambio entre secciones
-document.addEventListener('DOMContentLoaded', function() {
-    const buttons = document.querySelectorAll('.career-button');
+// Inicialización de Tabs
+const careerButtons = document.querySelectorAll('.career-button');
+if (careerButtons.length > 0) {
     const contentSections = document.querySelectorAll('.content-section');
     
-    // Función para cambiar de sección
     function switchContent(targetId) {
-        // Remover clase active de todos los botones y secciones
-        buttons.forEach(btn => btn.classList.remove('active'));
+        careerButtons.forEach(btn => btn.classList.remove('active'));
         contentSections.forEach(section => section.classList.remove('active'));
         
-        // Agregar clase active al botón clickeado y a la sección objetivo
-        document.querySelector(`[data-target="${targetId}"]`).classList.add('active');
-        document.getElementById(targetId).classList.add('active');
+        const targetBtn = document.querySelector(`[data-target="${targetId}"]`);
+        const targetSection = document.getElementById(targetId);
         
-        // Reinicializar carrusel para la nueva sección
-        initializeCarousel(targetId);
+        if (targetBtn) targetBtn.classList.add('active');
+        if (targetSection) {
+            targetSection.classList.add('active');
+            initializeCarousel(targetId);
+        }
     }
     
-    // Event listeners para los botones
-    buttons.forEach(button => {
+    careerButtons.forEach(button => {
         button.addEventListener('click', function() {
             const targetId = this.getAttribute('data-target');
             switchContent(targetId);
         });
     });
     
-    // Inicializar con Comunicación activa
-    switchContent('comunicacion-content');
-});
+    // Inicializar por defecto si estamos en el Home
+    if (document.getElementById('comunicacion-content')) {
+        switchContent('comunicacion-content');
+    }
+}
+
+/*
+   BOTÓN SCROLL TO TOP */
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            scrollTopBtn.classList.add("show");
+        } else {
+            scrollTopBtn.classList.remove("show");
+        }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}

@@ -12,69 +12,123 @@
 
         "cargo_administrativo": "Director de carrera",
         "correo": "rsanchezm@ups.edu.ec",
-        "foto": "../assets/docentes/robertosanchez.png",
+        "foto": "../assets/docentes/robertosanchez.JPG",
         "descripcion": "Director de la Carrera de Comunicación (UPS Quito). Doctor en Ciencias Sociales (UASB). Investigador y autor de artículos académicos sobre comunicación y política."
     },
     {
         "id": 2,
-        "nombre": "Paola Verónica Cruz Jaramillo",
-        "cargo": "CoEditora, Animadora Revista Pastoral Universitaria Utopía",
-        "especialidad": "MsC. Periodismo y Lic. Comunicación Social para el Desarrollo",
+        "nombre": "Grace Catalina Benalcázar Zambrano",
+        "cargo": "Docente, Jefe de Área Curricular Básica",
+        "especialidad": "null",
         "materias": [
-            "Comunicación Oral y Escrita", 
-            "Expresión Oral y Escrita"
+            "Lingüística y Comunicación",
+            "Semiótica",
+            "Prácticas al Servicio Comunitario",
+            "Prácticas Preprofesionales"
         ],
-        "cargo_administrativo": null,
-        "correo": "pcruz@ups.edu.ec",
-        "foto": "../assets/imgtest.jpg",
-        "descripcion": "Especialista en comunicación para el desarrollo, periodismo digital y edición de contenidos digitales e impresos."
+        "cargo_administrativo": "Jefe de Área Curricular Básica",
+        "correo": "null@ups.edu.ec",
+        "foto": "../assets/docentes/gracebenalcazar.JPG",
+        "descripcion": "null."
     },
     {
         "id": 3,
+        "nombre": "Diego Condor Sambache",
+        "cargo": "Docente, Jefe de Área Curricular Profesional",
+        "especialidad": "null",
+        "materias": [
+            "Comunicación", 
+            "Cultura e Interculturalidad",
+            "Historia de la Comunicación",
+            "Comunicación e Ideología",
+            "Pensamiento Crítico",
+            "Integración Curricular"
+        ],
+        "cargo_administrativo": "Jefe de Área Curricular Profesional",
+        "correo": "null@ups.edu.ec",
+        "foto": "../assets/docentes/diegocondor.JPG",
+        "descripcion": "null."
+    },
+    {
+        "id": 4,
+        "nombre": "Cristina Satyavati Naranjo Delgado",
+        "cargo": "Docente, Jefe de Área Técnico - Profesional",
+        "especialidad": "Magíster en Gestión de Educomunicacion, Producción Audiovisual.",
+        "materias": [
+            "Narrativas Audiovisuales",
+            "Producción Videográfica",
+            "Integración Curricular",
+            "Ecosistemas Digitales"
+
+        ],
+        "cargo_administrativo": "Jefe de Área Técnico - Profesional",
+        "correo": "cnaranjo@ups.edu.ec",
+        "foto": "../assets/docentes/cristinanaranjo.jpg",
+        "descripcion": "."
+    },
+    {
+        "id": 5,
+        "nombre": "Nina Lulushca Aguiar Mariño",
+        "cargo": "Docente, Jefe de Área Titulación/Integración Curricular",
+        "especialidad": "null",
+        "materias": [
+            "Investigación de la Comunicación",
+            "Metodología y Técnicas de Investigación",
+            "Diseño del Proyecto de Investigación",
+            "Integración Curricular"
+        ],
+        "cargo_administrativo": "Jefe de Área Titulación/Integración Curricular",
+        "correo": "null@ups.edu.ec",
+        "foto": "../assets/docentes/ninaaguilar.JPG",
+        "descripcion": "null."
+    },
+    {
+        "id": 6,
+        "nombre": "Patricia Sofía Villagómez Rodríguez",
+        "cargo": "Docente, Coordinadora de Área de Vinculacion con la Sociedad",
+        "especialidad": "null",
+        "materias": [
+            "Planificación de la Comunicación",
+            "Prácticas Pre Profesionales"
+        ],
+        "cargo_administrativo": "Coordinadora de Área de Vinculacion con la Sociedad",
+        "correo": "null@ups.edu.ec",
+        "foto": "../assets/docentes/patyvillagomez.JPG",
+        "descripcion": "null."
+    },
+    {
+        "id": 7,
         "nombre": "Marcela Alexandra Noboa Salazar",
-        "cargo": "Coordinación",
+        "cargo": "Docente, Coordinación",
         "especialidad": "Máster en Educación y Desarrollo Social, Fotografía",
         "materias": [
             "Fotografía"
         ],
         "cargo_administrativo": "Coordinadora Proyecto LALA, TEPES, Cátedra UNESCO",
         "correo": "anoboa@ups.edu.ec",
-        "foto": "../assets/imgtest.jpg",
+        "foto": "../assets/docentes/alexandranoboa.JPG",
         "descripcion": "Comunicadora visual, especialista en fotografía digital."
     },
     {
-        "id": 4,
-        "nombre": "Patricio Iván Rosas Flórez",
-        "cargo": "Docente",
-        "especialidad": "Periodismo, Magíster en Interculturalidad",
-        "materias": [
-            "Comunicación oral y escrita", 
-            "periodismo digital", 
-            "comunicación e ideología"
-        ],
-        "cargo_administrativo": null,
-        "correo": "prosas@ups.edu.ec",
-        "foto": "../assets/imgtest.jpg",
-        "descripcion": "Especialista en coberturas deportivas, culturales y de entretenimiento. Crítico de películas, conciertos y asesor de relaciones públicas."
-    },
-    {
-        "id": 5,
+        "id": 8,
         "nombre": "María del Carmen Ramírez Soasti",
         "cargo": "Docente",
         "especialidad": "Doctora de Investigación en Ciencias Humanas, Doctora en Comunicación Social, Magíster en Comunicación",
         "materias": [
+            "Lenguaje y Redacción",
+            "Comunicación, Cultura e Interculturalidad",
+            "Proyectos de Comunicación",
             "Comunicación para el Cambio Social",
-            "Proyectos de Comunicación", 
-            "Comunicación Organizacional", 
-            "Lenguaje y Redacción"
+            "Comunicación Organizacional y Relaciones Públicas",
+            "Planificación de la Comunicación"
         ],
         "cargo_administrativo": null,
         "correo": "mramirezs@ups.edu.ec",
-        "foto": "../assets/docentes/mariadelcarmen.png",
+        "foto": "../assets/docentes/mariadelcarmen.JPG",
         "descripcion": "Especialista en planificación, comunicación para el desarrollo y proyectos, Experiencia con organismos de cooperación y comunidades indígenas."
     },
     {
-        "id": 6,
+        "id": 9,
         "nombre": "Edmundo Armando Grijalva Brito",
         "cargo": "Docente",
         "especialidad": "Comunicación Social, Radio, Narrativa sonora, Periodismo científico",
@@ -87,11 +141,11 @@
         ],
         "cargo_administrativo": null,
         "correo": "egrijalva@ups.edu.ec",
-        "foto": "../assets/imgtest.jpg",
+        "foto": "../assets/docentes/armandogrijalva.JPG",
         "descripcion": "Especialista en Comunicación sonora, comunitaria y de la ciencia y la tecnología."
     },
         {
-        "id": 7,
+        "id": 10,
         "nombre": "Mónica Ruiz Vásquez",
         "cargo": "Docente",
         "especialidad": "Magíster en Comunicación (UASB), Redacción periodística y creativa, Nuevas narrativas, Creación de contenidos.",
@@ -100,11 +154,11 @@
         ],
         "cargo_administrativo": "Editora de NOTIUPS",
         "correo": "mruiz@ups.edu.ec",
-        "foto": "../assets/docentes/monicavasquez.png",
+        "foto": "../assets/docentes/monicaruiz.JPG",
         "descripcion": "Periodista y editora enfocada en redacción, guionización y narrativas digitales."
     },
         {
-        "id": 8,
+        "id": 11,
         "nombre": "Yadis Vanessa Vanegas Toala",
         "cargo": "Docente",
         "especialidad": "Doctora en Comunicación, Magíster en Estudios de la Cultura, ",
@@ -114,29 +168,177 @@
         ],
         "cargo_administrativo": null,
         "correo": "yvanegast@ups.edu.ec",
-        "foto": "../assets/imgtest.jpg",
+        "foto": "../assets/docentes/vanevanegas.JPG",
         "descripcion": "Docente e investigadora. Coordina el Grupo de Investigación en Comunicación y Derechos (GICDE). Premiada por su Tesis Doctoral en Bienestar Planetario."
     },
-        {
-        "id": 9,
-        "nombre": "Cristina Satyavati Naranjo Delgado",
+    {
+        "id": 12,
+        "nombre": "José Luis Galván Jaramillo",
         "cargo": "Docente",
-        "especialidad": "Magíster en Gestión de Educomunicacion, Producción Audiovisual.",
+        "especialidad": "null",
         "materias": [
-            "Narrativas Audiovisuales",
-            "Producción Videográfica",
-            "Integración Curricular",
-            "Producción Educativa y Científica en Multimedia",
-            "Ecosistemas Digitales"
-
+            "Géneros Interpretativos de Opinión"
         ],
-        "cargo_administrativo": "Jefe de Área Técnico Profesional",
-        "correo": "cnaranjo@ups.edu.ec",
-        "foto": "../assets/docentes/cristinanaranjo.png",
-        "descripcion": "."
+        "cargo_administrativo": null,
+        "correo": "null@ups.edu.ec",
+        "foto": "../assets/docentes/joseluis.JPG",
+        "descripcion": "null."
     },
-        {
-        "id": 10,
+    {
+        "id": 13,
+        "nombre": "Mauro Alonso Ruiz Vinueza",
+        "cargo": "null",
+        "especialidad": "null",
+        "materias": [
+            "Psicología de la Comunicación",
+            "Comunicación Política y Opinión Pública",
+            "Comunicación de Marketing y Publicidad",
+            "Comunicación en Crisis y Manejo de Conflicto",
+            "Prácticas Pre Profesionales"
+        ],
+        "cargo_administrativo": null,
+        "correo": "null@ups.edu.ec",
+        "foto": "../assets/docentes/mauroruiz.JPG",
+        "descripcion": "null."
+    },
+    {
+        "id": 13,
+        "nombre": "Enza Franca Bosetti",
+        "cargo": "null",
+        "especialidad": "null",
+        "materias": [
+            "Arte y Comunicación"
+        ],
+        "cargo_administrativo": null,
+        "correo": "null@ups.edu.ec",
+        "foto": "../assets/docentes/enzabosetti.JPG",
+        "descripcion": "null."
+    },
+    {
+        "id": 14,
+        "nombre": "Johanna Escobar",
+        "cargo": "null",
+        "especialidad": "null",
+        "materias": [
+            "Diseño Gráfico",
+            "Narrativas Hipermediales",
+            "Diseño Multimedia",
+            "Narrativas Visuales"
+        ],
+        "cargo_administrativo": null,
+        "correo": "null@ups.edu.ec",
+        "foto": "../assets/docentes/null.JPG",
+        "descripcion": "null."
+    },
+    {
+        "id": 15,
+        "nombre": "Narcisa Medranda",
+        "cargo": "null",
+        "especialidad": "null",
+        "materias": [
+            "Periodismo de Investigación de Datos"
+        ],
+        "cargo_administrativo": null,
+        "correo": "null@ups.edu.ec",
+        "foto": "../assets/docentes/null.JPG",
+        "descripcion": "null."
+    },
+    {
+        "id": 16,
+        "nombre": "Tania Villalva",
+        "cargo": "null",
+        "especialidad": "null",
+        "materias": [
+            "Diseño del Proyecto de Investigación"
+        ],
+        "cargo_administrativo": null,
+        "correo": "null@ups.edu.ec",
+        "foto": "../assets/docentes/null.JPG",
+        "descripcion": "null."
+    },
+    {
+        "id": 17,
+        "nombre": "Augusto Sakihama",
+        "cargo": "Docente",
+        "especialidad": "null",
+        "materias": [
+            "Teoría de la Comunicación II"
+        ],
+        "cargo_administrativo": null,
+        "correo": "null@ups.edu.ec",
+        "foto": "../assets/docentes/null.JPG",
+        "descripcion": "null."
+    },
+    {
+        "id": 18,
+        "nombre": "David Moromenacho",
+        "cargo": "Docente",
+        "especialidad": "null",
+        "materias": [
+            "Comunicación, Cultura e Interculturalidad"
+        ],
+        "cargo_administrativo": null,
+        "correo": "null@ups.edu.ec",
+        "foto": "../assets/docentes/null.JPG",
+        "descripcion": "null."
+    },
+    {
+        "id": 19,
+        "nombre": "Pablo Romero",
+        "cargo": "Docente",
+        "especialidad": "null",
+        "materias": [
+            "Comunicación en Crisis y Manejo de Conflictos"
+        ],
+        "cargo_administrativo": null,
+        "correo": "null@ups.edu.ec",
+        "foto": "../assets/docentes/null.JPG",
+        "descripcion": "null."
+    },
+    {
+        "id": 20,
+        "nombre": "Ramiro Morejon",
+        "cargo": "Docente",
+        "especialidad": "null",
+        "materias": [
+            "Diseño Multimedial"
+        ],
+        "cargo_administrativo": null,
+        "correo": "null@ups.edu.ec",
+        "foto": "../assets/docentes/null.JPG",
+        "descripcion": "null."
+    },
+    {
+        "id": 21,
+        "nombre": "Paola Verónica Cruz Jaramillo",
+        "cargo": "CoEditora, Animadora Revista Pastoral Universitaria Utopía",
+        "especialidad": "MsC. Periodismo y Lic. Comunicación Social para el Desarrollo",
+        "materias": [
+            "Comunicación Oral y Escrita", 
+            "Expresión Oral y Escrita"
+        ],
+        "cargo_administrativo": null,
+        "correo": "pcruz@ups.edu.ec",
+        "foto": "../assets/docentes/imgtest.jpg",
+        "descripcion": "Especialista en comunicación para el desarrollo, periodismo digital y edición de contenidos digitales e impresos."
+    },
+    {
+        "id": 22,
+        "nombre": "Patricio Iván Rosas Flórez",
+        "cargo": "Docente",
+        "especialidad": "Periodismo, Magíster en Interculturalidad",
+        "materias": [
+            "Comunicación oral y escrita", 
+            "periodismo digital", 
+            "comunicación e ideología"
+        ],
+        "cargo_administrativo": null,
+        "correo": "prosas@ups.edu.ec",
+        "foto": "../assets/docentes/imgtest.jpg",
+        "descripcion": "Especialista en coberturas deportivas, culturales y de entretenimiento. Crítico de películas, conciertos y asesor de relaciones públicas."
+    },
+    {
+        "id": 30,
         "nombre": "Sir Lechuguin Vegetal Soza",
         "cargo": "Lechuga",
         "especialidad": "Lechuguear",
