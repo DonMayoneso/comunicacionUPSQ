@@ -327,7 +327,7 @@ header.scrolled + nav {
         position: fixed;
         left: -100%;
         top: 80px;
-        width: 47%; 
+        width: 55%; 
         height: calc(100vh - 80px);
         background-color: var(--primary-color);
         padding-top: 20px;
