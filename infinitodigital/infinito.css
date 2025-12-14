@@ -1,0 +1,355 @@
+/* VARIABLES ESPECÍFICAS INFINITO */
+:root {
+    --indi-purple: #383088;
+    --indi-purple-light: #6a62b8; /* Tonalidad más clara para partículas */
+    --indi-green: #93c01f;
+    --indi-green-light: #bce05b; /* Tonalidad más clara para partículas */
+    --indi-dark: #1a1a2e;
+}
+
+/* HERO SECTION DINÁMICA */
+.indi-hero {
+    position: relative;
+    /* Fondo base sólido oscuro */
+    background-color: var(--indi-dark);
+    color: #fef9f0;
+    padding: 180px 20px 100px; 
+    text-align: center;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+/* --- SISTEMA DE PARTÍCULAS DINÁMICAS --- */
+
+/* Capa 1: Partículas pequeñas y lentas (Fondo lejano) */
+.indi-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0.4;
+    /* Creamos "partículas" usando múltiples gradientes radiales dispersos */
+    background-image: 
+        radial-gradient(circle at 20% 30%, var(--indi-purple-light) 2px, transparent 3px),
+        radial-gradient(circle at 80% 10%, var(--indi-green) 2px, transparent 3px),
+        radial-gradient(circle at 40% 70%, var(--indi-purple) 3px, transparent 4px),
+        radial-gradient(circle at 10% 90%, var(--indi-green-light) 2px, transparent 3px),
+        radial-gradient(circle at 70% 50%, var(--indi-purple-light) 2px, transparent 3px),
+        radial-gradient(circle at 90% 80%, var(--indi-green) 3px, transparent 4px);
+    background-size: 400px 400px; /* Repetir patrón */
+    animation: moveParticles1 60s linear infinite;
+}
+
+/* Capa 2: Partículas más grandes y rápidas (Primer plano) */
+.indi-hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0.3;
+    /* Más partículas en distintas posiciones y tamaños */
+    background-image: 
+        radial-gradient(circle at 50% 20%, var(--indi-green-light) 4px, transparent 5px),
+        radial-gradient(circle at 10% 40%, var(--indi-purple) 5px, transparent 6px),
+        radial-gradient(circle at 85% 85%, var(--indi-green) 4px, transparent 5px),
+        radial-gradient(circle at 30% 60%, var(--indi-purple-light) 5px, transparent 6px);
+    background-size: 500px 500px;
+    /* Se mueven en dirección opuesta y más rápido */
+    animation: moveParticles2 45s linear infinite reverse;
+}
+
+/* Animaciones de movimiento de fondo */
+@keyframes moveParticles1 {
+    from { background-position: 0 0; }
+    to { background-position: 400px 400px; }
+}
+
+@keyframes moveParticles2 {
+    from { background-position: 0 0; }
+    to { background-position: -500px -500px; }
+}
+/* ------------------------------------ */
+
+
+/* Contenido del Hero (Asegurar que esté por encima de las partículas) */
+.indi-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* LOGO CON SOMBRA REALISTA (RESTAURADA) */
+.indi-logo-img {
+    width: 100%;
+    max-width: 500px; 
+    height: auto;
+    margin-bottom: 50px;
+    
+    /* SOMBRA OSCURA Y PROFUNDA (Restaurada) */
+    /* Separa el logo del fondo dinámico sin añadir colores extra */
+    filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.7));
+    
+    animation: logoFadeIn 1s ease-out;
+    /* Eliminamos transición de filtro porque ya no hay hover glow */
+}
+/* Eliminado el hover state del logo */
+
+@keyframes logoFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* BOTÓN VOLVER A CARRERA */
+.back-career-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    border: 2px solid var(--indi-green);
+    color: var(--indi-green);
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 10;
+}
+
+.back-career-btn:hover {
+    background-color: var(--indi-green);
+    color: var(--indi-purple);
+    box-shadow: 0 0 25px rgba(147, 192, 31, 0.5);
+    transform: translateY(-3px);
+}
+
+/* SECCIÓN DE GALERÍA Y FILTROS */
+.gallery-section {
+    padding: 60px 20px;
+    background-color: #f4f6f8;
+    min-height: 600px;
+    position: relative;
+    z-index: 1; /* Asegurar que tape el clip-path del hero */
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: #666;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.filter-btn:hover {
+    background-color: var(--indi-purple);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(56, 48, 136, 0.3);
+}
+
+.filter-btn.active {
+    background-color: var(--indi-green);
+    color: white;
+    box-shadow: 0 5px 15px rgba(147, 192, 31, 0.4);
+}
+
+/* GRID DE PROYECTOS */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: opacity 0.3s ease;
+}
+
+.project-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    cursor: pointer;
+    border-bottom: 4px solid transparent;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(56, 48, 136, 0.15);
+    border-bottom-color: var(--indi-green);
+}
+
+.project-card.animate-up {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.project-thumb {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-thumb img {
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(56, 48, 136, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay i {
+    color: var(--indi-green);
+    font-size: 3.5rem;
+    transform: scale(0);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
+    text-shadow: 0 0 20px rgba(147, 192, 31, 0.6);
+}
+
+.project-card:hover .project-overlay i {
+    transform: scale(1);
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-category {
+    color: var(--indi-green);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.project-title {
+    color: var(--indi-purple);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.project-author {
+    color: #888;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ESTILOS DEL MODAL */
+.project-modal-content {
+    border-top: 6px solid var(--indi-green);
+    overflow: hidden;
+}
+
+.project-modal-header {
+    margin-bottom: 20px;
+}
+
+.project-modal-tag {
+    background-color: var(--indi-purple);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.project-modal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--indi-green);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 25px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.project-modal-btn:hover {
+    background-color: #7ba318;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .indi-hero {
+        clip-path: none;
+        padding: 140px 20px 60px;
+    }
+    
+    .indi-logo-img {
+        max-width: 80%;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .indi-logo-img {
+        max-width: 90%;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-container {
+        gap: 10px;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 15px;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .filter-btn {
+        flex: 0 0 auto;
+    }
+}

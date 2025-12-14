@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "nombre": "Ailin Yemaya Diaz Salazar",
+        "semestre": "Comunicación",
+        "cargo": "Presidenta",
+        "correo": "ejemplo@est.ups.edu.ec",
+        "foto": "../assets/estudiantes/ailin.jpg",
+        "descripcion": "Encargada de liderar la asociación RugeCom, velar por el cumplimiento de los derechos estudiantiles y coordinar proyectos integrales para la carrera."
+    },
+    {
+        "id": 2,
+        "nombre": "Melissa Salome Rueda Proaño",
+        "semestre": "Comunicación",
+        "cargo": "Vicepresidenta",
+        "correo": "ejemplo@est.ups.edu.ec",
+        "foto": "../assets/estudiantes/melissa.jpg",
+        "descripcion": "Apoyo directo a la presidencia y coordinación de las comisiones de trabajo internas para asegurar la ejecución de eventos académicos y culturales."
+    },
+    {
+        "id": 3,
+        "nombre": "Romel Steven Vaca Peñaranda",
+        "semestre": "Comunicación",
+        "cargo": "Secretario",
+        "correo": "ejemplo@est.ups.edu.ec",
+        "foto": "../assets/estudiantes/romel.jpg",
+        "descripcion": "Responsable de la gestión administrativa, redacción de actas, convocatorias y el manejo de la documentación oficial de la asociación."
+    },
+    {
+        "id": 4,
+        "nombre": "Vicente Sebastian Reascos Montenegro",
+        "semestre": "Comunicación",
+        "cargo": "Tesorero",
+        "correo": "ejemplo@est.ups.edu.ec",
+        "foto": "../assets/estudiantes/vicente.jpg",
+        "descripcion": "Encargado de la planificación financiera, gestión de recursos y transparencia en los fondos destinados a las actividades estudiantiles."
+    },
+    {
+        "id": 5,
+        "nombre": "Juan Sebastian Ocaña Velasco",
+        "semestre": "Comunicación",
+        "cargo": "Primer Vocal",
+        "correo": "ejemplo@est.ups.edu.ec",
+        "foto": "../assets/estudiantes/juan.jpg",
+        "descripcion": "Enlace directo con los estudiantes para canalizar propuestas y colaborar activamente en la logística de eventos de la carrera."
+    },
+    {
+        "id": 6,
+        "nombre": "Domenica Valentina Rivera Torres",
+        "semestre": "Comunicación",
+        "cargo": "Segundo Vocal",
+        "correo": "ejemplo@est.ups.edu.ec",
+        "foto": "../assets/estudiantes/domenica.jpg",
+        "descripcion": "Coordinación de iniciativas estudiantiles y apoyo en la difusión de las actividades realizadas por RugeCom."
+    }
+]

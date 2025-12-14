@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinito Digital</title>
+    <link rel="icon" href="../assets/isotipoups.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="infinito.css">
+    <style>
+        /* --- ESTRUCTURA PRINCIPAL AJUSTADA --- */
+        .main-layout {
+            /* CAMBIO 1: Más ancho total para dar protagonismo al artículo */
+            max-width: 1280px; 
+            
+            /* CAMBIO 2: Margen positivo. Ya no se monta encima del hero (-60px), ahora baja (40px) */
+            margin: 40px auto 80px; 
+            
+            padding: 0 20px;
+            
+            display: grid;
+            /* El artículo ocupa todo el espacio posible (1fr), sidebar fija de 300px */
+            grid-template-columns: 1fr 300px; 
+            gap: 50px; /* Más separación entre artículo y sidebar */
+            
+            position: relative;
+            z-index: 5;
+            align-items: start;
+        }
+
+        /* ARTÍCULO (Tarjeta) */
+        .article-card {
+            background: #fff;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra más suave */
+            min-height: 500px;
+        }
+
+        /* ASIDE (Barra Lateral) */
+        .sidebar-container {
+            position: sticky;
+            top: 130px; 
+        }
+
+        .sidebar-header {
+            font-size: 1.1rem;
+            color: var(--indi-purple);
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--indi-green);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* MINI-TARJETAS SIDEBAR */
+        .side-card {
+            display: flex;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 90px;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+        .side-card:hover { 
+            transform: translateX(5px); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: var(--indi-green);
+        }
+
+        .side-img { width: 90px; height: 100%; flex-shrink: 0; }
+        .side-img img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .side-info { padding: 10px 15px; display: flex; flex-direction: column; justify-content: center; }
+        .side-cat { font-size: 0.65rem; color: var(--indi-green); text-transform: uppercase; font-weight: 800; margin-bottom: 4px; }
+        .side-title { font-size: 0.85rem; line-height: 1.3; font-weight: 600; color: #333; 
+            display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;
+        }
+
+        /* ESTILOS INTERNOS DEL ARTÍCULO */
+        .art-header { text-align: center; margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 30px; }
+        .art-category { 
+            display: inline-block; background: var(--indi-green); color: white;
+            padding: 5px 15px; border-radius: 20px; font-weight: 700; 
+            text-transform: uppercase; font-size: 0.8rem; margin-bottom: 15px;
+        }
+        .art-title { font-size: 2.5rem; color: var(--indi-purple); margin: 0 0 15px; line-height: 1.1; }
+        .art-meta { color: #888; font-size: 1rem; font-style: italic; }
+        
+        .art-media { margin-bottom: 40px; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .art-media img { width: 100%; height: auto; display: block; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+        .art-content { font-size: 1.15rem; line-height: 1.8; color: #444; text-align: left; }
+        .art-content p { margin-bottom: 25px; }
+        .art-content h2 { color: var(--indi-purple); margin-top: 40px; margin-bottom: 20px; font-size: 1.6rem; border-left: 4px solid var(--indi-green); padding-left: 15px; }
+        .art-content ul { margin-bottom: 25px; padding-left: 20px; }
+        .art-content li { margin-bottom: 10px; }
+
+        .quick-links { 
+            margin-top: 50px; padding: 30px; background: #f8f9fa; border-radius: 10px; text-align: center; border: 1px solid #eee;
+        }
+        .link-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--indi-purple); color: white; padding: 12px 30px; 
+            border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s;
+            font-size: 1rem;
+        }
+        .link-btn:hover { background: var(--indi-green); transform: translateY(-3px); box-shadow: 0 5px 15px rgba(147, 192, 31, 0.4); }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .main-layout { max-width: 100%; grid-template-columns: 1fr 280px; gap: 30px; }
+        }
+
+        @media (max-width: 900px) {
+            .main-layout {
+                grid-template-columns: 1fr; /* Una columna */
+                margin-top: 20px;
+                gap: 50px;
+            }
+            .sidebar-container { position: static; }
+            .article-card { padding: 25px; }
+            .art-title { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <div class="logo-combined"><img src="../assets/upscomunicacionlogo.png" alt="UPS Comunicación"></div>
+                <div class="logo-single"><img src="../assets/logocomunicacion.png" alt="Comunicación"></div>
+            </div>
+            <div class="isotipo-ups"><img src="../assets/logo30.png" alt="UPS"></div>
+        </div>
+    </header>
+
+    <main class="main-content" style="margin-top: 0;">
+        <section class="indi-hero" style="padding: 140px 20px 60px; min-height: auto;">
+             <div class="indi-hero-content">
+                <a href="infinito.html" class="back-career-btn"><i class="fas fa-arrow-left"></i> Volver a Proyectos</a>
+            </div>
+        </section>
+
+        <section class="gallery-section" style="padding-top: 0; background: transparent;">
+            
+            <div id="loading-state" style="text-align: center; padding: 100px 20px; color: var(--indi-purple);">
+                <i class="fas fa-circle-notch fa-spin fa-3x"></i><p style="margin-top: 15px;">Cargando...</p>
+            </div>
+
+            <div class="main-layout" id="main-layout" style="display: none;">
+                
+                <article class="article-card" id="article-content">
+                    </article>
+
+                <aside class="sidebar-container">
+                    <div class="sidebar-header">Más Recientes</div>
+                    <div id="sidebar-content">
+                        </div>
+                </aside>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Infinito Digital</h3><p>Donde las ideas cobran vida.</p>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2023 Infinito Digital - UPSQ.</p></div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" title="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="../script.js"></script>
+    <script>
+        const API_URL = 'https://script.google.com/macros/s/AKfycbzmT5VvLykwYYAXXjuto4hdpabTwvjEUgFbilxezAp01Ywz-QDy-os9xy6blDMXcWgJ/exec';
+        const CACHE_KEY = 'infinito_data_v1';
+        const CACHE_TIME = 10 * 60 * 1000; 
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            setupScrollTop();
+            const params = new URLSearchParams(window.location.search);
+            const currentId = params.get('id');
+
+            if(!currentId) { window.location.href = 'infinito.html'; return; }
+
+            // Cache
+            let allData = [];
+            const cachedData = localStorage.getItem(CACHE_KEY);
+            const cachedTimestamp = localStorage.getItem(CACHE_KEY + '_time');
+            const now = new Date().getTime();
+
+            if (cachedData && cachedTimestamp && (now - cachedTimestamp < CACHE_TIME)) {
+                allData = JSON.parse(cachedData);
+            } else {
+                try {
+                    const res = await fetch(API_URL);
+                    allData = await res.json();
+                    localStorage.setItem(CACHE_KEY, JSON.stringify(allData));
+                    localStorage.setItem(CACHE_KEY + '_time', now);
+                } catch(e) { console.error(e); }
+            }
+
+            // Render
+            const article = allData.find(item => String(item.id) === String(currentId));
+            if(article) {
+                renderArticle(article);
+                renderSidebar(allData, currentId);
+                
+                document.getElementById('loading-state').style.display = 'none';
+                document.getElementById('main-layout').style.display = 'grid';
+            } else {
+                document.getElementById('loading-state').innerHTML = '<p>Proyecto no encontrado.</p>';
+            }
+        });
+
+        function renderArticle(art) {
+            const container = document.getElementById('article-content');
+            
+            let mediaHTML = '';
+            if (art.youtube && art.youtube.length > 5) {
+                let videoID = '';
+                if(art.youtube.includes('v=')) videoID = art.youtube.split('v=')[1].split('&')[0];
+                else if(art.youtube.includes('youtu.be/')) videoID = art.youtube.split('youtu.be/')[1];
+                if(videoID) mediaHTML = `<div class="video-wrapper"><iframe src="https://www.youtube.com/embed/${videoID}" allowfullscreen></iframe></div>`;
+            } 
+            if (!mediaHTML) {
+                const imgUrl = art.imagen ? art.imagen : '../assets/upscomunicacionlogo.png';
+                mediaHTML = `<img src="${imgUrl}" alt="${art.titulo}" onerror="this.src='../assets/upscomunicacionlogo.png'">`;
+            }
+
+            const contenidoFormateado = art.contenido ? art.contenido.replace(/\n/g, '<br>') : '';
+            const catDisplay = art.categoria ? art.categoria.split(',')[0] : 'General';
+
+            container.innerHTML = `
+                <div class="art-header">
+                    <span class="art-category">${catDisplay}</span>
+                    <h1 class="art-title">${art.titulo}</h1>
+                    <div class="art-meta">Por: ${art.autor} • ${art.fecha ? new Date(art.fecha).toLocaleDateString() : ''}</div>
+                </div>
+                <div class="art-media">${mediaHTML}</div>
+                <div class="art-content">${contenidoFormateado}</div>
+                ${art.enlace_externo ? `
+                <div class="quick-links">
+                    <p style="font-weight:bold; margin-bottom:10px; color:#666;">Enlace Externo:</p>
+                    <a href="${art.enlace_externo}" target="_blank" class="link-btn">
+                        ${art.texto_enlace || 'Ver Proyecto Completo'} <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>` : ''}
+            `;
+        }
+
+        function renderSidebar(allData, currentId) {
+            const sidebarContainer = document.getElementById('sidebar-content');
+            const others = allData.filter(item => String(item.id) !== String(currentId)).reverse().slice(0, 4);
+            
+            if(others.length > 0) {
+                sidebarContainer.innerHTML = others.map(project => `
+                    <div class="side-card" onclick="window.location.href='infinito_art.html?id=${project.id}'">
+                        <div class="side-img">
+                            <img src="${project.imagen || '../assets/upscomunicacionlogo.png'}" alt="${project.titulo}" onerror="this.src='../assets/upscomunicacionlogo.png'">
+                        </div>
+                        <div class="side-info">
+                            <div class="side-cat">${project.categoria ? project.categoria.split(',')[0] : 'Blog'}</div>
+                            <h4 class="side-title">${project.titulo}</h4>
+                        </div>
+                    </div>
+                `).join('');
+            } else {
+                sidebarContainer.innerHTML = '<p style="font-size:0.9rem; color:#666;">Pronto más proyectos.</p>';
+            }
+        }
+
+        function setupScrollTop() {
+            const scrollBtn = document.getElementById('scrollTopBtn');
+            window.addEventListener('scroll', () => {
+                scrollBtn.classList.toggle('show', window.pageYOffset > 300);
+            });
+            scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+    </script>
+</body>
+</html>

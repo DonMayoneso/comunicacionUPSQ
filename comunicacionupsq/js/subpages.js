@@ -4,6 +4,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     initializeAboutCarousel();
     initializeTeachers();
+    initializeStudents(); // AGREGO LA INICIALIZACIÓN DE ESTUDIANTES AQUÍ
 });
 
 // Carrusel de Sobre Nosotros
@@ -98,10 +99,7 @@ function initializeTeachers() {
     function setupTeacherModals(docentes) {
         const teacherCards = document.querySelectorAll('.teacher-card');
         
-        // Usamos delegación de eventos si es posible, o asignación directa tras el render
-        // Como renderTeachers reemplaza el HTML, debemos re-seleccionar las tarjetas aquí (ya lo hicimos arriba)
-        
-        // Agregar evento click al contenedor padre para manejar clicks en tarjetas futuras o actuales (Delegación)
+        // Usamos delegación de eventos
         teachersGrid.addEventListener('click', function(e) {
             const card = e.target.closest('.teacher-card');
             if (card) {
@@ -198,10 +196,136 @@ function initializeTeachers() {
     }
 }
 
+/* =========================================
+   FUNCIONALIDAD RUGECOM (ESTUDIANTES)
+   ========================================= */
+
+function initializeStudents() {
+    const studentsGrid = document.getElementById('studentsGrid');
+    if (!studentsGrid) return; // Si no estamos en la página de estudiantes, salimos
+    
+    // Reutilizamos el mismo modal o buscamos uno específico si creaste uno aparte
+    // Según tu HTML anterior usaste ids específicos:
+    const modal = document.getElementById('studentModal'); 
+    const modalBody = document.getElementById('studentModalBody');
+    // Buscamos el botón de cerrar DENTRO del modal específico
+    const closeModal = modal ? modal.querySelector('.close-modal') : null;
+    
+    // Cargar datos desde JSON
+    fetch('js/estudiantes.json')
+        .then(response => response.json())
+        .then(estudiantes => {
+            renderStudents(estudiantes);
+            setupStudentModals(estudiantes);
+        })
+        .catch(error => {
+            console.error('Error cargando datos de estudiantes:', error);
+            studentsGrid.innerHTML = '<p>Error cargando la información de RugeCom.</p>';
+        });
+    
+    function renderStudents(estudiantes) {
+        // Reutilizamos las clases CSS 'teacher-card' para mantener el diseño idéntico
+        studentsGrid.innerHTML = estudiantes.map(est => `
+            <div class="teacher-card" data-student-id="${est.id}">
+                <div class="teacher-image">
+                    <img src="${est.foto}" alt="${est.nombre}" onerror="this.src='../assets/user-placeholder.png'">
+                </div>
+                <div class="teacher-info">
+                    <h3>${est.nombre}</h3>
+                    <div class="teacher-position" style="color: #e67e22;">${est.cargo}</div>
+                    <div class="teacher-subjects" style="font-weight: 500;">${est.semestre}</div>
+                </div>
+            </div>
+        `).join('');
+    }
+    
+    function setupStudentModals(estudiantes) {
+        // Delegación de eventos para las tarjetas
+        studentsGrid.addEventListener('click', function(e) {
+            const card = e.target.closest('.teacher-card');
+            if (card) {
+                const studentId = card.getAttribute('data-student-id');
+                const estudiante = estudiantes.find(e => e.id == studentId);
+                
+                if (estudiante) {
+                    showStudentModal(estudiante);
+                }
+            }
+        });
+        
+        // Cerrar modal
+        if (closeModal) {
+            closeModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        }
+        
+        // Cerrar clickeando fuera
+        if (modal) {
+            window.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Cerrar con Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal && modal.style.display === 'block') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
+    
+    function showStudentModal(estudiante) {
+        modalBody.innerHTML = `
+            <div class="teacher-modal-header">
+                <div class="teacher-modal-image">
+                    <img src="${estudiante.foto}" alt="${estudiante.nombre}" onerror="this.src='../assets/user-placeholder.png'">
+                </div>
+                <div class="teacher-modal-basic-info">
+                    <h2>${estudiante.nombre}</h2>
+                    <div class="teacher-modal-position" style="color: #e67e22;">${estudiante.cargo}</div>
+                    <div class="teacher-modal-specialty"><strong>Semestre actual:</strong> ${estudiante.semestre}</div>
+                    
+                    <div class="teacher-modal-contact" id="copyStudentEmailBtn" title="Click para copiar">
+                        <i class="fas fa-envelope"></i> <span>${estudiante.correo}</span>
+                        <span class="copy-tooltip">¡Copiado!</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="teacher-modal-details">
+                <h3>Sobre mí</h3>
+                <p>${estudiante.descripcion}</p>
+            </div>
+        `;
+        
+        // Lógica de copiado al portapapeles
+        const copyBtn = document.getElementById('copyStudentEmailBtn');
+        if (copyBtn) {
+            copyBtn.addEventListener('click', function() {
+                navigator.clipboard.writeText(estudiante.correo).then(() => {
+                    const tooltip = this.querySelector('.copy-tooltip');
+                    tooltip.classList.add('show');
+                    setTimeout(() => tooltip.classList.remove('show'), 2000);
+                }).catch(err => {
+                    console.error('Error al copiar: ', err);
+                });
+            });
+        }
+        
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+}
+
 // Smooth scroll para enlaces internos
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        // Solo aplicar si es un enlace interno válido y no un dropdown toggle vacío
         const href = this.getAttribute('href');
         if (href === '#' || href === '') return;
 
