@@ -6,7 +6,7 @@
         "cargo": "Presidenta",
         "correo": "ejemplo@est.ups.edu.ec",
         "foto": "../assets/estudiantes/ailin.jpg",
-        "descripcion": "Encargada de liderar la asociación RugeCom, velar por el cumplimiento de los derechos estudiantiles y coordinar proyectos integrales para la carrera."
+        "descripcion": "Comunicadora en crecimiento. Siempre involicrada en muchas cosas. ¡La carrera no lo es todo!, ''Me apasiona el activismo social y creo firmemente que la carrera de Comunicación puede ser más participativa y profesional para todos.''"
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "cargo": "Vicepresidenta",
         "correo": "ejemplo@est.ups.edu.ec",
         "foto": "../assets/estudiantes/melissa.jpg",
-        "descripcion": "Apoyo directo a la presidencia y coordinación de las comisiones de trabajo internas para asegurar la ejecución de eventos académicos y culturales."
+        "descripcion": "Con amabilidad y una gran capacidad de empatía, una persona sociable. ''Me apasiona la ayuda social, Disfruto conectar con las personas, escuchar sus historias y ser parte activa de soluciones que generen un impacto positivo.''"
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "cargo": "Secretario",
         "correo": "ejemplo@est.ups.edu.ec",
         "foto": "../assets/estudiantes/romel.jpg",
-        "descripcion": "Responsable de la gestión administrativa, redacción de actas, convocatorias y el manejo de la documentación oficial de la asociación."
+        "descripcion": "Técnologo en producción y realización de cine, TV y video. ''Mi trabajo busca reflexionar sobre la momoria y la identidad. He dirigido cortometrajes como El viejo Elefante, ganador del FACIUNI 2021, y Fruta Amarga, ganador regional en el festival global de cine Juvenil Don Bosco 2024''"
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "cargo": "Tesorero",
         "correo": "ejemplo@est.ups.edu.ec",
         "foto": "../assets/estudiantes/vicente.jpg",
-        "descripcion": "Encargado de la planificación financiera, gestión de recursos y transparencia en los fondos destinados a las actividades estudiantiles."
+        "descripcion": "Combina fotografía y escritura con una expresión facial de serenidad. Es una enciclopedia ambulante, su semblante contrasta con su pasión viva por capturar historias"
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "cargo": "Primer Vocal",
         "correo": "ejemplo@est.ups.edu.ec",
         "foto": "../assets/estudiantes/juan.jpg",
-        "descripcion": "Enlace directo con los estudiantes para canalizar propuestas y colaborar activamente en la logística de eventos de la carrera."
+        "descripcion": "Usa la comunicación como un medio de desarrllo poniéndola al servicio de los más vulnebrables''Mi mayor propósito es estar al servicio la comunidad, creo firmenmente en la política como un acto de amor y altruismo''"
     },
     {
         "id": 6,
@@ -51,6 +51,6 @@
         "cargo": "Segundo Vocal",
         "correo": "ejemplo@est.ups.edu.ec",
         "foto": "../assets/estudiantes/domenica.jpg",
-        "descripcion": "Coordinación de iniciativas estudiantiles y apoyo en la difusión de las actividades realizadas por RugeCom."
+        "descripcion": "Desde quinto semestre con la actitud adecuada ''Me gusta hacer cosas que suenan imposibles, con gente bacán todo fluye''"
     }
 ]
