@@ -2,7 +2,7 @@
     {
         "id": 1,
         "nombre": "Ailyn Yemaya Diaz Salazar",
-        "semestre": "Comunicación",
+        "semestre": "7mo",
         "cargo": "Presidenta",
         "correo": "ejemplo@est.ups.edu.ec",
         "foto": "../assets/estudiantes/ailin.jpg",
@@ -11,7 +11,7 @@
     {
         "id": 2,
         "nombre": "Melissa Salome Rueda Proaño",
-        "semestre": "Comunicación",
+        "semestre": "5to",
         "cargo": "Vicepresidenta",
         "correo": "ejemplo@est.ups.edu.ec",
         "foto": "../assets/estudiantes/melissa.jpg",
@@ -20,7 +20,7 @@
     {
         "id": 3,
         "nombre": "Romel Steven Vaca Peñaranda",
-        "semestre": "Comunicación",
+        "semestre": "5to",
         "cargo": "Secretario",
         "correo": "ejemplo@est.ups.edu.ec",
         "foto": "../assets/estudiantes/romel.jpg",
@@ -29,7 +29,7 @@
     {
         "id": 4,
         "nombre": "Vicente Sebastian Reascos Montenegro",
-        "semestre": "Comunicación",
+        "semestre": "4to",
         "cargo": "Tesorero",
         "correo": "ejemplo@est.ups.edu.ec",
         "foto": "../assets/estudiantes/vicente.jpg",
@@ -38,7 +38,7 @@
     {
         "id": 5,
         "nombre": "Juan Sebastian Ocaña Velasco",
-        "semestre": "Comunicación",
+        "semestre": "4to",
         "cargo": "Primer Vocal",
         "correo": "ejemplo@est.ups.edu.ec",
         "foto": "../assets/estudiantes/juan.jpg",
@@ -47,7 +47,7 @@
     {
         "id": 6,
         "nombre": "Domenica Valentina Rivera Torres",
-        "semestre": "Comunicación",
+        "semestre": "5to",
         "cargo": "Segundo Vocal",
         "correo": "ejemplo@est.ups.edu.ec",
         "foto": "../assets/estudiantes/domenica.jpg",
