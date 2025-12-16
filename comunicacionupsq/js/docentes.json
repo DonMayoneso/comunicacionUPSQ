@@ -19,7 +19,7 @@
         "id": 2,
         "nombre": "Grace Catalina Benalcázar Zambrano",
         "cargo": "Docente, Jefe de Área Curricular Básica",
-        "especialidad": "null",
+        "especialidad": "Mágister en comunicación y sociedad, con mención en politícas públicas para internet",
         "materias": [
             "Lingüística y Comunicación",
             "Semiótica",
@@ -27,15 +27,15 @@
             "Prácticas Preprofesionales"
         ],
         "cargo_administrativo": "Jefe de Área Curricular Básica",
-        "correo": "null@ups.edu.ec",
+        "correo": "gbenalcazar@ups.edu.ec",
         "foto": "../assets/docentes/gracebenalcazar.JPG",
-        "descripcion": "null."
+        "descripcion": "Comunicadora y docente universitaria. Estudio de las formas simbólicas del cuerpo. Amante de ka danza, el deporte, la naturaleza y la fotografía."
     },
     {
         "id": 3,
         "nombre": "Diego Condor Sambache",
         "cargo": "Docente, Jefe de Área Curricular Profesional",
-        "especialidad": "null",
+        "especialidad": "Maestria en comunicación",
         "materias": [
             "Comunicación", 
             "Cultura e Interculturalidad",
@@ -45,15 +45,15 @@
             "Integración Curricular"
         ],
         "cargo_administrativo": "Jefe de Área Curricular Profesional",
-        "correo": "null@ups.edu.ec",
+        "correo": "dcondor@ups.edu.ec",
         "foto": "../assets/docentes/diegocondor.JPG",
-        "descripcion": "null."
+        "descripcion": "Comunicador. Intereses en las ciencias sociales en general y el estudio de la brecha digital en particular"
     },
     {
         "id": 4,
         "nombre": "Cristina Satyavati Naranjo Delgado",
         "cargo": "Docente, Jefe de Área Técnico - Profesional",
-        "especialidad": "Magíster en Gestión de Educomunicacion, Producción Audiovisual.",
+        "especialidad": "Magíster en Gestión de Educomunicacion, Productora Audiovisual.",
         "materias": [
             "Narrativas Audiovisuales",
             "Producción Videográfica",
@@ -64,7 +64,7 @@
         "cargo_administrativo": "Jefe de Área Técnico - Profesional",
         "correo": "cnaranjo@ups.edu.ec",
         "foto": "../assets/docentes/cristinanaranjo.jpg",
-        "descripcion": "."
+        "descripcion": "Comunicadora Social graduada en la Universidad Politécnica Salesiana en Ecuador. Magister en Gestión de Educomunicación de la Universidad Central del Ecuador. Cursando Doctorado en Diseño y Comunicación en la Universidad de Palermo en la ciudad de Buenos Aires – Argentina. Docente Titular en la Universidad Politécnica Salesiana desde el año 2005 hasta la actualidad."
     },
     {
         "id": 5,
@@ -78,7 +78,7 @@
             "Integración Curricular"
         ],
         "cargo_administrativo": "Jefe de Área Titulación/Integración Curricular",
-        "correo": "null@ups.edu.ec",
+        "correo": "naguiar@ups.edu.ec",
         "foto": "../assets/docentes/ninaaguilar.JPG",
         "descripcion": "null."
     },
@@ -88,13 +88,12 @@
         "cargo": "Docente, Coordinadora de Área de Vinculacion con la Sociedad",
         "especialidad": "null",
         "materias": [
-            "Planificación de la Comunicación",
-            "Prácticas Pre Profesionales"
+            "Planificación de la Comunicación"
         ],
         "cargo_administrativo": "Coordinadora de Área de Vinculacion con la Sociedad",
-        "correo": "null@ups.edu.ec",
+        "correo": "pvillagomez@ups.edu.ec",
         "foto": "../assets/docentes/patyvillagomez.JPG",
-        "descripcion": "null."
+        "descripcion": "Comunicadora graduada de la Universidad Politécnica Salesiana. Magíster en Comunicación por la Universidad Andina Simón Bolívar y Máster en Comunicación Transmedia por la Universidad Internacional de La Rioja. Actualmente cursa el Doctorado en Diseño en la Universidad de Palermo. Se desempeña como docente e investigadora en la Universidad Politécnica Salesiana, Ecuador, e integra el grupo de investigación GICDE, enfocando su labor en el estudio de la comunicación, el discurso y las tecnologías emergentes. "
     },
     {
         "id": 7,
@@ -175,20 +174,20 @@
         "id": 12,
         "nombre": "José Luis Galván Jaramillo",
         "cargo": "Docente",
-        "especialidad": "null",
+        "especialidad": "Doctor en literatura latinoamericana",
         "materias": [
             "Géneros Interpretativos de Opinión"
         ],
         "cargo_administrativo": null,
-        "correo": "null@ups.edu.ec",
+        "correo": "jgalvan@ups.edu.ec",
         "foto": "../assets/docentes/joseluis.JPG",
-        "descripcion": "null."
+        "descripcion": "Ecuatoriano. Licenciado en Filosofía por la Pontificia Universidad Católica del Ecuador (PUCE); máster en Literatura Hispanoamericana por la PUCE; doctor en Literatura Latinoamericana por la UASB-E."
     },
     {
         "id": 13,
         "nombre": "Mauro Alonso Ruiz Vinueza",
-        "cargo": "null",
-        "especialidad": "null",
+        "cargo": "Docente, Coordinación prácticas Pre-profesionales",
+        "especialidad": "Magister en sistemas informativos educativos y licenciado en comunicación social",
         "materias": [
             "Psicología de la Comunicación",
             "Comunicación Política y Opinión Pública",
@@ -196,39 +195,52 @@
             "Comunicación en Crisis y Manejo de Conflicto",
             "Prácticas Pre Profesionales"
         ],
-        "cargo_administrativo": null,
-        "correo": "null@ups.edu.ec",
+        "cargo_administrativo": "Coordinación prácticas Pre-profesionales",
+        "correo": "mruizv@ups.edu.ec",
         "foto": "../assets/docentes/mauroruiz.JPG",
-        "descripcion": "null."
+        "descripcion": "Magister en sistemas informativos educativos y licenciado en comunicación social con mención en general e institucional"
     },
     {
         "id": 13,
         "nombre": "Enza Franca Bosetti",
-        "cargo": "null",
-        "especialidad": "null",
+        "cargo": "Docente, Coordinadora ISOSPAM",
+        "especialidad": "Laurea di dottore in materie letterarie",
         "materias": [
             "Arte y Comunicación"
         ],
-        "cargo_administrativo": null,
-        "correo": "null@ups.edu.ec",
-        "foto": "../assets/docentes/trian.gif",
-        "descripcion": "null."
+        "cargo_administrativo": "Coordinadora ISOSPAM",
+        "correo": "ebosetti@ups.edu.ec",
+        "foto": "../assets/docentes/enzabosetti.jpg",
+        "descripcion": "Doctora en Materias Literarias"
+    },
+    {
+        "id": 16,
+        "nombre": "Narcisa Medranda",
+        "cargo": "Docente, Dirección de carrera Diseño Multimedia",
+        "especialidad": "Doctora en comunicacion y periodismo, Master en Periodismo Investigativo",
+        "materias": [
+            "Periodismo de Investigación de Datos"
+        ],
+        "cargo_administrativo": "Directora de carrera Diseño Multimedia",
+        "correo": "nmedranda@ups.edu.ec",
+        "foto": "../assets/docentes/narcisamedranda.jpg",
+        "descripcion": "Doctora en Comunicación y Periodismo de la Universidad Autónoma de Barcelona, Es Master en Periodismo Investigativo, Datos y Visualización por la Universidad Internacional de la Rioja. Master en Educación obtenida en la Universidad de León y Licenciada en Comunicación Social por la Universidad Politécnica Salesiana."
     },
     {
         "id": 14,
-        "nombre": "Johanna Escobar",
-        "cargo": "null",
-        "especialidad": "null",
+        "nombre": "Johanna Francisca Escobar Torres",
+        "cargo": "Docente, Coordinadora Centro Multimedial",
+        "especialidad": "Baccalaureus Artium, Doctorado en ciencias sociales, Magister en gerencia y liderazgo educacional, Maestria en Comunicación, Licenciada artes digitales diseño multimedia ",
         "materias": [
             "Diseño Gráfico",
             "Narrativas Hipermediales",
             "Diseño Multimedia",
             "Narrativas Visuales"
         ],
-        "cargo_administrativo": null,
-        "correo": "null@ups.edu.ec",
-        "foto": "../assets/docentes/trian.gif",
-        "descripcion": "null."
+        "cargo_administrativo": "Coordinadora Centro Multimedial",
+        "correo": "jescobar@ups.edu.ec",
+        "foto": "../assets/docentes/johannaescobar.jpg",
+        "descripcion": "Baccalaureus Artium, Doctorado en ciencias sociales, Magister en gerencia y liderazgo educacional, Maestria en Comunicación, Licenciada artes digitales diseño multimedia."
     },
      {
         "id": 15,
@@ -242,21 +254,8 @@
         ],
         "cargo_administrativo": null,
         "correo": "prosas@ups.edu.ec",
-        "foto": "../assets/docentes/trian.gif",
+        "foto": "../assets/docentes/patriciorosas.jpg",
         "descripcion": "Especialista en coberturas deportivas, culturales y de entretenimiento. Crítico de películas, conciertos y asesor de relaciones públicas."
-    },
-    {
-        "id": 16,
-        "nombre": "Narcisa Medranda",
-        "cargo": "null",
-        "especialidad": "null",
-        "materias": [
-            "Periodismo de Investigación de Datos"
-        ],
-        "cargo_administrativo": null,
-        "correo": "null@ups.edu.ec",
-        "foto": "../assets/docentes/trian.gif",
-        "descripcion": "null."
     },
     {
         "id": 17,
@@ -269,7 +268,7 @@
         ],
         "cargo_administrativo": null,
         "correo": "pcruz@ups.edu.ec",
-        "foto": "../assets/docentes/trian.gif",
+        "foto": "../assets/docentes/paojaramillo.jpg",
         "descripcion": "Especialista en comunicación para el desarrollo, periodismo digital y edición de contenidos digitales e impresos."
     }
 

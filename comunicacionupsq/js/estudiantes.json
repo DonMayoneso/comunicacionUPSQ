@@ -4,7 +4,7 @@
         "nombre": "Ailyn Yemaya Diaz Salazar",
         "semestre": "7mo",
         "cargo": "Presidenta",
-        "correo": "ejemplo@est.ups.edu.ec",
+        "correo": "adiazs5@est.ups.edu.ec",
         "foto": "../assets/estudiantes/ailin.jpg",
         "descripcion": "Comunicadora en crecimiento. Siempre involicrada en muchas cosas. ¡La carrera no lo es todo!, ''Me apasiona el activismo social y creo firmemente que la carrera de Comunicación puede ser más participativa y profesional para todos.''"
     },
@@ -13,7 +13,7 @@
         "nombre": "Melissa Salome Rueda Proaño",
         "semestre": "5to",
         "cargo": "Vicepresidenta",
-        "correo": "ejemplo@est.ups.edu.ec",
+        "correo": "mruedap@est.ups.edu.ec",
         "foto": "../assets/estudiantes/melissa.jpg",
         "descripcion": "Con amabilidad y una gran capacidad de empatía, una persona sociable. ''Me apasiona la ayuda social, Disfruto conectar con las personas, escuchar sus historias y ser parte activa de soluciones que generen un impacto positivo.''"
     },
@@ -22,7 +22,7 @@
         "nombre": "Romel Steven Vaca Peñaranda",
         "semestre": "5to",
         "cargo": "Secretario",
-        "correo": "ejemplo@est.ups.edu.ec",
+        "correo": "rvacap@est.ups.edu.ec",
         "foto": "../assets/estudiantes/romel.jpg",
         "descripcion": "Técnologo en producción y realización de cine, TV y video. ''Mi trabajo busca reflexionar sobre la momoria y la identidad. He dirigido cortometrajes como El viejo Elefante, ganador del FACIUNI 2021, y Fruta Amarga, ganador regional en el festival global de cine Juvenil Don Bosco 2024''"
     },
@@ -31,7 +31,7 @@
         "nombre": "Vicente Sebastian Reascos Montenegro",
         "semestre": "4to",
         "cargo": "Tesorero",
-        "correo": "ejemplo@est.ups.edu.ec",
+        "correo": "vreascosm@est.ups.edu.ec",
         "foto": "../assets/estudiantes/vicente.jpg",
         "descripcion": "Combina fotografía y escritura con una expresión facial de serenidad. Es una enciclopedia ambulante, su semblante contrasta con su pasión viva por capturar historias"
     },
@@ -40,7 +40,7 @@
         "nombre": "Juan Sebastian Ocaña Velasco",
         "semestre": "4to",
         "cargo": "Primer Vocal",
-        "correo": "ejemplo@est.ups.edu.ec",
+        "correo": "jocana@ups.edu.ec",
         "foto": "../assets/estudiantes/juan.jpg",
         "descripcion": "Usa la comunicación como un medio de desarrllo poniéndola al servicio de los más vulnebrables''Mi mayor propósito es estar al servicio la comunidad, creo firmenmente en la política como un acto de amor y altruismo''"
     },
@@ -49,7 +49,7 @@
         "nombre": "Domenica Valentina Rivera Torres",
         "semestre": "5to",
         "cargo": "Segundo Vocal",
-        "correo": "ejemplo@est.ups.edu.ec",
+        "correo": "driverat3@est.ups.edu.ec",
         "foto": "../assets/estudiantes/domenica.jpg",
         "descripcion": "Desde quinto semestre con la actitud adecuada ''Me gusta hacer cosas que suenan imposibles, con gente bacán todo fluye''"
     }
