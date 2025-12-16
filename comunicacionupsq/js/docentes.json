@@ -240,7 +240,7 @@
         ],
         "cargo_administrativo": null,
         "correo": "null@ups.edu.ec",
-        "foto": "../assets/docentes/null.JPG",
+        "foto": "../assets/docentes/trian.gif",
         "descripcion": "null."
     },
     {
@@ -336,20 +336,6 @@
         "correo": "prosas@ups.edu.ec",
         "foto": "../assets/docentes/imgtest.jpg",
         "descripcion": "Especialista en coberturas deportivas, culturales y de entretenimiento. Crítico de películas, conciertos y asesor de relaciones públicas."
-    },
-    {
-        "id": 30,
-        "nombre": "Sir Lechuguin Vegetal Soza",
-        "cargo": "Lechuga",
-        "especialidad": "Lechuguear",
-        "materias": [
-            "Ciencias de la vegetación",
-            "Ecología",
-            "Botánica aplicada"
-        ],
-        "cargo_administrativo": null,
-        "correo": "lechuguin@ups.edu.ec",
-        "foto": "../assets/imgtest2.jpg",
-        "descripcion": "Una lechuga esbelta, rapida y con gran capacidad de adaptación a diferentes climas."
     }
+
 ]
