@@ -211,7 +211,7 @@
         ],
         "cargo_administrativo": null,
         "correo": "null@ups.edu.ec",
-        "foto": "../assets/docentes/enzabosetti.JPG",
+        "foto": "../assets/docentes/trian.gif",
         "descripcion": "null."
     },
     {
@@ -227,11 +227,26 @@
         ],
         "cargo_administrativo": null,
         "correo": "null@ups.edu.ec",
-        "foto": "../assets/docentes/null.JPG",
+        "foto": "../assets/docentes/trian.gif",
         "descripcion": "null."
     },
-    {
+     {
         "id": 15,
+        "nombre": "Patricio Iván Rosas Flórez",
+        "cargo": "Docente",
+        "especialidad": "Periodismo, Magíster en Interculturalidad",
+        "materias": [
+            "Comunicación oral y escrita", 
+            "periodismo digital", 
+            "comunicación e ideología"
+        ],
+        "cargo_administrativo": null,
+        "correo": "prosas@ups.edu.ec",
+        "foto": "../assets/docentes/trian.gif",
+        "descripcion": "Especialista en coberturas deportivas, culturales y de entretenimiento. Crítico de películas, conciertos y asesor de relaciones públicas."
+    }
+    {
+        "id": 16,
         "nombre": "Narcisa Medranda",
         "cargo": "null",
         "especialidad": "null",
@@ -244,72 +259,7 @@
         "descripcion": "null."
     },
     {
-        "id": 16,
-        "nombre": "Tania Villalva",
-        "cargo": "null",
-        "especialidad": "null",
-        "materias": [
-            "Diseño del Proyecto de Investigación"
-        ],
-        "cargo_administrativo": null,
-        "correo": "null@ups.edu.ec",
-        "foto": "../assets/docentes/null.JPG",
-        "descripcion": "null."
-    },
-    {
         "id": 17,
-        "nombre": "Augusto Sakihama",
-        "cargo": "Docente",
-        "especialidad": "null",
-        "materias": [
-            "Teoría de la Comunicación II"
-        ],
-        "cargo_administrativo": null,
-        "correo": "null@ups.edu.ec",
-        "foto": "../assets/docentes/null.JPG",
-        "descripcion": "null."
-    },
-    {
-        "id": 18,
-        "nombre": "David Moromenacho",
-        "cargo": "Docente",
-        "especialidad": "null",
-        "materias": [
-            "Comunicación, Cultura e Interculturalidad"
-        ],
-        "cargo_administrativo": null,
-        "correo": "null@ups.edu.ec",
-        "foto": "../assets/docentes/null.JPG",
-        "descripcion": "null."
-    },
-    {
-        "id": 19,
-        "nombre": "Pablo Romero",
-        "cargo": "Docente",
-        "especialidad": "null",
-        "materias": [
-            "Comunicación en Crisis y Manejo de Conflictos"
-        ],
-        "cargo_administrativo": null,
-        "correo": "null@ups.edu.ec",
-        "foto": "../assets/docentes/null.JPG",
-        "descripcion": "null."
-    },
-    {
-        "id": 20,
-        "nombre": "Ramiro Morejon",
-        "cargo": "Docente",
-        "especialidad": "null",
-        "materias": [
-            "Diseño Multimedial"
-        ],
-        "cargo_administrativo": null,
-        "correo": "null@ups.edu.ec",
-        "foto": "../assets/docentes/null.JPG",
-        "descripcion": "null."
-    },
-    {
-        "id": 21,
         "nombre": "Paola Verónica Cruz Jaramillo",
         "cargo": "CoEditora, Animadora Revista Pastoral Universitaria Utopía",
         "especialidad": "MsC. Periodismo y Lic. Comunicación Social para el Desarrollo",
@@ -319,23 +269,9 @@
         ],
         "cargo_administrativo": null,
         "correo": "pcruz@ups.edu.ec",
-        "foto": "../assets/docentes/imgtest.jpg",
+        "foto": "../assets/docentes/trian.gif",
         "descripcion": "Especialista en comunicación para el desarrollo, periodismo digital y edición de contenidos digitales e impresos."
-    },
-    {
-        "id": 22,
-        "nombre": "Patricio Iván Rosas Flórez",
-        "cargo": "Docente",
-        "especialidad": "Periodismo, Magíster en Interculturalidad",
-        "materias": [
-            "Comunicación oral y escrita", 
-            "periodismo digital", 
-            "comunicación e ideología"
-        ],
-        "cargo_administrativo": null,
-        "correo": "prosas@ups.edu.ec",
-        "foto": "../assets/docentes/imgtest.jpg",
-        "descripcion": "Especialista en coberturas deportivas, culturales y de entretenimiento. Crítico de películas, conciertos y asesor de relaciones públicas."
     }
 
 ]
+
