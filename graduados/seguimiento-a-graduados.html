@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguimiento a Graduados - Comunicación UPSQ</title>
+    <link rel="icon" href="../assets/isotipoups.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="graduados.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo-container">
+                <div class="logo-combined">
+                    <img src="../assets/upscomunicacionlogo.png" alt="UPS Comunicación">
+                </div>
+                <div class="logo-single">
+                    <img src="../assets/logocomunicacion.png" alt="Comunicación">
+                </div>
+            </a>
+            <div class="isotipo-ups">
+                <img src="../assets/logo30.png" alt="UPS">
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="navbar">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link dropdown-toggle">COMUNICACIÓN UPSQ</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../index.html" class="dropdown-item">Carrera de Comunicación</a></li>
+                        <li><a href="../comunicacionupsq/sobre-nosotros.html" class="dropdown-item">Sobre Nosotros</a></li>
+                        <li><a href="../comunicacionupsq/nuestros-docentes.html" class="dropdown-item">Nuestros Docentes</a></li>
+                        <li><a href="../comunicacionupsq/estudiantes.html" class="dropdown-item">RugeCom</a></li>
+                        <li><a href="../comunicacionupsq/malla-curricular.html" class="dropdown-item">Malla Curricular</a></li>
+                        <li><a href="../comunicacionupsq/horarios.html" class="dropdown-item">Horarios</a></li>
+                        <li><a href="../comunicacionupsq/tour-virtual.html" class="dropdown-item">Tour Virtual</a></li>
+                    </ul>
+                </li>
+                <!--<li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle">PRÁCTICAS Y VINCULACIÓN</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">Vinculación</a></li>
+                        <li><a href="#" class="dropdown-item">Prácticas</a></li>
+                        <li><a href="#" class="dropdown-item">Educación Continua</a></li>
+                    </ul>
+                </li> -->
+                <li class="nav-item">
+                    <a href="../infinitodigital/infinito.html" class="nav-link dropdown-toggle">INFINITO DIGITAL</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../infinitodigital/infinito.html" class="dropdown-item">Infinito Digital</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="../titulacion/titulacion.html" class="nav-link dropdown-toggle">TITULACIÓN</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../titulacion/titulacion.html" class="dropdown-item">Artículo Académico</a></li>
+                        <li><a href="../titulacion/titulacion.html" class="dropdown-item">Producto Comunicativo</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="graduadosupsq.html" class="nav-link dropdown-toggle">GRADUADOS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="graduadosupsq.html" class="dropdown-item">Perfil del Graduado</a></li>
+                        <li><a href="seguimiento-a-graduados.html" class="dropdown-item">Seguimiento a Graduados</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="nav-item">
+                    <a href="#" class="nav-link">OTROS</a>
+                </li>-->
+            </ul>
+            <button class="hamburger">☰</button>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        
+        <section class="page-hero minimal">
+            <div class="hero-container">
+                <h1>Seguimiento a Graduados</h1>
+                <p>Conoce dónde se desenvuelven los comunicadores de nuestra carrera.</p>
+            </div>
+        </section>
+
+        <main class="container">
+            <p class="intro-text">
+                La Universidad Politécnica Salesiana mantiene un vínculo permanente con sus alumni. 
+                Aquí presentamos las historias de éxito y el impacto profesional de nuestros graduados en el mundo laboral actual.
+            </p>
+
+            <div id="graduados-grid" class="graduados-grid">
+                <div style="text-align:center; width:100%; padding: 40px;">
+                    <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--primary-color);"></i>
+                    <p style="margin-top:10px; color:#666;">Cargando historias...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="graduateModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-img" src="" alt="Graduado">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-name"></h2>
+                    <h4 id="modal-job"></h4>
+                    
+                    <div id="modal-article" class="article-content"></div>
+                    
+                    <div id="modal-video-container" class="video-container" style="display:none;">
+                        <iframe id="modal-video" width="100%" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="modal-links">
+                        <a id="modal-link1" href="#" target="_blank" class="btn-link">Ver Más</a>
+                        <a id="modal-link2" href="#" target="_blank" class="social-link-btn">
+                            <span id="social-icon"></span> <span id="social-text">Contactar</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<footer class="main-footer">
+        <div class="footer-container">
+            
+            <div class="footer-section">
+                <h3>Contáctanos</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Campus el Girón, Ave 12 de Octubre 24-22, Quito 170143</p>
+                    <p>
+                        <i class="fas fa-phone"></i> 
+                        <a href="tel:+59323962900" class="footer-text-link">(+593) 2 3962900</a> ext.: 2126
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/informa.ups" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/carreradecomunicacionupsq/" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/indi_ups" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCJ78UoiJpFfgmJhzejwyEpQ" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Enlaces rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.ups.edu.ec" target="_blank" rel="noopener noreferrer">Universidad Politécnica Salesiana</a></li>
+                    <li><a href="https://www.ups.edu.ec/inscripciones-quito" target="_blank" rel="noopener noreferrer">Admisiones</a></li>
+                    <li><a href="https://avac.ups.edu.ec" target="_blank" rel="noopener noreferrer">AVAC</a></li>
+                    <li><a href="https://bienestar.ups.edu.ec" target="_blank" rel="noopener noreferrer">Bienestar Estudiantil</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Comunicación UPSQ. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // TU URL DE APPS SCRIPT
+        const API_URL = 'https://script.google.com/macros/s/AKfycbzuMb5OL_cd8-XQoQvEPU8JHrvP4kuSg2Rika1PZfaKHcvjEPWKKP40zXIuTOW780_D/exec'; 
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Inicializar Navbar Móvil
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            if(hamburger) {
+                hamburger.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+            }
+
+            // 2. Header Scroll Effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
+            });
+            
+            // 3. Cargar Datos
+            fetchGraduados();
+        });
+
+        // FUNCIÓN DE CARGA DE DATOS (JSON)
+        async function fetchGraduados() {
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) throw new Error('Error en la red');
+                
+                // Al usar Apps Script, recibimos JSON directo
+                const data = await response.json();
+                
+                renderGrid(data);
+            } catch (error) {
+                console.error('Error cargando graduados:', error);
+                document.getElementById('graduados-grid').innerHTML = `
+                    <p style="text-align:center; width:100%; color:red;">
+                        Hubo un problema cargando los datos. Por favor intenta más tarde.<br>
+                        <small>${error.message}</small>
+                    </p>`;
+            }
+        }
+
+        // RENDERIZADO DE TARJETAS
+        function renderGrid(graduados) {
+            const grid = document.getElementById('graduados-grid');
+            grid.innerHTML = ''; // Limpiar loader
+
+            if(graduados.length === 0) {
+                grid.innerHTML = '<p>No se encontraron registros.</p>';
+                return;
+            }
+
+            graduados.forEach(grad => {
+                // Normalización de ruta de imagen
+                let imgPath = grad.imagen || '';
+                if(imgPath && !imgPath.includes('http') && !imgPath.includes('../')) {
+                    imgPath = '../assets/' + imgPath;
+                }
+                if(!imgPath) imgPath = '../assets/upscomunicacionlogo.png';
+
+                // Crear Tarjeta
+                const card = document.createElement('div');
+                card.className = 'graduado-card';
+                card.innerHTML = `
+                    <div class="card-img">
+                        <img src="${imgPath}" alt="${grad.nombre}" onerror="this.src='../assets/upscomunicacionlogo.png'">
+                    </div>
+                    <div class="card-info">
+                        <h3>${grad.nombre}</h3>
+                        <p>${grad.trabajo}</p>
+                        <button onclick="openModal('${grad.id}')" class="btn-ver-mas">Ver Trayectoria</button>
+                    </div>
+                `;
+                
+                // Actualizamos el objeto con la ruta de imagen corregida para usarla en el modal
+                grad.imagenFinal = imgPath;
+                
+                // Guardar datos en el DOM para acceso rápido
+                card.dataset.info = JSON.stringify(grad); 
+                grid.appendChild(card);
+            });
+        }
+
+        // LÓGICA DEL MODAL
+        const modal = document.getElementById('graduateModal');
+        const closeModal = document.querySelector('.close-modal');
+
+        // Función Global para abrir modal
+        window.openModal = function(id) {
+            const cards = document.querySelectorAll('.graduado-card');
+            let data = null;
+            
+            cards.forEach(card => {
+                const info = JSON.parse(card.dataset.info);
+                if(info.id == id) data = info;
+            });
+
+            if(!data) return;
+
+            // 1. Llenar Textos e Imagen
+            document.getElementById('modal-img').src = data.imagenFinal;
+            document.getElementById('modal-name').innerText = data.nombre;
+            document.getElementById('modal-job').innerText = data.trabajo;
+            document.getElementById('modal-article').innerHTML = data.articulo;
+            
+            // 2. Gestionar Video YouTube
+            const videoContainer = document.getElementById('modal-video-container');
+            const videoFrame = document.getElementById('modal-video');
+            
+            if(data.youtube && data.youtube.toString().length > 5) {
+                // Convertir URL normal (watch?v=) a URL embed
+                let videoUrl = data.youtube.toString();
+                if(videoUrl.includes('watch?v=')) {
+                    videoUrl = videoUrl.replace('watch?v=', 'embed/');
+                    // Limpiar parámetros extra si los hubiera
+                    if(videoUrl.includes('&')) videoUrl = videoUrl.split('&')[0];
+                }
+                videoFrame.src = videoUrl;
+                videoContainer.style.display = 'block';
+            } else {
+                videoContainer.style.display = 'none';
+                videoFrame.src = "";
+            }
+
+            // 3. Gestionar Link 1 (Genérico)
+            const link1 = document.getElementById('modal-link1');
+            if(data.link1 && data.link1.toString().length > 1) {
+                link1.href = data.link1;
+                link1.style.display = 'inline-flex';
+            } else {
+                link1.style.display = 'none';
+            }
+
+            // 4. Gestionar Link 2 (Social)
+            const link2 = document.getElementById('modal-link2');
+            const iconSpan = document.getElementById('social-icon');
+            const textSpan = document.getElementById('social-text');
+
+            if(data.link2_url && data.link2_url.toString().length > 1) {
+                link2.href = data.link2_url;
+                link2.style.display = 'inline-flex';
+                
+                // Determinar icono y color
+                const tipo = (data.link2_tipo || '').toString().toLowerCase();
+                let iconClass = 'fas fa-link';
+                let btnColor = '#333'; // Default
+
+                if(tipo.includes('instagram')) { 
+                    iconClass = 'fab fa-instagram'; 
+                    btnColor = '#E1306C';
+                } else if(tipo.includes('whatsapp')) { 
+                    iconClass = 'fab fa-whatsapp'; 
+                    btnColor = '#25D366';
+                } else if(tipo.includes('facebook')) { 
+                    iconClass = 'fab fa-facebook-f'; 
+                    btnColor = '#1877F2';
+                } else if(tipo.includes('web')) { 
+                    iconClass = 'fas fa-globe'; 
+                    btnColor = '#000'; 
+                }
+
+                iconSpan.className = iconClass;
+                link2.style.backgroundColor = btnColor;
+                
+                // Texto del botón (Capitalizado)
+                let btnText = tipo ? tipo.charAt(0).toUpperCase() + tipo.slice(1) : 'Contacto';
+                textSpan.innerText = " " + btnText;
+            } else {
+                link2.style.display = 'none';
+            }
+
+            // Mostrar Modal
+            modal.style.display = 'block';
+        }
+
+        // Cerrar Modal
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+            document.getElementById('modal-video').src = "";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.getElementById('modal-video').src = "";
+            }
+        }
+    </script>
+</body>
+</html>

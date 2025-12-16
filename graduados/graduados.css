@@ -1,0 +1,508 @@
+
+:root {
+    --shadow-soft: 0 5px 20px rgba(0,0,0,0.05);
+    --shadow-hover: 0 10px 25px rgba(95, 179, 224, 0.2); 
+    --radius: 12px;
+}
+
+.main-content {
+    margin-top: 152px; 
+    min-height: 80vh;
+    background-color: var(--cream-bg);
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-top: 122px;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px 20px;
+}
+
+/*
+   HERO MINIMALISTA 
+ */
+.page-hero.minimal {
+    background: var(--light-color); 
+    color: var(--dark-color); 
+    padding: 40px 0;
+    text-align: left; 
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.page-hero.minimal .hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.page-hero.minimal h1 {
+    font-size: 2.2rem; 
+    margin-bottom: 0;
+    color: var(--dark-color);
+    position: relative;
+    padding-left: 20px;
+    font-weight: 700;
+}
+
+/* La barra lateral usando tu color primario */
+.page-hero.minimal h1::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    width: 5px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+.page-hero.minimal p {
+    font-size: 1.05rem;
+    color: #666; /* Gris neutro */
+    margin: 0;
+    text-align: right;
+    max-width: 500px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .page-hero.minimal .hero-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .page-hero.minimal h1 { font-size: 1.8rem; }
+    .page-hero.minimal p { text-align: left; padding-left: 20px; font-size: 0.95rem; }
+}
+
+/* Texto introductorio general */
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    max-width: 800px;
+    margin-bottom: 3rem;
+}
+
+/*
+PERFIL DEL GRADUADO
+ */
+.profile-content {
+    background: var(--light-color);
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(148, 196, 196, 0.2);
+    display: flex;
+    gap: 40px;
+    align-items: stretch; 
+}
+
+.profile-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.profile-text h2 {
+    color: var(--dark-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--primary-color); 
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.profile-text p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+.profile-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-text li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.profile-text i {
+    color: var(--hover-color);
+    margin-right: 12px;
+    font-size: 1.2rem;
+}
+
+/*CARRUSEL*/
+.mini-carousel-container {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background-color: #eee;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    height: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.85);
+    color: var(--dark-color);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    font-size: 1.2rem;
+}
+
+.carousel-btn:hover {
+    background: var(--hover-color);
+    color: var(--light-color);
+}
+
+.carousel-btn.prev { left: 15px; }
+.carousel-btn.next { right: 15px; }
+
+/*
+   SECCIÓN: SEGUIMIENTO (Grid de Tarjetas)
+ */
+.graduados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.graduado-card {
+    background: var(--light-color);
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.graduado-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary-color);
+}
+
+.card-img {
+    height: 220px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+/* Filtro sutil sobre la imagen */
+.card-img::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, transparent 70%, rgba(0,0,0,0.3));
+    opacity: 0.6;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.graduado-card:hover .card-img img {
+    transform: scale(1.08);
+}
+
+.card-info {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.card-info h3 {
+    margin: 0 0 5px 0;
+    color: var(--dark-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.card-info p {
+    font-size: 0.95rem;
+    color: var(--hover-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+    flex-grow: 1;
+}
+
+.btn-ver-mas {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--dark-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-ver-mas:hover {
+    background-color: var(--primary-color); 
+    color: var(--light-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(148, 196, 196, 0.4);
+}
+
+/*
+   MODAL (Adaptado al estilo Web Principal)
+ */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(44, 62, 80, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background-color: var(--light-color);
+    margin: 5% auto;
+    padding: 0;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    position: relative;
+    animation: fadeInModal 0.4s ease;
+    border: 1px solid var(--primary-color);
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-modal {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 100;
+    line-height: 1;
+}
+
+.close-modal:hover { color: var(--hover-color); }
+
+.modal-body {
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--light-color);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.modal-image {
+    flex: 1;
+    min-width: 300px;
+    background: #f9f9f9;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    min-height: 400px;
+}
+
+.modal-info {
+    flex: 1.4;
+    padding: 40px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-info h2 {
+    color: var(--dark-color);
+    font-size: 2rem;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.modal-info h4 {
+    color: var(--hover-color);
+    font-weight: 600;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.article-content {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+/* Scrollbar personalizada con colores de marca */
+.article-content::-webkit-scrollbar { width: 6px; }
+.article-content::-webkit-scrollbar-track { background: #f1f1f1; }
+.article-content::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 10px; }
+
+/* Video */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background: #000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.video-container iframe {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+}
+
+/* Links */
+.modal-links {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+
+.btn-link, .social-link-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+/* Botón Genérico usando Hover Color (Azul) para acción principal */
+.btn-link {
+    background-color: var(--hover-color);
+    color: var(--light-color);
+}
+.btn-link:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(95, 179, 224, 0.3);
+}
+
+/* Botón Social */
+.social-link-btn {
+    color: white;
+    background-color: #333;
+}
+.social-link-btn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/*
+   RESPONSIVE
+ */
+@media (max-width: 768px) {
+    /* Profile */
+    .profile-content {
+        flex-direction: column;
+        padding: 25px;
+    }
+    
+    .mini-carousel-container {
+        height: 280px; 
+    }
+
+    /* Modal */
+    .modal-body { flex-direction: column; }
+    .modal-image img { height: 250px; min-height: auto; }
+    .modal-info { padding: 25px; }
+    .modal-links { flex-direction: column; }
+    .btn-link, .social-link-btn { width: 100%; }
+}
+.footer-text-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-text-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
