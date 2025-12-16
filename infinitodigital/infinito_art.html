@@ -9,21 +9,14 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="infinito.css">
     <style>
-        /* --- ESTRUCTURA PRINCIPAL AJUSTADA --- */
+        /* ESTRUCTURA PRINCIPAL AJUSTADA */
         .main-layout {
-            /* CAMBIO 1: Más ancho total para dar protagonismo al artículo */
             max-width: 1280px; 
-            
-            /* CAMBIO 2: Margen positivo. Ya no se monta encima del hero (-60px), ahora baja (40px) */
             margin: 40px auto 80px; 
-            
             padding: 0 20px;
-            
             display: grid;
-            /* El artículo ocupa todo el espacio posible (1fr), sidebar fija de 300px */
             grid-template-columns: 1fr 300px; 
-            gap: 50px; /* Más separación entre artículo y sidebar */
-            
+            gap: 50px;
             position: relative;
             z-index: 5;
             align-items: start;
@@ -34,7 +27,7 @@
             background: #fff;
             padding: 50px;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra más suave */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             min-height: 500px;
         }
 
@@ -122,7 +115,7 @@
 
         @media (max-width: 900px) {
             .main-layout {
-                grid-template-columns: 1fr; /* Una columna */
+                grid-template-columns: 1fr;
                 margin-top: 20px;
                 gap: 50px;
             }
@@ -135,14 +128,19 @@
 <body>
     <header>
         <div class="header-container">
-            <div class="logo-container">
-                <div class="logo-combined"><img src="../assets/upscomunicacionlogo.png" alt="UPS Comunicación"></div>
-                <div class="logo-single"><img src="../assets/logocomunicacion.png" alt="Comunicación"></div>
+            <a href="../index.html" class="logo-container">
+                <div class="logo-combined">
+                    <img src="../assets/upscomunicacionlogo.png" alt="UPS Comunicación">
+                </div>
+                <div class="logo-single">
+                    <img src="../assets/logocomunicacion.png" alt="Comunicación">
+                </div>
+            </a>
+            <div class="isotipo-ups">
+                <img src="../assets/logo30.png" alt="UPS">
             </div>
-            <div class="isotipo-ups"><img src="../assets/logo30.png" alt="UPS"></div>
         </div>
     </header>
-
     <main class="main-content" style="margin-top: 0;">
         <section class="indi-hero" style="padding: 140px 20px 60px; min-height: auto;">
              <div class="indi-hero-content">
