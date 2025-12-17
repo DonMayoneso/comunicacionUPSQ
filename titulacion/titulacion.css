@@ -1,6 +1,6 @@
 /* titulacion/titulacion.css - VERSIÓN UNIFICADA (Estilos Idénticos) */
 
-/* --- AJUSTES DE ESTRUCTURA --- */
+/* AJUSTES DE ESTRUCTURA */
 .main-content {
     margin-top: 152px; /* Espacio para el header fijo */
     min-height: 80vh;
@@ -13,9 +13,9 @@
     }
 }
 
-/* =========================================
+/*
    HERO MINIMALISTA
-   ========================================= */
+ */
 .page-hero.minimal {
     background: #ffffff; 
     color: #333; 
@@ -76,11 +76,11 @@
     .page-hero.minimal p { text-align: left; padding-left: 15px; font-size: 0.95rem; }
 }
 
-/* =========================================
+/*
    ESTILOS DE NAVEGACIÓN Y CONTENIDO
-   ========================================= */
+ */
 
-/* --- TABS DE NAVEGACIÓN (STICKY) --- */
+/* TABS DE NAVEGACIÓN (STICKY) */
 .tabs-wrapper {
     background-color: white;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -184,9 +184,9 @@
     margin-bottom: 20px;
 }
 
-/* =========================================
+/*
    SECCIÓN 1: FORMATOS GENERALES (IGUAL QUE PRODUCTO)
-   ========================================= */
+ */
 
 .requirements-grid {
     display: grid;
@@ -249,9 +249,9 @@
     width: 100%;
 }
 
-/* =========================================
+/*
    SECCIÓN 2: PRODUCTO COMUNICATIVO
-   ========================================= */
+ */
 
 .types-grid {
     display: grid;
@@ -330,9 +330,9 @@
     flex-shrink: 0;
 }
 
-/* =========================================
+/*
    SECCIÓN 3: ARTÍCULO ACADÉMICO
-   ========================================= */
+ */
 
 .timeline-structure {
     position: relative;
@@ -403,9 +403,9 @@
 .structure-box li { margin-bottom: 8px; position: relative; padding-left: 20px; font-size: 0.95rem; color: #555; }
 .structure-box li::before { content: '•'; color: var(--primary-color); position: absolute; left: 0; font-size: 1.2rem; line-height: 1; }
 
-/* =========================================
+/*
    COMPONENTE DE DESCARGA
-   ========================================= */
+ */
 
 .download-section {
     margin-top: 50px;
@@ -457,7 +457,7 @@
 .btn-ups-solid:hover { background-color: var(--hover-color); transform: translateY(-2px); }
 .btn-ups-outline:hover { background-color: #f0f7ff; border-color: var(--hover-color); color: var(--hover-color); }
 
-/* --- RESPONSIVE FINAL --- */
+/* RESPONSIVE FINAL */
 @media (max-width: 768px) {
     .tabs-wrapper { top: 80px; }
     .tabs-container { gap: 8px; }
@@ -466,8 +466,6 @@
     .download-section { flex-direction: column; text-align: center; gap: 15px; }
     .pdf-actions { width: 100%; justify-content: center; }
     .btn-ups-solid, .btn-ups-outline { flex: 1; }
-
-    /* En móvil, regresamos a 1 columna para legibilidad */
     .requirements-grid, .types-grid {
         grid-template-columns: 1fr;
     }

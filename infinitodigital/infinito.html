@@ -26,17 +26,30 @@
         </div>
     </header>
     
-    <main class="main-content" style="margin-top: 0;">
-        <section class="indi-hero">
-            <div class="indi-hero-content">
-                <div class="indi-logo-large">
-                    <img src="../assets/indilogo.png" alt="Infinito Digital Logo" class="indi-logo-img">
-                </div>
-                <a href="../index.html" class="back-career-btn"><i class="fas fa-arrow-left"></i> Volver a la Carrera</a>
+<main class="main-content" style="margin-top: 0;">
+    <section class="indi-hero">
+        <div class="indi-hero-content">
+            <div class="indi-logo-large">
+                <img src="../assets/indilogo.png" alt="Infinito Digital Logo" class="indi-logo-img">
             </div>
-            </section>
+            <a href="../index.html" class="back-career-btn"><i class="fas fa-arrow-left"></i> Volver a la Carrera</a>
+        </div>
+    </section>
 
-        <section class="gallery-section">
+    <section class="featured-section">
+        <div class="section-header">
+            <h2>Lo más reciente</h2>
+            </div>
+        
+        <div class="infinite-carousel-wrapper">
+            <div class="carousel-track" id="featuredCarouselTrack">
+                </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        
+        <div class="controls-wrapper">
             <div class="filter-container">
                 <button class="filter-btn active" data-filter="all">Todo</button>
                 <button class="filter-btn" data-filter="editorial">Editorial</button>
@@ -44,15 +57,22 @@
                 <button class="filter-btn" data-filter="visual">Visual</button>
                 <button class="filter-btn" data-filter="audiovisual">Audiovisual</button>
                 <button class="filter-btn" data-filter="multimedia">Multimedia</button>
-                <button class="filter-btn" data-filter="radio mensaje">Radio Mensaje</button>
-                <button class="filter-btn" data-filter="jorcom">JorCom</button>
+                <button class="filter-btn" data-filter="radio mensaje">Radio</button> <button class="filter-btn" data-filter="jorcom">JorCom</button>
                 <button class="filter-btn" data-filter="webinars">Webinars</button>
             </div>
 
-            <div class="projects-grid" id="projectsGrid">
-                </div>
-        </section>
-    </main>
+            <div class="sort-container">
+                <button id="sortToggleBtn" class="sort-toggle-btn">
+                    <span id="sortLabel">Más Nuevos</span>
+                    <i class="fas fa-sort-amount-down" id="sortIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+            </div>
+    </section>
+</main>
 
 <footer class="main-footer">
         <div class="footer-container">

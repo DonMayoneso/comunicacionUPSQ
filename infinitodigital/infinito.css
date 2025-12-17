@@ -1,16 +1,19 @@
-/* VARIABLES ESPECÍFICAS INFINITO */
+/* =========================================
+   VARIABLES GLOBALES
+   ========================================= */
 :root {
     --indi-purple: #383088;
-    --indi-purple-light: #6a62b8; /* Tonalidad más clara para partículas */
+    --indi-purple-light: #6a62b8;
     --indi-green: #93c01f;
-    --indi-green-light: #bce05b; /* Tonalidad más clara para partículas */
+    --indi-green-light: #bce05b;
     --indi-dark: #1a1a2e;
 }
 
-/* HERO SECTION DINÁMICA */
+/* =========================================
+   HERO SECTION (PARTÍCULAS DINÁMICAS)
+   ========================================= */
 .indi-hero {
     position: relative;
-    /* Fondo base sólido oscuro */
     background-color: var(--indi-dark);
     color: #fef9f0;
     padding: 180px 20px 100px; 
@@ -19,15 +22,12 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
-/* --- SISTEMA DE PARTÍCULAS DINÁMICAS --- */
-
-/* Capa 1: Partículas pequeñas y lentas (Fondo lejano) */
+/* --- Sistema de Partículas --- */
 .indi-hero::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     opacity: 0.4;
-    /* Creamos "partículas" usando múltiples gradientes radiales dispersos */
     background-image: 
         radial-gradient(circle at 20% 30%, var(--indi-purple-light) 2px, transparent 3px),
         radial-gradient(circle at 80% 10%, var(--indi-green) 2px, transparent 3px),
@@ -35,28 +35,24 @@
         radial-gradient(circle at 10% 90%, var(--indi-green-light) 2px, transparent 3px),
         radial-gradient(circle at 70% 50%, var(--indi-purple-light) 2px, transparent 3px),
         radial-gradient(circle at 90% 80%, var(--indi-green) 3px, transparent 4px);
-    background-size: 400px 400px; /* Repetir patrón */
+    background-size: 400px 400px;
     animation: moveParticles1 60s linear infinite;
 }
 
-/* Capa 2: Partículas más grandes y rápidas (Primer plano) */
 .indi-hero::after {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     opacity: 0.3;
-    /* Más partículas en distintas posiciones y tamaños */
     background-image: 
         radial-gradient(circle at 50% 20%, var(--indi-green-light) 4px, transparent 5px),
         radial-gradient(circle at 10% 40%, var(--indi-purple) 5px, transparent 6px),
         radial-gradient(circle at 85% 85%, var(--indi-green) 4px, transparent 5px),
         radial-gradient(circle at 30% 60%, var(--indi-purple-light) 5px, transparent 6px);
     background-size: 500px 500px;
-    /* Se mueven en dirección opuesta y más rápido */
     animation: moveParticles2 45s linear infinite reverse;
 }
 
-/* Animaciones de movimiento de fondo */
 @keyframes moveParticles1 {
     from { background-position: 0 0; }
     to { background-position: 400px 400px; }
@@ -66,37 +62,28 @@
     from { background-position: 0 0; }
     to { background-position: -500px -500px; }
 }
-/* ------------------------------------ */
 
-
-/* Contenido del Hero (Asegurar que esté por encima de las partículas) */
 .indi-hero-content {
     position: relative;
     z-index: 2;
 }
 
-/* LOGO CON SOMBRA REALISTA (RESTAURADA) */
+/* Logo */
 .indi-logo-img {
     width: 100%;
     max-width: 500px; 
     height: auto;
     margin-bottom: 50px;
-    
-    /* SOMBRA OSCURA Y PROFUNDA (Restaurada) */
-    /* Separa el logo del fondo dinámico sin añadir colores extra */
     filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.7));
-    
     animation: logoFadeIn 1s ease-out;
-    /* Eliminamos transición de filtro porque ya no hay hover glow */
 }
-/* Eliminado el hover state del logo */
 
 @keyframes logoFadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* BOTÓN VOLVER A CARRERA */
+/* Botón Volver */
 .back-career-btn {
     display: inline-flex;
     align-items: center;
@@ -122,49 +109,195 @@
     transform: translateY(-3px);
 }
 
-/* SECCIÓN DE GALERÍA Y FILTROS */
-.gallery-section {
-    padding: 60px 20px;
-    background-color: #f4f6f8;
-    min-height: 600px;
+/* =========================================
+   NUEVO: SECCIÓN DESTACADOS (CARRUSEL INFINITO)
+   ========================================= */
+/* CAMBIO REALIZADO: Fondo transparente y eliminación de scrollbars manuales */
+.featured-section {
+    padding: 40px 0;
+    background: transparent; /* Fondo eliminado como solicitaste */
+    overflow: hidden; 
     position: relative;
-    z-index: 1; /* Asegurar que tape el clip-path del hero */
+    z-index: 5;
 }
 
+.section-header {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+}
+
+.section-header h2 {
+    color: var(--indi-dark); /* Color oscuro para contrastar si el fondo es claro */
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-header h2 i {
+    color: var(--indi-green);
+}
+
+/* Wrapper del Carrusel */
+.infinite-carousel-wrapper {
+    width: 100%;
+    position: relative;
+    display: flex;
+    /* Efecto de desvanecimiento en los bordes para integración suave */
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+/* Riel de Animación */
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    padding: 20px 0; /* Espacio para sombras */
+    animation: scrollLoop 40s linear infinite;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+/* Tarjeta Carrusel (Rediseñada para el loop) */
+.carousel-card {
+    width: 300px;
+    height: 400px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    background: #fff;
+}
+
+.carousel-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(56, 48, 136, 0.2);
+}
+
+.carousel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-card .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(26, 26, 46, 0.9), transparent);
+    padding: 20px;
+    color: white;
+}
+
+.carousel-card h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Keyframes para Loop Infinito */
+@keyframes scrollLoop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Se mueve la mitad (el set duplicado) */
+}
+
+/* =========================================
+   SECCIÓN GALERÍA Y FILTROS MEJORADOS
+   ========================================= */
+.gallery-section {
+    padding: 20px 20px 60px;
+    background-color: #f4f6f8; /* Mantenemos este fondo para contraste */
+    min-height: 600px;
+    position: relative;
+    z-index: 1; 
+}
+
+/* Contenedor de Controles (Filtros + Sort) */
+.controls-wrapper {
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* CAMBIO REALIZADO: Estilo "Pill" para filtros */
 .filter-container {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 50px;
     flex-wrap: wrap;
+    gap: 8px;
+    padding: 6px;
+    background: rgba(0,0,0,0.03); /* Fondo sutil contenedor */
+    border-radius: 50px;
 }
 
 .filter-btn {
-    background: white;
+    background: transparent;
     border: none;
-    padding: 10px 25px;
+    padding: 8px 22px;
     border-radius: 30px;
     color: #666;
     font-weight: 600;
+    font-size: 0.9rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .filter-btn:hover {
-    background-color: var(--indi-purple);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(56, 48, 136, 0.3);
+    color: var(--indi-dark);
+    background-color: rgba(255,255,255,0.6);
 }
 
 .filter-btn.active {
     background-color: var(--indi-green);
-    color: white;
-    box-shadow: 0 5px 15px rgba(147, 192, 31, 0.4);
+    color: var(--indi-dark);
+    box-shadow: 0 4px 12px rgba(147, 192, 31, 0.3);
 }
 
-/* GRID DE PROYECTOS */
+/* CAMBIO REALIZADO: Botón Sort estilo Toggle */
+.sort-container {
+    display: flex;
+    align-items: center;
+}
+
+.sort-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--indi-purple);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.sort-toggle-btn:hover {
+    border-color: var(--indi-purple);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(56, 48, 136, 0.1);
+}
+
+.sort-toggle-btn i {
+    transition: transform 0.3s ease;
+}
+
+/* =========================================
+   GRID DE PROYECTOS (MANTENIDO)
+   ========================================= */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -273,48 +406,9 @@
     gap: 8px;
 }
 
-/* ESTILOS DEL MODAL */
-.project-modal-content {
-    border-top: 6px solid var(--indi-green);
-    overflow: hidden;
-}
-
-.project-modal-header {
-    margin-bottom: 20px;
-}
-
-.project-modal-tag {
-    background-color: var(--indi-purple);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    display: inline-block;
-    margin-bottom: 15px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-}
-
-.project-modal-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background-color: var(--indi-green);
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 6px;
-    margin-top: 25px;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.project-modal-btn:hover {
-    background-color: #7ba318;
-    transform: translateY(-2px);
-}
-
-/* RESPONSIVE */
+/* =========================================
+   RESPONSIVE
+   ========================================= */
 @media (max-width: 768px) {
     .indi-hero {
         clip-path: none;
@@ -323,6 +417,11 @@
     
     .indi-logo-img {
         max-width: 80%;
+    }
+
+    .controls-wrapper {
+        flex-direction: column;
+        gap: 15px;
     }
     
     .projects-grid {
@@ -341,18 +440,22 @@
     }
     
     .filter-container {
-        gap: 10px;
+        gap: 5px;
         overflow-x: auto;
         justify-content: flex-start;
-        padding-bottom: 15px;
+        padding-bottom: 10px;
         flex-wrap: nowrap;
+        width: 100%;
         -webkit-overflow-scrolling: touch;
     }
     
     .filter-btn {
         flex: 0 0 auto;
+        padding: 6px 16px;
+        font-size: 0.8rem;
     }
 }
+
 .footer-text-link {
     color: inherit;
     text-decoration: none;
@@ -360,6 +463,6 @@
 }
 
 .footer-text-link:hover {
-    color: var(--primary-color);
+    color: var(--indi-green);
     text-decoration: underline;
 }
