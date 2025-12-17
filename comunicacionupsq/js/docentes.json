@@ -70,7 +70,7 @@
         "id": 5,
         "nombre": "Nina Lulushca Aguiar Mariño",
         "cargo": "Docente, Jefe de Área Titulación/Integración Curricular",
-        "especialidad": "null",
+        "especialidad": "Doctora en Estudios Latinoamericanos, Máster en Estudios Latinoamericanos y licenciada en Comunicación Social, especialidad en Desarrollo.",
         "materias": [
             "Investigación de la Comunicación",
             "Metodología y Técnicas de Investigación",
@@ -80,7 +80,7 @@
         "cargo_administrativo": "Jefe de Área Titulación/Integración Curricular",
         "correo": "naguiar@ups.edu.ec",
         "foto": "../assets/docentes/ninaaguilar.JPG",
-        "descripcion": "null."
+        "descripcion": "Actualmente se desempeña como coordinadora de la Unidad de Titulación de la Carrera de Comunicación en la UPS, donde también ejerce como docente e investigadora. Es coodinadora del Grupo de Investigación Comunicación, Desarrollo y Política (GICODEPO), contribuyendo con su expertise en áreas como comunicación política, estrategias digitales, políticas culturales y transparencia en la comunicación pública."
     },
     {
         "id": 6,
