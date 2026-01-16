@@ -1018,3 +1018,305 @@ header.scrolled + nav {
     color: var(--primary-color);
     text-decoration: underline;
 }
+
+/* --- FORMULARIO DE CAPTACIÓN (VERSIÓN VERTICAL) --- */
+
+.captacion-wrapper {
+    max-width: 800px; /* Ancho controlado para que no se vea estirado */
+    margin: 50px auto 0 auto; /* 50px de separación con el bloque de arriba */
+    background-color: var(--cream-bg);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(148, 196, 196, 0.4);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+/* Título del formulario centrado */
+.form-header-center {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header-center h3 {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.form-header-center p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Estructura interna del form */
+.contact-form-stacked {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    width: 100%;
+}
+
+/* Fila de dos columnas para PC */
+.two-col {
+    display: flex;
+    gap: 20px;
+}
+
+.two-col .input-group {
+    flex: 1;
+}
+
+/* Inputs y Labels */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    width: 100%;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+    margin-left: 4px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e6e6e6;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: white;
+    outline: none;
+}
+
+/* Input Teléfono Específico */
+.phone-input-container {
+    position: relative;
+    width: 100%;
+}
+
+.flag-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    z-index: 2;
+}
+
+.phone-input-container input {
+    padding-left: 45px; /* Espacio solo para la bandera */
+}
+
+/* Estados Focus y Error */
+.input-group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(148, 196, 196, 0.15);
+}
+
+.input-group.error input {
+    border-color: #e74c3c;
+    background-color: #fff8f8;
+}
+
+.error-msg {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    display: none;
+    font-weight: 500;
+}
+
+.input-group.error .error-msg {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botón */
+.form-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px; /* Botón más redondeado y moderno */
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 200px;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(148, 196, 196, 0.4);
+}
+
+.submit-btn:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(95, 179, 224, 0.4);
+}
+
+/* Feedback */
+.form-feedback {
+    text-align: center;
+    min-height: 24px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.form-feedback.success { color: #27ae60; }
+.form-feedback.error { color: #e74c3c; }
+
+/* Responsive Form */
+@media (max-width: 768px) {
+    .captacion-wrapper {
+        padding: 25px 20px;
+        margin-top: 30px;
+    }
+    
+    .two-col {
+        flex-direction: column; /* Apilar teléfono y correo en móviles */
+        gap: 20px;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        border-radius: 8px; /* Menos redondeado en móvil para aprovechar espacio */
+    }
+}
+/* --- ESTILOS DEL POPUP DE ÉXITO --- */
+.form-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(4px); /* Efecto moderno de desenfoque */
+    z-index: 3000; /* Por encima de todo */
+    display: none; /* Oculto por defecto */
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.form-popup-overlay.show {
+    display: flex;
+    opacity: 1;
+}
+
+.form-popup-content {
+    background: white;
+    width: 90%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    transform: translateY(20px);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.form-popup-overlay.show .form-popup-content {
+    transform: translateY(0);
+}
+
+/* Icono de éxito */
+.popup-icon-container {
+    font-size: 4rem;
+    color: #27ae60;
+    margin-bottom: 20px;
+    animation: popIn 0.5s ease;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0); }
+    80% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.form-popup-content h3 {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.form-popup-content p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Botones de cierre */
+.close-popup-x {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-popup-x:hover {
+    color: var(--dark-color);
+}
+
+.popup-action-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.popup-action-btn:hover {
+    background-color: var(--hover-color);
+}
+
+.direct-contact {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.direct-contact a {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.direct-contact a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+}
