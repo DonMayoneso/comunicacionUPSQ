@@ -1,0 +1,200 @@
+{
+  "1": {
+    "1": {
+      "Lunes": [
+        { "horaInicio": "07:00", "horaFin": "09:00", "materia": "ANTROPOLOGÍA FILOSÓFICA - TEOLÓGICA franja", "profesor": "", "aula": "" },
+        { "horaInicio": "09:00", "horaFin": "11:00", "materia": "COMUNICACIÓN, CULTURA E INTERCULTURALIDAD", "profesor": "Diego Condor", "aula": "Aula A-5" },
+        { "horaInicio": "11:00", "horaFin": "12:00", "materia": "SOCIOLOGÍA Y ESCENARIOS", "profesor": "Vanessa Vanegas", "aula": "Aula A-5" }
+      ],
+      "Martes": [
+        { "horaInicio": "07:00", "horaFin": "08:00", "materia": "INGLES", "profesor": "", "aula": "" },
+        { "horaInicio": "09:00", "horaFin": "12:00", "materia": "FOTOGRAFÍA", "profesor": "Alexandra Noboa", "aula": "Laboratorio Producción Sonora" }
+      ],
+      "Miércoles": [
+        { "horaInicio": "09:00", "horaFin": "11:00", "materia": "LENGUAJE Y REDACCIÓN", "profesor": "María del Carmen Ramírez", "aula": "Cecasig" }
+      ],
+      "Jueves": [
+        { "horaInicio": "09:00", "horaFin": "11:00", "materia": "SOCIOLOGÍA Y ESCENARIOS", "profesor": "Vanessa Vanegas", "aula": "Aula A-5" },
+        { "horaInicio": "11:00", "horaFin": "12:00", "materia": "COMUNICACIÓN, CULTURA E INTERCULTURALIDAD", "profesor": "Diego Condor", "aula": "Aula A-5" },
+        { "horaInicio": "12:00", "horaFin": "13:00", "materia": "FOTOGRAFÍA", "profesor": "Alexandra Noboa", "aula": "Laboratorio Producción Sonora" }
+      ],
+      "Viernes": [
+        { "horaInicio": "09:00", "horaFin": "11:00", "materia": "LENGUAJE Y REDACCIÓN", "profesor": "María del Carmen Ramírez", "aula": "Cecasig" },
+        { "horaInicio": "11:00", "horaFin": "14:00", "materia": "HISTORIA DE LA COMUNICACIÓN", "profesor": "En línea", "aula": "ARMANDO GRIJALVA" }
+      ]
+    }
+  },
+  "2": {
+    "1": {
+      "Lunes": [
+        { "horaInicio": "07:00", "horaFin": "09:00", "materia": "INVESTIGACIÓN DE LA COMUNICACIÓN", "profesor": "Diego Cóndor", "aula": "Aula A-7" },
+        { "horaInicio": "09:00", "horaFin": "12:00", "materia": "LINGÜÍSTICA Y COMUNICACIÓN", "profesor": "Grace Benalcazar", "aula": "Aula A-7" }
+      ],
+      "Martes": [
+        { "horaInicio": "07:00", "horaFin": "08:00", "materia": "INGLÉS", "profesor": "", "aula": "" },
+        { "horaInicio": "09:00", "horaFin": "11:00", "materia": "TEORÍA DE LA COMUNICACIÓN I", "profesor": "Roberto Sánchez", "aula": "Aula A-7" }
+      ],
+      "Miércoles": [
+        { "horaInicio": "09:00", "horaFin": "11:00", "materia": "RADIO / TEORÍA", "profesor": "Armando Grijalva", "aula": "Laboratorio de radio" },
+        { "horaInicio": "11:00", "horaFin": "13:00", "materia": "INVESTIGACIÓN DE LA COMUNICACIÓN", "profesor": "Diego Cóndor", "aula": "Aula A-7" }
+      ],
+      "Jueves": [
+        { "horaInicio": "09:00", "horaFin": "11:00", "materia": "RADIO / TEORÍA", "profesor": "Armando Grijalva", "aula": "Laboratorio de radio" },
+        { "horaInicio": "11:00", "horaFin": "12:00", "materia": "TEORÍA DE LA COMUNICACIÓN I", "profesor": "Roberto Sánchez", "aula": "Aula A-7" }
+      ],
+      "Viernes": [
+        { "horaInicio": "09:00", "horaFin": "12:00", "materia": "COMUNICACIÓN E IDEOLOGÍA", "profesor": "asig. en línea", "aula": "Patricio Rosas" }
+      ]
+    }
+  },
+  "3": {
+    "1": {
+      "Lunes": [
+        { "horaInicio": "07:00", "horaFin": "08:00", "materia": "TEORÍA DE LA COMUNICACIÓN II", "profesor": "Roberto Sánchez", "aula": "Aula B-89" },
+        { "horaInicio": "08:00", "horaFin": "09:00", "materia": "ARTE Y COMUNICACIÓN", "profesor": "Enza Bosetti", "aula": "Aula A-5" },
+        { "horaInicio": "09:00", "horaFin": "12:00", "materia": "DISEÑO GRÁFICO", "profesor": "Johanna Escobar", "aula": "Laboratorio" },
+        { "horaInicio": "12:00", "horaFin": "13:00", "materia": "SEMIÓTICA", "profesor": "Grace Benalcazar", "aula": "Aula A-7" }
+      ],
+      "Martes": [
+        { "horaInicio": "07:00", "horaFin": "08:00", "materia": "INGLÉS", "profesor": "", "aula": "" },
+        { "horaInicio": "09:00", "horaFin": "11:00", "materia": "ARTE Y COMUNICACIÓN", "profesor": "Enza Bosetti", "aula": "Aula A-5" },
+        { "horaInicio": "11:00", "horaFin": "13:00", "materia": "PSICOLOGÍA DE LA COMUNICACIÓN", "profesor": "Mauro Ruiz", "aula": "Aula A-5" }
+      ],
+      "Miércoles": [
+        { "horaInicio": "09:00", "horaFin": "11:00", "materia": "SEMIÓTICA", "profesor": "Grace Benalcazar", "aula": "Aula A-7" },
+        { "horaInicio": "11:00", "horaFin": "13:00", "materia": "TEORÍA DE LA COMUNICACIÓN II", "profesor": "Roberto Sánchez", "aula": "Aula B-89" }
+      ],
+      "Jueves": [
+        { "horaInicio": "09:00", "horaFin": "11:00", "materia": "DISEÑO GRÁFICO", "profesor": "Johanna Escobar", "aula": "Laboratorio" },
+        { "horaInicio": "11:00", "horaFin": "12:00", "materia": "PSICOLOGÍA DE LA COMUNICACIÓN", "profesor": "Mauro Ruiz", "aula": "Laboratorio" }
+      ],
+      "Viernes": [
+        { "horaInicio": "09:00", "horaFin": "12:00", "materia": "EPISTEMOLOGÍA", "profesor": "", "aula": "Armando Grijalva - Virtual" }
+      ]
+    }
+  },
+  "4": {
+    "1": {
+      "Lunes": [
+        { "horaInicio": "07:00", "horaFin": "08:00", "materia": "COMUNICACIÓN POLÍTICA Y OPINIÓN PÚBLICA", "profesor": "Mauro Ruiz", "aula": "Aula B-89" },
+        { "horaInicio": "08:00", "horaFin": "11:00", "materia": "PROYECTOS DE COMUNICACIÓN", "profesor": "Ma. Del Carmen Ramírez", "aula": "Cecasig" },
+        { "horaInicio": "11:00", "horaFin": "12:00", "materia": "DERECHOS DE LA COMUNICACIÓN", "profesor": "Roberto Sánchez", "aula": "Aula B - 89" }
+      ],
+      "Martes": [
+        { "horaInicio": "07:00", "horaFin": "08:00", "materia": "INGLÉS", "profesor": "", "aula": "" },
+        { "horaInicio": "09:00", "horaFin": "11:00", "materia": "COMUNICACIÓN POLÍTICA Y OPINIÓN PÚBLICA", "profesor": "Mauro Ruiz", "aula": "Aula B-89" }
+      ],
+      "Miércoles": [
+        { "horaInicio": "09:00", "horaFin": "12:00", "materia": "EPISTEMOLOGÍA DE LA COMUNICACIÓN", "profesor": "(Asig. en línea)", "aula": "Armando Grijalva" }
+      ],
+      "Jueves": [
+        { "horaInicio": "09:00", "horaFin": "12:00", "materia": "PRODUCCIÓN VIDEOGRÁFICA", "profesor": "Cristina Naranjo", "aula": "Laboratorio Audiovisual" }
+      ],
+      "Viernes": [
+        { "horaInicio": "09:00", "horaFin": "11:00", "materia": "PRODUCCIÓN VIDEOGRÁFICA", "profesor": "Cristina Naranjo", "aula": "Laboratorio Audiovisual" },
+        { "horaInicio": "11:00", "horaFin": "13:00", "materia": "DERECHOS DE LA COMUNICACIÓN", "profesor": "Roberto Sánchez", "aula": "Aula B - 89" }
+      ]
+    }
+  },
+  "5": {
+    "1": {
+      "Lunes": [
+        { "horaInicio": "07:00", "horaFin": "09:00", "materia": "NARRATIVAS VISUALES", "profesor": "Johanna Escobar", "aula": "Laboratorio" },
+        { "horaInicio": "09:00", "horaFin": "10:00", "materia": "GÉNEROS INFORMATIVOS", "profesor": "Vanegas", "aula": "CECASIG" },
+        { "horaInicio": "11:00", "horaFin": "14:00", "materia": "COMUNICACIÓN PARA EL CAMBIO SOCIAL", "profesor": "asig. en línea", "aula": "Ma. Del Carmen Ramírez" }
+      ],
+      "Martes": [
+        { "horaInicio": "10:00", "horaFin": "12:00", "materia": "PRACTICAS AL SERVICIO COMUNITARIO", "profesor": "Grace Benalcazar", "aula": "" }
+      ],
+      "Miércoles": [
+        { "horaInicio": "07:00", "horaFin": "08:00", "materia": "COMUNICACIÓN DE MARKETING Y PUBLICIDAD", "profesor": "Mauro Ruiz", "aula": "Aula A-7" },
+        { "horaInicio": "08:00", "horaFin": "10:00", "materia": "GÉNEROS INFORMATIVOS", "profesor": "Vanegas", "aula": "CECASIG" }
+      ],
+      "Jueves": [
+        { "horaInicio": "08:00", "horaFin": "10:00", "materia": "PENSAMIENTO CRÍTICO", "profesor": "asig. en línea", "aula": "" }
+      ],
+      "Viernes": [
+        { "horaInicio": "07:00", "horaFin": "10:00", "materia": "NARRATIVAS VISUALES", "profesor": "Johanna Escobar", "aula": "Laboratorio" },
+        { "horaInicio": "10:00", "horaFin": "12:00", "materia": "COMUNICACIÓN DE MARKETING Y PUBLICIDAD", "profesor": "Mauro Ruiz", "aula": "Aula A-7" }
+      ]
+    }
+  },
+  "6": {
+    "1": {
+      "Lunes": [
+        { "horaInicio": "09:00", "horaFin": "12:00", "materia": "NARRATIVAS SONORAS", "profesor": "Armando Grijalva", "aula": "Laboratorio de radio" }
+      ],
+      "Martes": [
+        { "horaInicio": "07:00", "horaFin": "09:00", "materia": "METODOLOGÍA Y TÉCNICAS DE INVESTIGACIÓN", "profesor": "Nina Aguiar", "aula": "Aula A-7" },
+        { "horaInicio": "09:00", "horaFin": "10:00", "materia": "COMUNICACIÓN ORGANIZACIONAL Y RELACIONES PÚBLICAS", "profesor": "Ma. Del Carmen Ramírez", "aula": "Laboratorio" }
+      ],
+      "Miércoles": [
+        { "horaInicio": "08:00", "horaFin": "09:00", "materia": "COMUNICACIÓN ORGANIZACIONAL Y RELACIONES PÚBLICAS", "profesor": "Ma. Del Carmen Ramírez", "aula": "Aula B-89" },
+        { "horaInicio": "09:00", "horaFin": "12:00", "materia": "PERIODISMO DE INVESTIGACIÓN DE DATOS", "profesor": "Narcisa Medranda", "aula": "Laboratorio" }
+      ],
+      "Jueves": [
+        { "horaInicio": "07:00", "horaFin": "09:00", "materia": "NARRATIVAS SONORAS", "profesor": "Armando Grijalva", "aula": "Laboratorio de radio" },
+        { "horaInicio": "09:00", "horaFin": "11:00", "materia": "COMUNICACIÓN ORGANIZACIONAL Y RELACIONES PÚBLICAS", "profesor": "Ma. Del Carmen Ramírez", "aula": "Aula B-89" },
+        { "horaInicio": "11:00", "horaFin": "13:00", "materia": "METODOLOGÍA Y TÉCNICAS DE INVESTIGACIÓN", "profesor": "Nina Aguiar", "aula": "Aula B89" }
+      ],
+      "Viernes": [
+        { "horaInicio": "08:00", "horaFin": "11:00", "materia": "GÉNEROS INTERPRETATIVOS DE OPINIÓN", "profesor": "José Luis Galván", "aula": "" }
+      ]
+    }
+  },
+  "7": {
+    "1": {
+      "Lunes": [],
+      "Martes": [
+        { "horaInicio": "07:00", "horaFin": "09:00", "materia": "COMUNCACIÓN EN CRISIS Y MANEJO DE CONFLICTO", "profesor": "Mauro Ruiz", "aula": "A5" },
+        { "horaInicio": "10:00", "horaFin": "12:00", "materia": "NARRATIVAS AUDIOVISUALES", "profesor": "Cristina Naranjo", "aula": "Laboratorio Audiovisual" },
+        { "horaInicio": "12:00", "horaFin": "13:00", "materia": "PLANIFICACIÓN DE LA COMUNICACIÓN", "profesor": "Patricia Villagómez", "aula": "Aula B89" }
+      ],
+      "Miércoles": [
+        { "horaInicio": "07:00", "horaFin": "09:00", "materia": "DISEÑO DEL PROYECTO DE INVESTIGACIÓN", "profesor": "Nina Aguiar", "aula": "Cecasig" },
+        { "horaInicio": "10:00", "horaFin": "13:00", "materia": "NARRATIVAS AUDIOVISUALES", "profesor": "Cristina Naranjo", "aula": "Laboratorio Audiovisual" }
+      ],
+      "Jueves": [
+        { "horaInicio": "07:00", "horaFin": "09:00", "materia": "PLANIFICACIÓN DE LA COMUNICACIÓN", "profesor": "Patricia Villagómez", "aula": "Aula B89" },
+        { "horaInicio": "09:00", "horaFin": "11:00", "materia": "PRACTICAS PRE PROFESIONALES", "profesor": "Armando Grijalva", "aula": "" }
+      ],
+      "Viernes": [
+        { "horaInicio": "09:00", "horaFin": "10:00", "materia": "COMUNCACIÓN EN CRISIS Y MANEJO DE CONFLICTO", "profesor": "Mauro Ruiz", "aula": "A5" },
+        { "horaInicio": "10:00", "horaFin": "13:00", "materia": "DISEÑO MULTIMEDIA", "profesor": "Johanna Escobar", "aula": "Lab." }
+      ]
+    }
+  },
+  "8": {
+    "1": {
+      "Lunes": [
+        { "horaInicio": "08:00", "horaFin": "09:00", "materia": "EDUCOMUNICACIÓN", "profesor": "Armando Grijalva", "aula": "Aula B-89" },
+        { "horaInicio": "09:00", "horaFin": "12:00", "materia": "INTEGRACIÓN", "profesor": "Nina Aguiar", "aula": "CECASIG" }
+      ],
+      "Martes": [
+        { "horaInicio": "07:00", "horaFin": "09:00", "materia": "EDUCOMUNICACIÓN", "profesor": "Armando Grijalva", "aula": "Aula B-89" }
+      ],
+      "Miércoles": [
+        { "horaInicio": "07:00", "horaFin": "10:00", "materia": "NARRATIVAS HIPERMEDIALES", "profesor": "Johanna Escobar", "aula": "Laboratorio" }
+      ],
+      "Jueves": [
+        { "horaInicio": "07:00", "horaFin": "09:00", "materia": "NARRATIVAS HIPERMEDIALES", "profesor": "Johanna Escobar", "aula": "Laboratorio" },
+        { "horaInicio": "10:00", "horaFin": "12:00", "materia": "PERIODISMO DIGITAL", "profesor": "Patricio Rosas", "aula": "en línea" }
+      ],
+      "Viernes": [
+        { "horaInicio": "07:00", "horaFin": "10:00", "materia": "INTEGRACIÓN", "profesor": "Nina Aguiar", "aula": "CECASIG" },
+        { "horaInicio": "10:00", "horaFin": "12:00", "materia": "Prácticas Preprofesionales", "profesor": "Mauro Ruiz", "aula": "Aula Virtual 2" }
+      ]
+    },
+    "2": {
+      "Lunes": [],
+      "Martes": [
+        { "horaInicio": "07:00", "horaFin": "12:00", "materia": "INTEGRACIÓN", "profesor": "Diego Cóndor", "aula": "CECASIG" }
+      ],
+      "Miércoles": [],
+      "Jueves": [],
+      "Viernes": [
+        { "horaInicio": "07:00", "horaFin": "10:00", "materia": "INTEGRACIÓN", "profesor": "Diego Cóndor", "aula": "CECASIG" }
+      ]
+    }
+  }
+}

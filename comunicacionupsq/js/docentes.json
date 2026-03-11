@@ -17,19 +17,16 @@
     },
     {
         "id": 2,
-        "nombre": "Grace Catalina Benalcázar Zambrano",
+        "nombre": "Patricia Sofía Villagómez Rodríguez",
         "cargo": "Docente, Jefe de Área Curricular Básica",
-        "especialidad": "Mágister en comunicación y sociedad, con mención en politícas públicas para internet",
+        "especialidad": "null",
         "materias": [
-            "Lingüística y Comunicación",
-            "Semiótica",
-            "Prácticas al Servicio Comunitario",
-            "Prácticas Preprofesionales"
+            "Planificación de la Comunicación"
         ],
-        "cargo_administrativo": "Jefe de Área Curricular Básica",
-        "correo": "gbenalcazar@ups.edu.ec",
-        "foto": "../assets/docentes/gracebenalcazar.JPG",
-        "descripcion": "Comunicadora y docente universitaria. Estudio de las formas simbólicas del cuerpo. Amante de ka danza, el deporte, la naturaleza y la fotografía."
+        "cargo_administrativo": "Coordinadora de Área de Vinculacion con la Sociedad",
+        "correo": "pvillagomez@ups.edu.ec",
+        "foto": "../assets/docentes/patyvillagomez.JPG",
+        "descripcion": "Comunicadora graduada de la Universidad Politécnica Salesiana. Magíster en Comunicación por la Universidad Andina Simón Bolívar y Máster en Comunicación Transmedia por la Universidad Internacional de La Rioja. Actualmente cursa el Doctorado en Diseño en la Universidad de Palermo. Se desempeña como docente e investigadora en la Universidad Politécnica Salesiana, Ecuador, e integra el grupo de investigación GICDE, enfocando su labor en el estudio de la comunicación, el discurso y las tecnologías emergentes. "
     },
     {
         "id": 3,
@@ -84,16 +81,19 @@
     },
     {
         "id": 6,
-        "nombre": "Patricia Sofía Villagómez Rodríguez",
-        "cargo": "Docente, Coordinadora de Área de Vinculacion con la Sociedad",
-        "especialidad": "null",
+        "nombre": "Grace Catalina Benalcázar Zambrano",
+        "cargo": "Coordinadora de Área de Vinculacion con la Sociedad",
+        "especialidad": "Mágister en comunicación y sociedad, con mención en politícas públicas para internet",
         "materias": [
-            "Planificación de la Comunicación"
+            "Lingüística y Comunicación",
+            "Semiótica",
+            "Prácticas al Servicio Comunitario",
+            "Prácticas Preprofesionales"
         ],
-        "cargo_administrativo": "Coordinadora de Área de Vinculacion con la Sociedad",
-        "correo": "pvillagomez@ups.edu.ec",
-        "foto": "../assets/docentes/patyvillagomez.JPG",
-        "descripcion": "Comunicadora graduada de la Universidad Politécnica Salesiana. Magíster en Comunicación por la Universidad Andina Simón Bolívar y Máster en Comunicación Transmedia por la Universidad Internacional de La Rioja. Actualmente cursa el Doctorado en Diseño en la Universidad de Palermo. Se desempeña como docente e investigadora en la Universidad Politécnica Salesiana, Ecuador, e integra el grupo de investigación GICDE, enfocando su labor en el estudio de la comunicación, el discurso y las tecnologías emergentes. "
+        "cargo_administrativo": "Jefe de Área Curricular Básica",
+        "correo": "gbenalcazar@ups.edu.ec",
+        "foto": "../assets/docentes/gracebenalcazar.JPG",
+        "descripcion": "Comunicadora y docente universitaria. Estudio de las formas simbólicas del cuerpo. Amante de ka danza, el deporte, la naturaleza y la fotografía."
     },
     {
         "id": 7,

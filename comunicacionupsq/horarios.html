@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horarios Periodo 67 - Comunicación UPSQ</title>
+    <title>Horarios Periodo 68 - Comunicación UPSQ</title>
     <link rel="icon" href="../assets/isotipoups.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
@@ -61,6 +61,14 @@
             from { opacity: 0; transform: translateY(5px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        
+        /* Loading spinner */
+        .loading-schedule {
+            text-align: center;
+            padding: 40px;
+            color: #003366;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -95,14 +103,6 @@
                         <li><a href="tour-virtual.html" class="dropdown-item">Tour Virtual</a></li>
                     </ul>
                 </li>
-                <!--<li class="nav-item">
-                    <a href="#" class="nav-link dropdown-toggle">PRÁCTICAS Y VINCULACIÓN</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" class="dropdown-item">Vinculación</a></li>
-                        <li><a href="#" class="dropdown-item">Prácticas</a></li>
-                        <li><a href="#" class="dropdown-item">Educación Continua</a></li>
-                    </ul> -->
-                </li>
                 <li class="nav-item">
                     <a href="../infinitodigital/infinito.html" class="nav-link dropdown-toggle">INFINITO DIGITAL</a>
                     <ul class="dropdown-menu">
@@ -124,9 +124,6 @@
                         <li><a href="../graduados/seguimiento-a-graduados.html" class="dropdown-item">Seguimiento a Graduados</a></li>
                     </ul>
                 </li>
-                <!-- <li class="nav-item">
-                    <a href="#" class="nav-link">OTROS</a>
-                </li>-->
             </ul>
             <button class="hamburger">
                 <i class="fas fa-bars"></i>
@@ -137,7 +134,7 @@
     <main class="main-content">
         <section class="page-hero minimal">
             <div class="hero-container">
-                <h1>Horarios Periodo 67</h1>
+                <h1>Horarios Periodo 68</h1>
                 <p>Planificación académica oficial • Sede Quito • Campus El Girón<br>Carrera de Comunicación</p>
             </div>
         </section>
@@ -158,778 +155,20 @@
                     </div>
                 </div>
 
-                <div id="nivel1" class="schedule-content active">
-                    <div class="schedule-header">
-                        <h2>Primer Nivel</h2>
-                        <div class="header-controls">
-                            <span id="badge-n1-g1" class="schedule-badge">Jornada Diurna - G101</span>
-                            <span id="badge-n1-g2" class="schedule-badge" style="display:none;">Jornada Matutina - G2</span>
-                            <button class="switch-group-btn" onclick="toggleGroup('n1')">
-                                Ver Grupo 2 <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div id="table-n1-g1" class="group-container">
-                        <div class="table-responsive">
-                            <table class="schedule-table">
-                                <thead>
-                                    <tr><th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="time-col">7:00 – 8:00</td>
-                                        <td><strong>ANTROPOLOGÍA FILOSÓFICA - TEOLÓGICA</strong><br>Franja</td>
-                                        <td><strong>INGLÉS</strong></td>
-                                        <td>-</td><td>-</td><td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">8:00 – 9:00</td>
-                                        <td><strong>ANTROPOLOGÍA FILOSÓFICA - TEOLÓGICA</strong><br>Franja</td>
-                                        <td>-</td><td>-</td><td>-</td><td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">9:00 – 10:00</td>
-                                        <td><strong>COMUNICACIÓN, CULTURA E INTERCULTURALIDAD</strong><br>Diego Condor<br><span class="room-tag">Aula A-5</span></td>
-                                        <td><strong>FOTOGRAFÍA</strong><br>Alexandra Noboa<br><span class="room-tag">Lab Prod. Sonora</span></td>
-                                        <td><strong>LENGUAJE Y REDACCIÓN</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">Cecasig 4</span></td>
-                                        <td><strong>SOCIOLOGÍA Y ESCENARIOS</strong><br>Vanessa Vanegas<br><span class="room-tag">Aula A-5</span></td>
-                                        <td><strong>LENGUAJE Y REDACCIÓN</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">Cecasig 4</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">10:00 – 11:00</td>
-                                        <td><strong>COMUNICACIÓN, CULTURA E INTERCULTURALIDAD</strong><br>Diego Condor<br><span class="room-tag">Aula A-5</span></td>
-                                        <td><strong>FOTOGRAFÍA</strong><br>Alexandra Noboa<br><span class="room-tag">Lab Prod. Sonora</span></td>
-                                        <td><strong>LENGUAJE Y REDACCIÓN</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">Cecasig 4</span></td>
-                                        <td><strong>SOCIOLOGÍA Y ESCENARIOS</strong><br>Vanessa Vanegas<br><span class="room-tag">Aula A-5</span></td>
-                                        <td><strong>LENGUAJE Y REDACCIÓN</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">Cecasig 4</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">11:00 – 12:00</td>
-                                        <td><strong>SOCIOLOGÍA Y ESCENARIOS</strong><br>Vanessa Vanegas<br><span class="room-tag">Aula A-5</span></td>
-                                        <td><strong>FOTOGRAFÍA</strong><br>Alexandra Noboa<br><span class="room-tag">Lab Prod. Sonora</span></td>
-                                        <td>-</td>
-                                        <td><strong>COMUNICACIÓN, CULTURA E INTERCULTURALIDAD</strong><br>Diego Condor<br><span class="room-tag">Aula A-5</span></td>
-                                        <td><strong>HISTORIA DE LA COMUNICACIÓN</strong><br>Armando Grijalva<br><span class="room-tag">En línea</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">12:00 – 13:00</td>
-                                        <td>-</td><td>-</td>
-                                        <td><strong>FOTOGRAFÍA</strong><br>Alexandra Noboa<br><span class="room-tag">Lab Prod. Sonora</span></td>
-                                        <td>-</td>
-                                        <td><strong>HISTORIA DE LA COMUNICACIÓN</strong><br>Armando Grijalva<br><span class="room-tag">En línea</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">13:00 – 14:00</td>
-                                        <td>-</td><td>-</td><td>-</td><td>-</td>
-                                        <td><strong>HISTORIA DE LA COMUNICACIÓN</strong><br>Armando Grijalva<br><span class="room-tag">En línea</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div id="table-n1-g2" class="group-container" style="display:none;">
-                        <div class="table-responsive">
-                            <table class="schedule-table">
-                                <thead>
-                                    <tr><th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="time-col">7:00 – 8:00</td>
-                                        <td><strong>ANTROPOLOGÍA FILOSÓFICA - TEOLÓGICA</strong><br>Franja 1 Grupo 2</td>
-                                        <td>-</td><td>-</td><td>-</td><td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">8:00 – 9:00</td>
-                                        <td><strong>ANTROPOLOGÍA FILOSÓFICA - TEOLÓGICA</strong><br>Franja 1 Grupo 2</td>
-                                        <td>-</td><td>-</td><td>-</td><td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">9:00 – 10:00</td>
-                                        <td><strong>LENGUAJE Y REDACCIÓN</strong><br>Monica Ruiz<br><span class="room-tag">Aula A2</span></td>
-                                        <td><strong>FOTOGRAFÍA / TEORÍA</strong><br>Alexandra Noboa<br><span class="room-tag">Lab.</span></td>
-                                        <td><strong>COMU., CULTURA E INTERCULTURALIDAD</strong><br>David Moromenacho<br><span class="room-tag">Aula B15</span></td>
-                                        <td><strong>FOTOGRAFÍA / TEORÍA</strong><br>Alexandra Noboa<br><span class="room-tag">Lab.</span></td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">10:00 – 11:00</td>
-                                        <td><strong>LENGUAJE Y REDACCIÓN</strong><br>Monica Ruiz<br><span class="room-tag">Aula A2</span></td>
-                                        <td><strong>FOTOGRAFÍA / TEORÍA</strong><br>Alexandra Noboa<br><span class="room-tag">Lab.</span></td>
-                                        <td><strong>COMU., CULTURA E INTERCULTURALIDAD</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">Aula B15</span></td>
-                                        <td><strong>FOTOGRAFÍA / TEORÍA</strong><br>Alexandra Noboa<br><span class="room-tag">Lab.</span></td>
-                                        <td><strong>HISTORIA DE LA COMUNICACIÓN</strong><br>Diego Condor<br><span class="room-tag">en línea</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">11:00 – 12:00</td>
-                                        <td><strong>SOCIOLOGÍA Y ESCENARIOS</strong><br>Vanessa Vanegas<br><span class="room-tag">Aula A2</span></td>
-                                        <td>-</td>
-                                        <td><strong>COMU., CULTURA E INTERCULTURALIDAD</strong><br>David Moromenacho<br><span class="room-tag">Aula B15</span></td>
-                                        <td><strong>LENGUAJE Y REDACCIÓN</strong><br>Monica Ruiz<br><span class="room-tag">Aula A2</span></td>
-                                        <td><strong>HISTORIA DE LA COMUNICACIÓN</strong><br>Diego Condor<br><span class="room-tag">en línea</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">12:00 – 13:00</td>
-                                        <td><strong>SOCIOLOGÍA Y ESCENARIOS</strong><br>Vanessa Vanegas<br><span class="room-tag">Aula A2</span></td>
-                                        <td>-</td><td>-</td>
-                                        <td><strong>LENGUAJE Y REDACCIÓN</strong><br>Monica Ruiz<br><span class="room-tag">Aula A2</span></td>
-                                        <td><strong>HISTORIA DE LA COMUNICACIÓN</strong><br>Diego Condor<br><span class="room-tag">en línea</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">13:00 – 14:00</td>
-                                        <td><strong>SOCIOLOGÍA Y ESCENARIOS</strong><br>Vanessa Vanegas<br><span class="room-tag">Aula A2</span></td>
-                                        <td>-</td><td>-</td><td>-</td><td>-</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="nivel2" class="schedule-content">
-                    <div class="schedule-header">
-                        <h2>Segundo Nivel - Grupo 201</h2>
-                        <span class="schedule-badge">Jornada Diurna</span>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="schedule-table">
-                            <thead>
-                                <tr><th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="time-col">7:00 – 8:00</td>
-                                    <td><strong>INVESTIGACIÓN DE LA COMUNICACIÓN</strong><br>Nina Aguiar<br><span class="room-tag">Aula A-14</span></td>
-                                    <td><strong>INGLÉS</strong></td>
-                                    <td>-</td><td>-</td><td>-</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-col">8:00 – 9:00</td>
-                                    <td><strong>INVESTIGACIÓN DE LA COMUNICACIÓN</strong><br>Nina Aguiar<br><span class="room-tag">Aula A-14</span></td>
-                                    <td>-</td><td>-</td><td>-</td><td>-</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-col">9:00 – 10:00</td>
-                                    <td><strong>LINGÜÍSTICA Y COMUNICACIÓN</strong><br>Grace Benalcazar<br><span class="room-tag">Aula A-14</span></td>
-                                    <td><strong>TEORÍA DE LA COMUNICACIÓN I</strong><br>Roberto Sánchez<br><span class="room-tag">Aula A-14</span></td>
-                                    <td><strong>RADIO / TEORÍA</strong><br>Armando Grijalva<br><span class="room-tag">Lab. radio</span></td>
-                                    <td><strong>RADIO / TEORÍA</strong><br>Armando Grijalva<br><span class="room-tag">Lab. radio</span></td>
-                                    <td><strong>TEORÍA DE LA COMUNICACIÓN I</strong><br>Roberto Sánchez<br><span class="room-tag">Aula A-5</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="time-col">10:00 – 11:00</td>
-                                    <td>-</td>
-                                    <td><strong>TEORÍA DE LA COMUNICACIÓN I</strong><br>Roberto Sánchez<br><span class="room-tag">Aula A-14</span></td>
-                                    <td><strong>RADIO / TEORÍA</strong><br>Armando Grijalva<br><span class="room-tag">Lab. radio</span></td>
-                                    <td><strong>RADIO / TEORÍA</strong><br>Armando Grijalva<br><span class="room-tag">Lab. radio</span></td>
-                                    <td><strong>COMUNICACIÓN E IDEOLOGÍA</strong><br>Diego Condor<br><span class="room-tag">En línea</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="time-col">11:00 – 12:00</td>
-                                    <td>-</td><td>-</td>
-                                    <td><strong>LINGÜÍSTICA Y COMUNICACIÓN</strong><br>Grace Benalcazar<br><span class="room-tag">Aula A-14</span></td>
-                                    <td><strong>INVESTIGACIÓN DE LA COMUNICACIÓN</strong><br>Nina Aguiar<br><span class="room-tag">Aula A-14</span></td>
-                                    <td><strong>COMUNICACIÓN E IDEOLOGÍA</strong><br>Diego Condor<br><span class="room-tag">En línea</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="time-col">12:00 – 13:00</td>
-                                    <td>-</td><td>-</td>
-                                    <td><strong>LINGÜÍSTICA Y COMUNICACIÓN</strong><br>Grace Benalcazar<br><span class="room-tag">Aula A-14</span></td>
-                                    <td><strong>INVESTIGACIÓN DE LA COMUNICACIÓN</strong><br>Nina Aguiar<br><span class="room-tag">Aula A-14</span></td>
-                                    <td><strong>COMUNICACIÓN E IDEOLOGÍA</strong><br>Diego Condor<br><span class="room-tag">En línea</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div id="nivel3" class="schedule-content">
-                    <div class="schedule-header">
-                        <h2>Tercer Nivel</h2>
-                        <div class="header-controls">
-                            <span id="badge-n3-g1" class="schedule-badge">Jornada Diurna - G301</span>
-                            <span id="badge-n3-g2" class="schedule-badge" style="display:none;">Jornada Matutina - G2</span>
-                            <button class="switch-group-btn" onclick="toggleGroup('n3')">
-                                Ver Grupo 2 <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div id="table-n3-g1" class="group-container">
-                        <div class="table-responsive">
-                            <table class="schedule-table">
-                                <thead>
-                                    <tr><th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="time-col">7:00 – 8:00</td>
-                                        <td>-</td>
-                                        <td><strong>INGLÉS</strong></td>
-                                        <td>-</td><td>-</td><td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">8:00 – 9:00</td>
-                                        <td><strong>TEORÍA DE LA COMUNICACIÓN II</strong><br>Roberto Sánchez<br><span class="room-tag">Aula A-7</span></td>
-                                        <td>-</td><td>-</td><td>-</td><td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">9:00 – 10:00</td>
-                                        <td><strong>ARTE Y COMUNICACIÓN</strong><br>Enza Bosetti<br><span class="room-tag">Aula A-7</span></td>
-                                        <td><strong>ARTE Y COMUNICACIÓN</strong><br>Enza Bosetti<br><span class="room-tag">Aula A-7</span></td>
-                                        <td>-</td><td>-</td>
-                                        <td><strong>SEMIÓTICA</strong><br>Grace Benalcazar<br><span class="room-tag">Aula A-7</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">10:00 – 11:00</td>
-                                        <td><strong>ARTE Y COMUNICACIÓN</strong><br>Enza Bosetti<br><span class="room-tag">Aula A-7</span></td>
-                                        <td><strong>DISEÑO GRÁFICO</strong><br>Johanna Escobar<br><span class="room-tag">Mac 2</span></td>
-                                        <td><strong>DISEÑO GRÁFICO</strong><br>Johanna Escobar<br><span class="room-tag">Lab. Visual</span></td>
-                                        <td><strong>PSICOLOGÍA DE LA COMUNICACIÓN</strong><br>Mauro Ruiz<br><span class="room-tag">Aula A-7</span></td>
-                                        <td><strong>TEORÍA DE LA COMUNICACIÓN II</strong><br>Roberto Sánchez<br><span class="room-tag">Aula A-7</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">11:00 – 12:00</td>
-                                        <td><strong>SEMIÓTICA</strong><br>Grace Benalcazar<br><span class="room-tag">Aula A-7</span></td>
-                                        <td><strong>DISEÑO GRÁFICO</strong><br>Johanna Escobar<br><span class="room-tag">Mac 2</span></td>
-                                        <td><strong>DISEÑO GRÁFICO</strong><br>Johanna Escobar<br><span class="room-tag">Lab. Visual</span></td>
-                                        <td><strong>PSICOLOGÍA DE LA COMUNICACIÓN</strong><br>Mauro Ruiz<br><span class="room-tag">Aula A-7</span></td>
-                                        <td><strong>TEORÍA DE LA COMUNICACIÓN II</strong><br>Roberto Sánchez<br><span class="room-tag">Aula A-7</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">12:00 – 13:00</td>
-                                        <td><strong>SEMIÓTICA</strong><br>Grace Benalcazar<br><span class="room-tag">Aula A-7</span></td>
-                                        <td>-</td>
-                                        <td><strong>DISEÑO GRÁFICO</strong><br>Johanna Escobar<br><span class="room-tag">Lab. Visual</span></td>
-                                        <td><strong>PSICOLOGÍA DE LA COMUNICACIÓN</strong><br>Mauro Ruiz<br><span class="room-tag">Aula A-7</span></td>
-                                        <td>-</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div id="table-n3-g2" class="group-container" style="display:none;">
-                        <div class="table-responsive">
-                            <table class="schedule-table">
-                                <thead>
-                                    <tr><th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="time-col">7:00 – 8:00</td>
-                                        <td>-</td>
-                                        <td><strong>DISEÑO GRÁFICO / TEORÍA</strong><br>Daniela Moya<br><span class="room-tag">Aula B57B</span></td>
-                                        <td><strong>DISEÑO GRÁFICO / TEORÍA</strong><br>Daniela Moya<br><span class="room-tag">Aula B57B</span></td>
-                                        <td><strong>PSICOLOGÍA DE LA COMUNICACIÓN</strong><br>Mauro Ruiz<br><span class="room-tag">Aula B57B</span></td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">8:00 – 9:00</td>
-                                        <td><strong>ARTE Y COMUNICACIÓN</strong><br>Enza Bosetti<br><span class="room-tag">Aula B63B</span></td>
-                                        <td><strong>DISEÑO GRÁFICO / TEORÍA</strong><br>Daniela Moya<br><span class="room-tag">Aula B57B</span></td>
-                                        <td><strong>DISEÑO GRÁFICO / TEORÍA</strong><br>Daniela Moya<br><span class="room-tag">Aula B57B</span></td>
-                                        <td><strong>PSICOLOGÍA DE LA COMUNICACIÓN</strong><br>Mauro Ruiz<br><span class="room-tag">Aula B57B</span></td>
-                                        <td><strong>TEORÍA DE LA COMUNICACIÓN II</strong><br>Augusto Sakihama<br><span class="room-tag">Aula B15</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">9:00 – 10:00</td>
-                                        <td><strong>ARTE Y COMUNICACIÓN</strong><br>Enza Bosetti<br><span class="room-tag">Aula B63B</span></td>
-                                        <td><strong>DISEÑO GRÁFICO / TEORÍA</strong><br>Daniela Moya<br><span class="room-tag">Aula B57B</span></td>
-                                        <td><strong>SEMIÓTICA</strong><br>Grace Benalcazar<br><span class="room-tag">Aula B81</span></td>
-                                        <td><strong>PSICOLOGÍA DE LA COMUNICACIÓN</strong><br>Mauro Ruiz<br><span class="room-tag">Aula B57B</span></td>
-                                        <td><strong>TEORÍA DE LA COMUNICACIÓN II</strong><br>Augusto Sakihama<br><span class="room-tag">Aula B15</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">10:00 – 11:00</td>
-                                        <td><strong>ARTE Y COMUNICACIÓN</strong><br>Enza Bosetti<br><span class="room-tag">Aula B63B</span></td>
-                                        <td>-</td>
-                                        <td><strong>SEMIÓTICA</strong><br>Grace Benalcazar<br><span class="room-tag">Aula B81</span></td>
-                                        <td>-</td>
-                                        <td><strong>TEORÍA DE LA COMUNICACIÓN II</strong><br>Augusto Sakihama<br><span class="room-tag">Aula B15</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">11:00 – 12:00</td>
-                                        <td>-</td><td>-</td>
-                                        <td><strong>SEMIÓTICA</strong><br>Grace Benalcazar<br><span class="room-tag">Aula B81</span></td>
-                                        <td>-</td><td>-</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="nivel4" class="schedule-content">
-                    <div class="schedule-header">
-                        <h2>Cuarto Nivel - Grupo 401</h2>
-                        <span class="schedule-badge">Jornada Diurna</span>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="schedule-table">
-                            <thead>
-                                <tr><th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="time-col">9:00 – 10:00</td>
-                                    <td><strong>PROYECTOS DE COMUNICACIÓN</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">Aula A-14</span></td>
-                                    <td><strong>PRODUCCIÓN VIDEOGRÁFICA</strong><br>Cristina Naranjo<br><span class="room-tag">Lab. Audiovisual</span></td>
-                                    <td><strong>COMUNICACIÓN POLÍTICA</strong><br>Mauro Ruiz<br><span class="room-tag">Aula A-5</span></td>
-                                    <td><strong>PRODUCCIÓN VIDEOGRÁFICA</strong><br>Cristina Naranjo<br><span class="room-tag">Lab. Audiovisual</span></td>
-                                    <td><strong>EPISTEMOLOGÍA</strong><br>Armando Grijalva<br><span class="room-tag">En línea</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="time-col">10:00 – 11:00</td>
-                                    <td><strong>PROYECTOS DE COMUNICACIÓN</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">Aula A-14</span></td>
-                                    <td><strong>PRODUCCIÓN VIDEOGRÁFICA</strong><br>Cristina Naranjo<br><span class="room-tag">Lab. Audiovisual</span></td>
-                                    <td><strong>COMUNICACIÓN POLÍTICA</strong><br>Mauro Ruiz<br><span class="room-tag">Aula A-5</span></td>
-                                    <td><strong>PRODUCCIÓN VIDEOGRÁFICA</strong><br>Cristina Naranjo<br><span class="room-tag">Lab. Audiovisual</span></td>
-                                    <td><strong>EPISTEMOLOGÍA</strong><br>Armando Grijalva<br><span class="room-tag">En línea</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="time-col">11:00 – 12:00</td>
-                                    <td><strong>PROYECTOS DE COMUNICACIÓN</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">Aula A-14</span></td>
-                                    <td><strong>DERECHOS DE LA COMUNICACIÓN</strong><br><span class="room-tag">Aula A-14</span></td>
-                                    <td><strong>COMUNICACIÓN POLÍTICA</strong><br>Mauro Ruiz<br><span class="room-tag">Aula A-5</span></td>
-                                    <td><strong>PRODUCCIÓN VIDEOGRÁFICA</strong><br>Cristina Naranjo<br><span class="room-tag">Lab. Audiovisual</span></td>
-                                    <td><strong>EPISTEMOLOGÍA</strong><br>Armando Grijalva<br><span class="room-tag">En línea</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="time-col">12:00 – 13:00</td>
-                                    <td>-</td>
-                                    <td><strong>DERECHOS DE LA COMUNICACIÓN</strong><br><span class="room-tag">Aula A-14</span></td>
-                                    <td>-</td>
-                                    <td><strong>DERECHOS DE LA COMUNICACIÓN</strong><br><span class="room-tag">Lab. Audiovisual</span></td>
-                                    <td>-</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div id="nivel5" class="schedule-content">
-                    <div class="schedule-header">
-                        <h2>Quinto Nivel</h2>
-                        <div class="header-controls">
-                            <span id="badge-n5-g1" class="schedule-badge">Jornada Diurna - G501</span>
-                            <span id="badge-n5-g2" class="schedule-badge" style="display:none;">Jornada Matutina - G2</span>
-                            <button class="switch-group-btn" onclick="toggleGroup('n5')">
-                                Ver Grupo 2 <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div id="table-n5-g1" class="group-container">
-                        <div class="table-responsive">
-                            <table class="schedule-table">
-                                <thead>
-                                    <tr><th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th><th>Sábado</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="time-col">7:00 – 8:00</td>
-                                        <td>-</td>
-                                        <td><strong>NARRATIVAS VISUALES</strong><br>Johanna Escobar<br><span class="room-tag">Lab. Mac 1</span></td>
-                                        <td><strong>MARKETING Y PUBLICIDAD</strong><br>Mauro Ruiz<br><span class="room-tag">Aula A-14</span></td>
-                                        <td>-</td><td>-</td><td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">8:00 – 9:00</td>
-                                        <td><strong>PENSAMIENTO CRÍTICO</strong><br>Diego Condor<br><span class="room-tag">En línea</span></td>
-                                        <td><strong>NARRATIVAS VISUALES</strong><br>Johanna Escobar<br><span class="room-tag">Lab. Mac 1</span></td>
-                                        <td><strong>GÉNEROS INFORMATIVOS</strong><br>Vanegas<br><span class="room-tag">CECASIG 5</span></td>
-                                        <td>-</td>
-                                        <td><strong>MARKETING Y PUBLICIDAD</strong><br>Mauro Ruiz<br><span class="room-tag">Aula A-14</span></td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">9:00 – 10:00</td>
-                                        <td><strong>PENSAMIENTO CRÍTICO</strong><br>Diego Condor<br><span class="room-tag">En línea</span></td>
-                                        <td><strong>GÉNEROS INFORMATIVOS</strong><br>Vanegas<br><span class="room-tag">CECASIG 1</span></td>
-                                        <td><strong>GÉNEROS INFORMATIVOS</strong><br>Vanegas<br><span class="room-tag">CECASIG 5</span></td>
-                                        <td><strong>NARRATIVAS VISUALES</strong><br>Johanna Escobar<br><span class="room-tag">Lab. visual</span></td>
-                                        <td><strong>MARKETING Y PUBLICIDAD</strong><br>Mauro Ruiz<br><span class="room-tag">Aula A-14</span></td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">10:00 – 11:00</td>
-                                        <td>-</td><td>-</td><td>-</td>
-                                        <td><strong>NARRATIVAS VISUALES</strong><br>Johanna Escobar<br><span class="room-tag">Lab. visual</span></td>
-                                        <td><strong>PRÁCTICAS COMUNITARIAS</strong><br>Grace Benalcazar</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">11:00 – 12:00</td>
-                                        <td>-</td>
-                                        <td><strong>COMUNICACIÓN CAMBIO SOCIAL</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">En línea</span></td>
-                                        <td>-</td>
-                                        <td><strong>NARRATIVAS VISUALES</strong><br>Johanna Escobar<br><span class="room-tag">Lab. visual</span></td>
-                                        <td><strong>PRÁCTICAS COMUNITARIAS</strong><br>Grace Benalcazar</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">12:00 – 13:00</td>
-                                        <td>-</td>
-                                        <td><strong>COMUNICACIÓN CAMBIO SOCIAL</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">En línea</span></td>
-                                        <td>-</td><td>-</td><td>-</td><td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">13:00 – 14:00</td>
-                                        <td>-</td>
-                                        <td><strong>COMUNICACIÓN CAMBIO SOCIAL</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">En línea</span></td>
-                                        <td>-</td><td>-</td><td>-</td><td>-</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div id="table-n5-g2" class="group-container" style="display:none;">
-                        <div class="table-responsive">
-                            <table class="schedule-table">
-                                <thead>
-                                    <tr><th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th><th>Sábado</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="time-col">7:00 – 8:00</td>
-                                        <td><strong>NARRATIVAS VISUALES / Teórica</strong><br><span class="room-tag">Lab</span></td>
-                                        <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">8:00 – 9:00</td>
-                                        <td><strong>NARRATIVAS VISUALES / Teórica</strong><br><span class="room-tag">Lab</span></td>
-                                        <td>-</td>
-                                        <td><strong>PENSAMIENTO CRÍTICO</strong><br><span class="room-tag">en línea</span></td>
-                                        <td><strong>COMUNICACIÓN CAMBIO SOCIAL</strong><br><span class="room-tag">en línea</span></td>
-                                        <td><strong>GÉNEROS INFORMATIVOS</strong><br><span class="room-tag">Aula B63B</span></td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">9:00 – 10:00</td>
-                                        <td><strong>NARRATIVAS VISUALES / Teórica</strong><br><span class="room-tag">Lab</span></td>
-                                        <td>-</td>
-                                        <td><strong>PENSAMIENTO CRÍTICO</strong><br><span class="room-tag">en línea</span></td>
-                                        <td><strong>COMUNICACIÓN CAMBIO SOCIAL</strong><br><span class="room-tag">en línea</span></td>
-                                        <td><strong>GÉNEROS INFORMATIVOS</strong><br><span class="room-tag">Aula B63B</span></td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">10:00 – 11:00</td>
-                                        <td>-</td><td>-</td>
-                                        <td><strong>NARRATIVAS VISUALES / Teórica</strong><br><span class="room-tag">Lab</span></td>
-                                        <td><strong>COMUNICACIÓN CAMBIO SOCIAL</strong><br><span class="room-tag">en línea</span></td>
-                                        <td><strong>GÉNEROS INFORMATIVOS</strong><br><span class="room-tag">Aula B63B</span></td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">11:00 – 12:00</td>
-                                        <td>-</td><td>-</td>
-                                        <td><strong>NARRATIVAS VISUALES / Teórica</strong><br><span class="room-tag">Lab</span></td>
-                                        <td><strong>PRÁCTICAS COMUNITARIAS</strong></td>
-                                        <td><strong>MARKETING Y PUBLICIDAD</strong><br><span class="room-tag">Aula B63B</span></td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">12:00 – 13:00</td>
-                                        <td>-</td><td>-</td><td>-</td>
-                                        <td><strong>PRÁCTICAS COMUNITARIAS</strong></td>
-                                        <td><strong>MARKETING Y PUBLICIDAD</strong><br><span class="room-tag">Aula B63B</span></td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">13:00 – 14:00</td>
-                                        <td>-</td><td>-</td><td>-</td>
-                                        <td><strong>PRÁCTICAS COMUNITARIAS</strong></td>
-                                        <td><strong>MARKETING Y PUBLICIDAD</strong><br><span class="room-tag">Aula B63B</span></td>
-                                        <td>-</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="nivel6" class="schedule-content">
-                    <div class="schedule-header">
-                        <h2>Sexto Nivel - Grupo 601</h2>
-                        <span class="schedule-badge">Jornada Diurna</span>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="schedule-table">
-                            <thead>
-                                <tr><th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="time-col">7:00 – 8:00</td>
-                                    <td>-</td>
-                                    <td><strong>PERIODISMO DE DATOS</strong><br>Narcisa Medranda<br><span class="room-tag">Lab. Audiovisual</span></td>
-                                    <td><strong>METODOLOGÍA DE INVESTIGACIÓN</strong><br>Nina Aguiar<br><span class="room-tag">Aula A-5</span></td>
-                                    <td><strong>NARRATIVAS SONORAS</strong><br>Armando Grijalva<br><span class="room-tag">Lab. radio</span></td>
-                                    <td>-</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-col">8:00 – 9:00</td>
-                                    <td>-</td>
-                                    <td><strong>PERIODISMO DE DATOS</strong><br>Narcisa Medranda<br><span class="room-tag">Lab. Audiovisual</span></td>
-                                    <td><strong>METODOLOGÍA DE INVESTIGACIÓN</strong><br>Nina Aguiar<br><span class="room-tag">Aula A-5</span></td>
-                                    <td><strong>NARRATIVAS SONORAS</strong><br>Armando Grijalva<br><span class="room-tag">Lab. radio</span></td>
-                                    <td>-</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-col">9:00 – 10:00</td>
-                                    <td>-</td>
-                                    <td><strong>RELACIONES PÚBLICAS</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">Aula A-43</span></td>
-                                    <td><strong>GÉNEROS INTERPRETATIVOS</strong><br>José Luis Galván<br><span class="room-tag">En línea</span></td>
-                                    <td><strong>RELACIONES PÚBLICAS</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">Aula A-43</span></td>
-                                    <td>-</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-col">10:00 – 11:00</td>
-                                    <td><strong>NARRATIVAS SONORAS</strong><br>Armando Grijalva<br><span class="room-tag">Lab. radio</span></td>
-                                    <td><strong>RELACIONES PÚBLICAS</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">Aula A-43</span></td>
-                                    <td><strong>GÉNEROS INTERPRETATIVOS</strong><br>José Luis Galván<br><span class="room-tag">En línea</span></td>
-                                    <td><strong>RELACIONES PÚBLICAS</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">Aula A-43</span></td>
-                                    <td>-</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-col">11:00 – 12:00</td>
-                                    <td><strong>NARRATIVAS SONORAS</strong><br>Armando Grijalva<br><span class="room-tag">Lab. radio</span></td>
-                                    <td><strong>METODOLOGÍA DE INVESTIGACIÓN</strong><br>Nina Aguiar<br><span class="room-tag">Aula A-5</span></td>
-                                    <td><strong>GÉNEROS INTERPRETATIVOS</strong><br>José Luis Galván<br><span class="room-tag">En línea</span></td>
-                                    <td><strong>PERIODISMO DE DATOS</strong><br>Narcisa Medranda<br><span class="room-tag">Lab. Sonoro</span></td>
-                                    <td>-</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-col">12:00 – 13:00</td>
-                                    <td><strong>NARRATIVAS SONORAS</strong><br>Armando Grijalva<br><span class="room-tag">Lab. radio</span></td>
-                                    <td><strong>METODOLOGÍA DE INVESTIGACIÓN</strong><br>Nina Aguiar<br><span class="room-tag">Aula A-5</span></td>
-                                    <td>-</td><td>-</td><td>-</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div id="nivel7" class="schedule-content">
-                    <div class="schedule-header">
-                        <h2>Séptimo Nivel</h2>
-                        <div class="header-controls">
-                            <span id="badge-n7-g1" class="schedule-badge">Jornada Matutina - G1</span>
-                            <span id="badge-n7-g2" class="schedule-badge" style="display:none;">Jornada Matutina - G2</span>
-                            <button class="switch-group-btn" onclick="toggleGroup('n7')">
-                                Ver Grupo 2 <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div id="table-n7-g1" class="group-container">
-                        <div class="table-responsive">
-                            <table class="schedule-table">
-                                <thead>
-                                    <tr><th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="time-col">8:00 – 9:00</td>
-                                        <td>-</td>
-                                        <td><strong>PLANIFICACIÓN DE LA COMUNICACIÓN</strong><br>Patricia Villagómez<br><span class="room-tag">Aula A-5</span></td>
-                                        <td>-</td>
-                                        <td><strong>PLANIFICACIÓN DE LA COMUNICACIÓN</strong><br>Patricia Villagómez<br><span class="room-tag">Aula A-5</span></td>
-                                        <td><strong>PRÁCTICAS PRE PROFESIONALES</strong><br>Mauro Ruiz</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">9:00 – 10:00</td>
-                                        <td><strong>COMUNICACIÓN EN CRISIS</strong><br>Mauro Ruiz<br><span class="room-tag">Lab. Dibujo</span></td>
-                                        <td><strong>PLANIFICACIÓN DE LA COMUNICACIÓN</strong><br>Patricia Villagómez<br><span class="room-tag">Aula A-5</span></td>
-                                        <td>-</td>
-                                        <td><strong>COMUNICACIÓN EN CRISIS</strong><br>Mauro Ruiz<br><span class="room-tag">Aula A-7</span></td>
-                                        <td><strong>PRÁCTICAS PRE PROFESIONALES</strong><br>Mauro Ruiz</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">10:00 – 11:00</td>
-                                        <td><strong>COMUNICACIÓN EN CRISIS</strong><br>Mauro Ruiz<br><span class="room-tag">Lab. Dibujo</span></td>
-                                        <td>-</td>
-                                        <td><strong>NARRATIVAS AUDIOVISUALES</strong><br>Cristina Naranjo<br><span class="room-tag">Lab. Audiovisual</span></td>
-                                        <td>-</td>
-                                        <td><strong>DISEÑO MULTIMEDIA</strong><br>Johanna Escobar<br><span class="room-tag">Lab. Visual</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">11:00 – 12:00</td>
-                                        <td><strong>DISEÑO PROYECTO INVESTIGACIÓN</strong><br>Nina Aguiar<br><span class="room-tag">CECASIG L3</span></td>
-                                        <td><strong>NARRATIVAS AUDIOVISUALES</strong><br>Cristina Naranjo<br><span class="room-tag">Lab. Audiovisual</span></td>
-                                        <td><strong>NARRATIVAS AUDIOVISUALES</strong><br>Cristina Naranjo<br><span class="room-tag">Lab. Audiovisual</span></td>
-                                        <td>-</td>
-                                        <td><strong>DISEÑO MULTIMEDIA</strong><br>Johanna Escobar<br><span class="room-tag">Lab. Visual</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">12:00 – 13:00</td>
-                                        <td><strong>DISEÑO PROYECTO INVESTIGACIÓN</strong><br>Nina Aguiar<br><span class="room-tag">CECASIG L3</span></td>
-                                        <td><strong>NARRATIVAS AUDIOVISUALES</strong><br>Cristina Naranjo<br><span class="room-tag">Lab. Audiovisual</span></td>
-                                        <td><strong>NARRATIVAS AUDIOVISUALES</strong><br>Cristina Naranjo<br><span class="room-tag">Lab. Audiovisual</span></td>
-                                        <td>-</td>
-                                        <td><strong>DISEÑO MULTIMEDIA</strong><br>Johanna Escobar<br><span class="room-tag">Lab. Visual</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div id="table-n7-g2" class="group-container" style="display:none;">
-                        <div class="table-responsive">
-                            <table class="schedule-table">
-                                <thead>
-                                    <tr><th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="time-col">7:00 – 8:00</td>
-                                        <td>-</td>
-                                        <td><strong>NARRATIVAS AUDIOVISUALES / Teórica</strong><br>Cristina Naranjo<br><span class="room-tag">Aula virtual</span></td>
-                                        <td><strong>NARRATIVAS AUDIOVISUALES / Teórica</strong><br>Cristina Naranjo<br><span class="room-tag">Aula virtual</span></td>
-                                        <td><strong>DISEÑO MULTIMEDIAL</strong><br>Ramiro Morejon<br><span class="room-tag">Aula B68</span></td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">8:00 – 9:00</td>
-                                        <td>-</td>
-                                        <td><strong>NARRATIVAS AUDIOVISUALES / Teórica</strong><br>Cristina Naranjo<br><span class="room-tag">Aula virtual</span></td>
-                                        <td><strong>NARRATIVAS AUDIOVISUALES / Teórica</strong><br>Cristina Naranjo<br><span class="room-tag">Aula virtual</span></td>
-                                        <td><strong>DISEÑO MULTIMEDIAL</strong><br>Ramiro Morejon<br><span class="room-tag">Aula B68</span></td>
-                                        <td><strong>PLANIFICACIÓN DE LA COMUNICACIÓN</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">Aula B68</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">9:00 – 10:00</td>
-                                        <td><strong>COMUNICACIÓN EN CRISIS</strong><br>Pablo Romero<br><span class="room-tag">Aula B74</span></td>
-                                        <td><strong>NARRATIVAS AUDIOVISUALES / Teórica</strong><br>Cristina Naranjo<br><span class="room-tag">Aula virtual</span></td>
-                                        <td><strong>DISEÑO PROYECTO INVESTIGACIÓN</strong><br>Tania Villalva<br><span class="room-tag">Aula virtual</span></td>
-                                        <td><strong>DISEÑO MULTIMEDIAL</strong><br>Ramiro Morejon<br><span class="room-tag">Aula B68</span></td>
-                                        <td><strong>PLANIFICACIÓN DE LA COMUNICACIÓN</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">Aula B68</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">10:00 – 11:00</td>
-                                        <td><strong>COMUNICACIÓN EN CRISIS</strong><br>Pablo Romero<br><span class="room-tag">Aula B74</span></td>
-                                        <td><strong>PRÁCTICAS PRE PROFESIONALES</strong><br>Patricia Villagómez</td>
-                                        <td><strong>DISEÑO PROYECTO INVESTIGACIÓN</strong><br>Tania Villalva<br><span class="room-tag">Aula virtual</span></td>
-                                        <td><strong>PRÁCTICAS PRE PROFESIONALES</strong><br>Patricia Villagómez</td>
-                                        <td><strong>PLANIFICACIÓN DE LA COMUNICACIÓN</strong><br>Ma. Del Carmen Ramírez<br><span class="room-tag">Aula B68</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">11:00 – 12:00</td>
-                                        <td><strong>COMUNICACIÓN EN CRISIS</strong><br>Pablo Romero<br><span class="room-tag">Aula B74</span></td>
-                                        <td><strong>PRÁCTICAS PRE PROFESIONALES</strong><br>Patricia Villagómez</td>
-                                        <td><strong>PRÁCTICAS PRE PROFESIONALES</strong><br>Patricia Villagómez</td>
-                                        <td><strong>PRÁCTICAS PRE PROFESIONALES</strong><br>Patricia Villagómez</td>
-                                        <td>-</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="nivel8" class="schedule-content">
-                    <div class="schedule-header">
-                        <h2>Octavo Nivel</h2>
-                        <div class="header-controls">
-                            <span id="badge-n8-g1" class="schedule-badge">Jornada Matutina - G1</span>
-                            <span id="badge-n8-g2" class="schedule-badge" style="display:none;">Jornada Matutina - G2</span>
-                            <button class="switch-group-btn" onclick="toggleGroup('n8')">
-                                Ver Grupo 2 <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div id="table-n8-g1" class="group-container">
-                        <div class="table-responsive">
-                            <table class="schedule-table">
-                                <thead>
-                                    <tr><th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="time-col">7:00 – 8:00</td>
-                                        <td><strong>EDUCOMUNICACIÓN</strong><br>Armando Grijalva<br><span class="room-tag">Aula A-43</span></td>
-                                        <td><strong>INTEGRACIÓN</strong><br>Nina Aguiar<br><span class="room-tag">CECASIG L4</span></td>
-                                        <td><strong>NARRATIVAS HIPERMEDIALES</strong><br>Johanna Escobar<br><span class="room-tag">lab MAC 2</span></td>
-                                        <td><strong>NARRATIVAS HIPERMEDIALES</strong><br>Johanna Escobar<br><span class="room-tag">Lab Homework</span></td>
-                                        <td><strong>INTEGRACIÓN</strong><br>Nina Aguiar<br><span class="room-tag">CECASIG L2</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">8:00 – 9:00</td>
-                                        <td><strong>EDUCOMUNICACIÓN</strong><br>Armando Grijalva<br><span class="room-tag">Aula A-43</span></td>
-                                        <td><strong>INTEGRACIÓN</strong><br>Nina Aguiar<br><span class="room-tag">CECASIG L4</span></td>
-                                        <td><strong>NARRATIVAS HIPERMEDIALES</strong><br>Johanna Escobar<br><span class="room-tag">lab MAC 2</span></td>
-                                        <td><strong>NARRATIVAS HIPERMEDIALES</strong><br>Johanna Escobar<br><span class="room-tag">Lab Homework</span></td>
-                                        <td><strong>INTEGRACIÓN</strong><br>Nina Aguiar<br><span class="room-tag">CECASIG L2</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">9:00 – 10:00</td>
-                                        <td><strong>EDUCOMUNICACIÓN</strong><br>Armando Grijalva<br><span class="room-tag">Aula A-43</span></td>
-                                        <td><strong>INTEGRACIÓN</strong><br>Nina Aguiar<br><span class="room-tag">CECASIG L4</span></td>
-                                        <td><strong>NARRATIVAS HIPERMEDIALES</strong><br>Johanna Escobar<br><span class="room-tag">lab MAC 2</span></td>
-                                        <td><strong>PERIODISMO DIGITAL</strong><br>Patricio Rosas<br><span class="room-tag">en línea</span></td>
-                                        <td><strong>INTEGRACIÓN</strong><br>Nina Aguiar<br><span class="room-tag">CECASIG L2</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">10:00 – 11:00</td>
-                                        <td>-</td><td>-</td><td>-</td>
-                                        <td><strong>PERIODISMO DIGITAL</strong><br>Patricio Rosas<br><span class="room-tag">en línea</span></td>
-                                        <td><strong>PRÁCTICAS PREPROFESIONALES</strong><br>Grace Benalcazar<br><span class="room-tag">Aula Virtual 2</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">11:00 – 12:00</td>
-                                        <td>-</td><td>-</td><td>-</td><td>-</td>
-                                        <td><strong>PRÁCTICAS PREPROFESIONALES</strong><br>Grace Benalcazar<br><span class="room-tag">Aula Virtual 2</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div id="table-n8-g2" class="group-container" style="display:none;">
-                        <div class="table-responsive">
-                            <table class="schedule-table">
-                                <thead>
-                                    <tr><th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="time-col">7:00 – 8:00</td>
-                                        <td>-</td>
-                                        <td><strong>INTEGRACIÓN</strong><br>Diego Cóndor<br><span class="room-tag">CECASIG L3</span></td>
-                                        <td>-</td><td>-</td>
-                                        <td><strong>INTEGRACIÓN</strong><br>Diego Cóndor<br><span class="room-tag">CECASIG 8/B21</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">8:00 – 9:00</td>
-                                        <td>-</td>
-                                        <td><strong>INTEGRACIÓN</strong><br>Diego Cóndor<br><span class="room-tag">CECASIG L3</span></td>
-                                        <td>-</td><td>-</td>
-                                        <td><strong>INTEGRACIÓN</strong><br>Diego Cóndor<br><span class="room-tag">CECASIG 8/B21</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="time-col">9:00 – 10:00</td>
-                                        <td>-</td>
-                                        <td><strong>INTEGRACIÓN</strong><br>Diego Cóndor<br><span class="room-tag">CECASIG L4</span></td>
-                                        <td>-</td><td>-</td>
-                                        <td><strong>INTEGRACIÓN</strong><br>Diego Cóndor<br><span class="room-tag">CECASIG 8/B21</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                <div id="nivel1" class="schedule-content active"></div>
+                <div id="nivel2" class="schedule-content"></div>
+                <div id="nivel3" class="schedule-content"></div>
+                <div id="nivel4" class="schedule-content"></div>
+                <div id="nivel5" class="schedule-content"></div>
+                <div id="nivel6" class="schedule-content"></div>
+                <div id="nivel7" class="schedule-content"></div>
+                <div id="nivel8" class="schedule-content"></div>
 
             </div>
         </section>
     </main>
 
-<footer class="main-footer">
+    <footer class="main-footer">
         <div class="footer-container">
             
             <div class="footer-section">
@@ -979,6 +218,167 @@
 
     <script src="../script.js"></script>
     <script>
+    let horariosData = null;
+
+    // Configuración general de la tabla de horarios
+    const diasSemana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
+    // Mapeo ampliado para incluir todas las horas posibles
+    const horasMatriz = ["07:00", "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "14:30", "15:00", "15:30", "16:00", "17:00"];
+
+    document.addEventListener("DOMContentLoaded", async function() {
+        // Mostrar "Cargando" mientras leemos el JSON
+        for(let i=1; i<=8; i++) {
+            document.getElementById(`nivel${i}`).innerHTML = `<div class="loading-schedule">Cargando horario del servidor... <i class="fas fa-spinner fa-spin"></i></div>`;
+        }
+
+        try {
+            const response = await fetch('./js/horarios.json');
+            if (!response.ok) throw new Error("No se pudo cargar el archivo JSON");
+            horariosData = await response.json();
+            
+            // Renderizar todos los niveles
+            for(let i=1; i<=8; i++) {
+                renderizarNivel(i);
+            }
+            
+            // Activar el primer tab visualmente
+            document.getElementById("nivel1").style.display = "block";
+            
+        } catch (error) {
+            console.error(error);
+            document.querySelector('.schedules-section .container').innerHTML += `<div style="color:red; text-align:center;">Error al cargar los horarios. Asegúrate de estar corriendo en un servidor local.</div>`;
+        }
+    });
+
+    // Función principal que lee el JSON y crea el HTML
+    function renderizarNivel(nivelNum) {
+        const nivelDiv = document.getElementById(`nivel${nivelNum}`);
+        if (!horariosData[nivelNum]) {
+            nivelDiv.innerHTML = `<div class="loading-schedule">Horario no disponible aún.</div>`;
+            return;
+        }
+
+        const dataNivel = horariosData[nivelNum];
+        // Determinar si hay grupo 2
+        const tieneDosGrupos = dataNivel["2"] && Object.keys(dataNivel["2"]).length > 0;
+
+        // Nombres en texto según el nivel
+        const nombresNiveles = ["", "Primer", "Segundo", "Tercer", "Cuarto", "Quinto", "Sexto", "Séptimo", "Octavo"];
+        
+        let htmlCabecera = `
+            <div class="schedule-header">
+                <h2>${nombresNiveles[nivelNum]} Nivel</h2>
+                <div class="header-controls">
+                    <span id="badge-n${nivelNum}-g1" class="schedule-badge">Jornada Diurna - G${nivelNum}01</span>
+                    ${tieneDosGrupos ? `<span id="badge-n${nivelNum}-g2" class="schedule-badge" style="display:none;">Jornada Matutina - G2</span>` : ''}
+
+                    ${tieneDosGrupos ? `
+                    <button class="switch-group-btn" onclick="toggleGroup('n${nivelNum}')">
+                        Ver Grupo 2 <i class="fas fa-arrow-right"></i>
+                    </button>` : ''}
+                </div>
+            </div>
+        `;
+
+        // Generar Tabla Grupo 1
+        let htmlTablas = generarHtmlTabla(nivelNum, '1', dataNivel["1"], true);
+        
+        // Generar Tabla Grupo 2 (Si existe)
+        if (tieneDosGrupos) {
+            htmlTablas += generarHtmlTabla(nivelNum, '2', dataNivel["2"], false);
+        }
+
+        nivelDiv.innerHTML = htmlCabecera + htmlTablas;
+    }
+
+    // Lógica para construir la tabla HTML cruzando Horas y Días
+    function generarHtmlTabla(nivelNum, idGrupo, horarioGrupo, esVisible) {
+        let displayStyle = esVisible ? 'block' : 'none';
+        let tablaHTML = `
+        <div id="table-n${nivelNum}-g${idGrupo}" class="group-container" style="display:${displayStyle};">
+            <div class="table-responsive">
+                <table class="schedule-table">
+                    <thead>
+                        <tr><th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th></tr>
+                    </thead>
+                    <tbody>
+        `;
+
+        // Encontrar la última hora en la que hay clases para este grupo para no dibujar filas vacías innecesarias
+        let maxIndexHora = 7; // Mínimo mostrar hasta las 14:00 (índice 7 = "14:00")
+        
+        for (const dia in horarioGrupo) {
+            horarioGrupo[dia].forEach(clase => {
+                let endH = parseInt(clase.horaFin.split(':')[0]);
+                for(let k=0; k < horasMatriz.length; k++){
+                    if(parseInt(horasMatriz[k].split(':')[0]) >= endH) {
+                        if(k > maxIndexHora) maxIndexHora = k;
+                        break;
+                    }
+                }
+            });
+        }
+
+        // Iterar sobre cada hora (fila) hasta el máximo necesario
+        for (let i = 0; i < maxIndexHora; i++) {
+            let horaInicioStr = horasMatriz[i];
+            let horaFinStr = horasMatriz[i + 1];
+            
+            // Format 7:00 a 8:00
+            let timeLabel = `${horaInicioStr} – ${horaFinStr}`;
+            tablaHTML += `<tr><td class="time-col">${timeLabel}</td>`;
+
+            // Iterar sobre cada día (columna)
+            diasSemana.forEach(dia => {
+                let clasesEncontradas = [];
+                
+                // Buscar si en este grupo, en este día, hay clases que cubran esta hora
+                if(horarioGrupo[dia]) {
+                    clasesEncontradas = horarioGrupo[dia].filter(clase => {
+                        // Convertir horas a minutos para comparación precisa (ej. 14:30 -> 870)
+                        let startArr = clase.horaInicio.split(':');
+                        let startMin = parseInt(startArr[0]) * 60 + parseInt(startArr[1]);
+                        
+                        let endArr = clase.horaFin.split(':');
+                        let endMin = parseInt(endArr[0]) * 60 + parseInt(endArr[1]);
+                        
+                        let currentArr = horaInicioStr.split(':');
+                        let currentMin = parseInt(currentArr[0]) * 60 + parseInt(currentArr[1]);
+                        
+                        // La clase debe haber empezado igual o antes de esta hora, y terminar después de esta hora
+                        return currentMin >= startMin && currentMin < endMin;
+                    });
+                }
+
+                if (clasesEncontradas.length > 0) {
+                    tablaHTML += `<td>`;
+                    // Renderizar todas las clases encontradas en este bloque (por si hay cruces/dobles)
+                    clasesEncontradas.forEach((clase, idx) => {
+                        if(idx > 0) tablaHTML += `<hr style="margin: 5px 0; border: 0; border-top: 1px dashed #ccc;">`;
+                        tablaHTML += `
+                            <strong>${clase.materia}</strong>
+                            ${clase.profesor ? `<br>${clase.profesor}` : ''}
+                            ${clase.aula ? `<br><span class="room-tag">${clase.aula}</span>` : ''}
+                        `;
+                    });
+                    tablaHTML += `</td>`;
+                } else {
+                    tablaHTML += `<td>-</td>`;
+                }
+            });
+
+            tablaHTML += `</tr>`;
+        }
+
+        tablaHTML += `
+                    </tbody>
+                </table>
+            </div>
+        </div>`;
+        return tablaHTML;
+    }
+
+
     // Función para cambiar de nivel (Tabs principales)
     function openLevel(evt, levelName) {
         var i, content, tablinks;
@@ -1006,20 +406,20 @@
         var b2 = document.getElementById('badge-' + levelId + '-g2');
         var btn = document.querySelector('#nivel' + levelId.substring(1) + ' .switch-group-btn');
 
-        if (g1.style.display === 'none') {
-            // Mostrar Grupo 1
-            g1.style.display = 'block';
-            g2.style.display = 'none';
-            b1.style.display = 'inline-block';
-            b2.style.display = 'none';
-            btn.innerHTML = 'Ver Grupo 2 <i class="fas fa-arrow-right"></i>';
-        } else {
-            // Mostrar Grupo 2
-            g1.style.display = 'none';
-            g2.style.display = 'block';
-            b1.style.display = 'none';
-            b2.style.display = 'inline-block';
-            btn.innerHTML = '<i class="fas fa-arrow-left"></i> Ver Grupo 1';
+        if (g1 && g2) {
+            if (g1.style.display === 'none') {
+                g1.style.display = 'block';
+                g2.style.display = 'none';
+                if(b1) b1.style.display = 'inline-block';
+                if(b2) b2.style.display = 'none';
+                if(btn) btn.innerHTML = 'Ver Grupo 2 <i class="fas fa-arrow-right"></i>';
+            } else {
+                g1.style.display = 'none';
+                g2.style.display = 'block';
+                if(b1) b1.style.display = 'none';
+                if(b2) b2.style.display = 'inline-block';
+                if(btn) btn.innerHTML = '<i class="fas fa-arrow-left"></i> Ver Grupo 1';
+            }
         }
     }
 
