@@ -188,7 +188,7 @@
     "2": {
       "Lunes": [],
       "Martes": [
-        { "horaInicio": "07:00", "horaFin": "12:00", "materia": "INTEGRACIÓN", "profesor": "Diego Cóndor", "aula": "CECASIG" }
+        { "horaInicio": "09:00", "horaFin": "12:00", "materia": "INTEGRACIÓN", "profesor": "Diego Cóndor", "aula": "CECASIG" }
       ],
       "Miércoles": [],
       "Jueves": [],
