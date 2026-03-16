@@ -222,11 +222,9 @@
 
     // Configuración general de la tabla de horarios
     const diasSemana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
-    // Mapeo ampliado para incluir todas las horas posibles
     const horasMatriz = ["07:00", "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "14:30", "15:00", "15:30", "16:00", "17:00"];
 
     document.addEventListener("DOMContentLoaded", async function() {
-        // Mostrar "Cargando" mientras leemos el JSON
         for(let i=1; i<=8; i++) {
             document.getElementById(`nivel${i}`).innerHTML = `<div class="loading-schedule">Cargando horario del servidor... <i class="fas fa-spinner fa-spin"></i></div>`;
         }
@@ -235,13 +233,11 @@
             const response = await fetch('./js/horarios.json');
             if (!response.ok) throw new Error("No se pudo cargar el archivo JSON");
             horariosData = await response.json();
-            
-            // Renderizar todos los niveles
+
             for(let i=1; i<=8; i++) {
                 renderizarNivel(i);
             }
             
-            // Activar el primer tab visualmente
             document.getElementById("nivel1").style.display = "block";
             
         } catch (error) {
