@@ -149,7 +149,7 @@
                             <span class="authority-position">- Jefe de Área Técnico - Profesional</span>
                         </div>
                         <div class="authority-item">
-                            <span class="authority-name">Nina Aguilar Mariño</span>
+                            <span class="authority-name">Nina Aguiar Mariño</span>
                             <span class="authority-position">- Jefe de Área Titulación/Integración Curricular</span>
                         </div>
                         <div class="authority-item">
@@ -314,6 +314,200 @@
                             </div>
                     </div>
                 </div>
+            <!-- Reproductor
+            <style>
+                /* Variables de color aplicadas */
+                :root {
+                    --primary-color: #94c4c4;
+                    --dark-color: #333;
+                    --light-color: #fff;
+                    --hover-color: #5fb3e0;
+                }
+
+                /* Contenedor flotante fijo en la esquina izquierda */
+                .creative-player-container {
+                    position: fixed;
+                    bottom: 25px; 
+                    left: 25px;   
+                    z-index: 9999; 
+                    
+                    display: flex;
+                    align-items: center;
+                    background-color: var(--light-color);
+                    padding: 1rem;
+                    border-radius: 100px 30px 30px 100px;
+                    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+                    max-width: calc(100vw - 50px);
+                    gap: 0px; 
+                    transition: gap 0.5s ease;
+                }
+
+                /* Espacio de separación cuando la barra se abre */
+                .creative-player-container.open { 
+                    gap: 1.5rem; 
+                }
+
+                /* -------------------------------------------
+                BURBUJA DE TEXTO INDICATIVA (RESPONSIVA)
+                ------------------------------------------- */
+                .player-hint-bubble {
+                    position: absolute;
+                    bottom: 135px; /* Flota exactamente por encima del vinilo */
+                    left: 20px;
+                    background-color: var(--dark-color);
+                    color: var(--light-color);
+                    padding: 6px 14px;
+                    font-size: 0.85rem;
+                    font-weight: 500;
+                    border-radius: 20px;
+                    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+                    white-space: nowrap;
+                    pointer-events: none; /* Evita bloquear clics accidentales */
+                    
+                    /* Transición suave para aparecer/desaparecer */
+                    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+                    transform: translateY(0);
+                    opacity: 1;
+                    visibility: visible;
+                    z-index: 10000;
+                }
+
+                /* Pequeña flecha apuntando hacia el vinilo */
+                .player-hint-bubble::after {
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 35px;
+                    border: 6px solid transparent;
+                    border-top-color: var(--dark-color);
+                }
+
+                /* OCULTACIÓN: Cuando el reproductor está abierto o se le añade la clase hidden, desaparece */
+                .creative-player-container.open .player-hint-bubble,
+                .player-hint-bubble.hidden {
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(10px); /* Efecto de caída ligera al ocultarse */
+                }
+
+                /* Estética del Disco de Vinilo */
+                .vinyl-button {
+                    width: 120px; 
+                    height: 120px; 
+                    border-radius: 50%; 
+                    background-color: #111;
+                    border: 5px solid var(--dark-color); 
+                    position: relative; 
+                    cursor: pointer; 
+                    outline: none;
+                    flex-shrink: 0; 
+                    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    display: flex; 
+                    align-items: center; 
+                    justify-content: center; 
+                    overflow: hidden; 
+                    z-index: 10;
+                }
+                .vinyl-button:hover { 
+                    transform: scale(1.04); 
+                    box-shadow: 0 8px 20px rgba(0,0,0,0.4); 
+                }
+
+                .vinyl-grooves {
+                    position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%;
+                    background: repeating-radial-gradient(circle, #2c2c2c 0px, #151515 2px, #2c2c2c 4px, #111 6px);
+                    opacity: 0.9; pointer-events: none;
+                }
+
+                .vinyl-center {
+                    width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-color);
+                    border: 3px solid #000; z-index: 2; display: flex; align-items: center; justify-content: center;
+                    color: var(--dark-color); transition: background-color 0.3s ease, color 0.3s ease;
+                }
+                .vinyl-button:hover .vinyl-center { 
+                    background-color: var(--hover-color); 
+                    color: var(--light-color); 
+                }
+                
+                .radio-icon { width: 22px; height: 22px; }
+
+                @keyframes spinVinyl { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+                .vinyl-button.spinning { animation: spinVinyl 3.5s linear infinite; }
+
+                /* Máscara del panel horizontal */
+                .player-panel-horizontal {
+                    height: 105px; 
+                    width: 0px; 
+                    overflow: hidden !important; 
+                    position: relative;
+                    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+                }
+
+                .player-panel-horizontal.open {
+                    width: 750px; 
+                }
+
+                .cstrEmbed {
+                    width: 750px !important;
+                    height: 105px !important;
+                    display: block !important;
+                    overflow: hidden !important;
+                }
+
+                .player-panel-horizontal iframe,
+                .cstrEmbed iframe {
+                    width: 750px !important;
+                    height: 105px !important;
+                    border: none !important;
+                    overflow: hidden !important;
+                }
+
+                /* -------------------------------------------
+                ADAPTACIÓN EXCLUSIVA PARA MÓVILES
+                ------------------------------------------- */
+                @media (max-width: 768px) {
+                    .player-hint-bubble {
+                        font-size: 0.75rem; /* Letra un poco más pequeña en móviles */
+                        padding: 5px 10px;
+                        bottom: 115px; /* Se ajusta a la escala móvil */
+                        left: 15px;
+                    }
+                    .vinyl-button {
+                        width: 100px; /* Reducción ligera para pantallas pequeñas */
+                        height: 100px;
+                    }
+                }
+            </style>
+
+            <div id="creative-container" class="creative-player-container">
+                
+                <div id="player-hint" class="player-hint-bubble">
+                    Escucha la radio de la carrera
+                </div>
+
+                <button id="vinyl-btn" class="vinyl-button" title="Haga clic para desplegar el reproductor">
+                    <div class="vinyl-grooves"></div>
+                    <div class="vinyl-center">
+                        <svg class="radio-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 10H5C3.89543 10 3 10.8954 3 12V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V12C21 10.8954 20.1046 10 19 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 6L14 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="currentColor"/>
+                            <circle cx="8" cy="16" r="2" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="16" cy="16" r="2" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </button>
+
+                <div id="player-panel" class="player-panel-horizontal">
+                    
+                    <div class="cstrEmbed" data-type="newStreamPlayer" data-publicToken="13011916-6311-470d-9f7f-3c20e05e5dfc" data-theme="dark" data-color="175AE8" data-channelId="" data-rendered="false">
+                    <a href="https://www.caster.fm">Shoutcast Hosting</a> <a href="https://www.caster.fm">Stream Hosting</a> <a href="https://www.caster.fm">Radio Server Hosting</a></div>
+                    <script src="//cdn.cloud.caster.fm//widgets/embed.js"></script>
+                    
+                </div>
+
+            </div> -->
         </section>
     </main>
 

@@ -178,3 +178,31 @@ if (scrollTopBtn) {
         });
     });
 }
+// BLOQUE JS: CONTROLADOR DEL REPRODUCTOR CREATIVO DE RADIO
+(function() {
+    document.addEventListener("DOMContentLoaded", function() {
+        var vinylBtn = document.getElementById("vinyl-btn");
+        var playerPanel = document.getElementById("player-panel");
+        var creativeContainer = document.getElementById("creative-container");
+
+        if (!vinylBtn || !playerPanel || !creativeContainer) {
+            console.warn("WebCraft Pro: Los elementos del reproductor de radio no fueron encontrados en esta página.");
+            return;
+        }
+
+        vinylBtn.addEventListener("click", function() {
+            playerPanel.classList.toggle("open");
+            creativeContainer.classList.toggle("open");
+        });
+        window.addEventListener("blur", function() {
+            setTimeout(function() {
+                if (document.activeElement && document.activeElement.tagName === "IFRAME") {
+                    vinylBtn.classList.add("spinning");
+                }
+            }, 150);
+        });
+        creativeContainer.addEventListener("mouseenter", function() {
+            window.focus();
+        });
+    });
+})();
