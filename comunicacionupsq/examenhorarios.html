@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horarios Periodo 68 - Comunicación UPSQ</title>
+    <title>Horario de Exámenes - Comunicación UPSQ</title>
     <link rel="icon" href="../assets/isotipoups.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
@@ -101,7 +101,7 @@
     <main class="main-content">
         <section class="page-hero minimal">
             <div class="hero-container">
-                <h1>Horarios Periodo 68</h1>
+                <h1>Horario de Exámenes Finales P68</h1>
                 <p>Planificación académica oficial • Sede Quito • Campus El Girón<br>Carrera de Comunicación</p>
             </div>
         </section>
@@ -187,18 +187,19 @@
     <script>
     let horariosData = null;
 
-    // Configuración general de la tabla de horarios
+    // Configuración general de la tabla de horarios (ahora adaptado visualmente a exámenes)
     const diasSemana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
     const horasMatriz = ["07:00", "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "14:30", "15:00", "15:30", "16:00", "17:00"];
 
     document.addEventListener("DOMContentLoaded", async function() {
         for(let i=1; i<=8; i++) {
-            document.getElementById(`nivel${i}`).innerHTML = `<div class="loading-schedule">Cargando horario del servidor... <i class="fas fa-spinner fa-spin"></i></div>`;
+            document.getElementById(`nivel${i}`).innerHTML = `<div class="loading-schedule">Cargando horario de exámenes... <i class="fas fa-spinner fa-spin"></i></div>`;
         }
 
         try {
-            const response = await fetch('./js/horarios.json');
-            if (!response.ok) throw new Error("No se pudo cargar el archivo JSON");
+            // CAMBIO: Ahora apunta al nuevo JSON de exámenes
+            const response = await fetch('./js/examenhorarios.json');
+            if (!response.ok) throw new Error("No se pudo cargar el archivo JSON de exámenes");
             horariosData = await response.json();
 
             for(let i=1; i<=8; i++) {
@@ -209,7 +210,7 @@
             
         } catch (error) {
             console.error(error);
-            document.querySelector('.schedules-section .container').innerHTML += `<div style="color:red; text-align:center;">Error al cargar los horarios. Asegúrate de estar corriendo en un servidor local.</div>`;
+            document.querySelector('.schedules-section .container').innerHTML += `<div style="color:red; text-align:center;">Error al cargar los exámenes. Asegúrate de estar corriendo en un servidor local y que el archivo examenhorarios.json exista.</div>`;
         }
     });
 
@@ -217,7 +218,7 @@
     function renderizarNivel(nivelNum) {
         const nivelDiv = document.getElementById(`nivel${nivelNum}`);
         if (!horariosData[nivelNum]) {
-            nivelDiv.innerHTML = `<div class="loading-schedule">Horario no disponible aún.</div>`;
+            nivelDiv.innerHTML = `<div class="loading-schedule">Exámenes no disponibles aún para este nivel.</div>`;
             return;
         }
 
@@ -267,7 +268,7 @@
                     <tbody>
         `;
 
-        // Encontrar la última hora en la que hay clases para este grupo para no dibujar filas vacías innecesarias
+        // Encontrar la última hora en la que hay clases/exámenes para este grupo para no dibujar filas vacías innecesarias
         let maxIndexHora = 7; // Mínimo mostrar hasta las 14:00 (índice 7 = "14:00")
         
         for (const dia in horarioGrupo) {
@@ -295,7 +296,7 @@
             diasSemana.forEach(dia => {
                 let clasesEncontradas = [];
                 
-                // Buscar si en este grupo, en este día, hay clases que cubran esta hora
+                // Buscar si en este grupo, en este día, hay exámenes que cubran esta hora
                 if(horarioGrupo[dia]) {
                     clasesEncontradas = horarioGrupo[dia].filter(clase => {
                         // Convertir horas a minutos para comparación precisa (ej. 14:30 -> 870)
@@ -308,14 +309,14 @@
                         let currentArr = horaInicioStr.split(':');
                         let currentMin = parseInt(currentArr[0]) * 60 + parseInt(currentArr[1]);
                         
-                        // La clase debe haber empezado igual o antes de esta hora, y terminar después de esta hora
+                        // El examen debe haber empezado igual o antes de esta hora, y terminar después de esta hora
                         return currentMin >= startMin && currentMin < endMin;
                     });
                 }
 
                 if (clasesEncontradas.length > 0) {
                     tablaHTML += `<td>`;
-                    // Renderizar todas las clases encontradas en este bloque (por si hay cruces/dobles)
+                    // Renderizar todos los exámenes encontrados en este bloque (por si hay cruces/dobles)
                     clasesEncontradas.forEach((clase, idx) => {
                         if(idx > 0) tablaHTML += `<hr style="margin: 5px 0; border: 0; border-top: 1px dashed #ccc;">`;
                         tablaHTML += `

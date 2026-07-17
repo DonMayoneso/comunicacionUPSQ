@@ -29,11 +29,11 @@ async function initializeProjects() {
     const now = new Date().getTime();
 
     if (cachedData && cachedTimestamp && (now - cachedTimestamp < CACHE_TIME)) {
-        console.log("WebCraft Pro: Usando datos en caché");
+        console.log("Infinito Digital: Usando datos en caché");
         projectsData = JSON.parse(cachedData);
         processData();
     } else {
-        console.log("WebCraft Pro: Sincronizando con Google Sheets...");
+        console.log("Infinito Digital: Sincronizando con Google Sheets...");
         
         // Loader visual minimalista en el grid
         grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 60px;"><i class="fas fa-circle-notch fa-spin fa-2x" style="color:var(--indi-purple);"></i></div>';

@@ -1321,150 +1321,324 @@ header.scrolled + nav {
     text-decoration: underline;
 }
 
-/* Contenedor principal centrado */
-            .radio-wrapper {
-                display: flex;
-                justify-content: center;
-                padding: 20px;
-                width: 95%;
-            }
+ /* Contenedor principal centrado */
+ .radio-wrapper {
+     display: flex;
+     justify-content: center;
+     padding: 20px;
+     width: 95%;
+ }
 
-            /* Contenedor del reproductor (con la forma curva) */
-            .creative-player-container {
-                display: flex;
-                align-items: center;
-                background-color: #fff;
-                padding: 1rem;
-                border-radius: 150px 30px 30px 150px;
-                box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-                gap: 1.5rem;
-                width: fit-content;
-                border: 1px solid #eee;
-            }
+ /* Contenedor del reproductor (con la forma curva) */
+ .creative-player-container {
+     display: flex;
+     align-items: center;
+     background-color: #fff;
+     padding: 1rem;
+     border-radius: 150px 30px 30px 150px;
+     box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+     gap: 1.5rem;
+     width: fit-content;
+     border: 1px solid #eee;
+ }
 
-            /* Vinilo Animado */
-            .vinyl-button {
-                width: 175px; 
-                height: 175px; 
-                border-radius: 50%; 
-                background-color: #111;
-                border: 4px solid #333; 
-                position: relative; 
-                flex-shrink: 0; 
-                display: flex; 
-                align-items: center; 
-                justify-content: center; 
-                overflow: hidden;
-                animation: spinVinyl 4s linear infinite;
-            }
+ /* Vinilo Animado */
+ .vinyl-button {
+     width: 175px; 
+     height: 175px; 
+     border-radius: 50%; 
+     background-color: #111;
+     border: 4px solid #333; 
+     position: relative; 
+     flex-shrink: 0; 
+     display: flex; 
+     align-items: center; 
+     justify-content: center; 
+     overflow: hidden;
+     animation: spinVinyl 4s linear infinite;
+ }
 
-            .vinyl-grooves {
-                position: absolute; width: 100%; height: 100%; border-radius: 50%;
-                background: repeating-radial-gradient(circle, #2c2c2c 0px, #151515 2px, #2c2c2c 4px, #111 6px);
-                pointer-events: none;
-            }
+ .vinyl-grooves {
+     position: absolute; width: 100%; height: 100%; border-radius: 50%;
+     background: repeating-radial-gradient(circle, #2c2c2c 0px, #151515 2px, #2c2c2c 4px, #111 6px);
+     pointer-events: none;
+ }
 
-            .vinyl-center {
-                width: 35px; height: 35px; border-radius: 50%; background-color: #94c4c4;
-                border: 2px solid #000; z-index: 2; display: flex; align-items: center; justify-content: center;
-            }
+ .vinyl-center {
+     width: 35px; height: 35px; border-radius: 50%; background-color: #94c4c4;
+     border: 2px solid #000; z-index: 2; display: flex; align-items: center; justify-content: center;
+ }
 
-            .radio-icon { width: 18px; height: 18px; fill: #333; }
+ .radio-icon { width: 18px; height: 18px; fill: #333; }
 
-            @keyframes spinVinyl { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+ @keyframes spinVinyl { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-            /* Ajuste del reproductor */
-            .player-box {
-                height: auto;
-                width: 750px;
-                overflow: hidden;
-            }
+ /* Ajuste del reproductor */
+ .player-box {
+     height: auto;
+     width: 750px;
+     overflow: hidden;
+ }
 
-            .cstrEmbed {
-                width: 750px ;
-                height: 105px ;
-                display: block ;
-            }
+ .cstrEmbed {
+     width: 750px ;
+     height: 105px ;
+     display: block ;
+ }
 
-            /* Hacer que los links sean invisibles a la vista pero visibles para el script */
-            .caster-links {
-                font-size: 1px !important;
-                opacity: 0.01 !important;
-                height: 1px !important;
-                overflow: hidden;
-            }
+ /* Hacer que los links sean invisibles a la vista pero visibles para el script */
+ .caster-links {
+     font-size: 1px !important;
+     opacity: 0.01 !important;
+     height: 1px !important;
+     overflow: hidden;
+ }
 
-            /* Adaptación móvil */
-            @media (max-width: 768px) {
-                .creative-player-container {
-                    flex-direction: column;
-                    border-radius: 30px;
-                    gap: 10px;
-                    width: 90%;
-                }
-                .player-box { width: 100%; }
-                .cstrEmbed { width: 100% !important; }
-            }
+ /* Adaptación móvil */
+ @media (max-width: 768px) {
+     .creative-player-container {
+         flex-direction: column;
+         border-radius: 30px;
+         gap: 10px;
+         width: 90%;
+     }
+     .player-box { width: 100%; }
+     .cstrEmbed { width: 100% !important; }
+ }
 
-            /* --- Botón Flotante  --- */
-            .radio-floating-wrapper {
-                position: fixed;
-                bottom: 30px;
-                left: 15px;
-                z-index: 99999;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
-            }
+/* --- Botón Flotante con Animación de Ciclo --- */
+.radio-floating-wrapper {
+    position: fixed;
+    bottom: 30px;
+    left: 15px; 
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
 
-            /* El Globo de Texto */
-            .radio-hint-bubble {
-                background-color: #333;
-                color: #fff;
-                padding: 8px 15px;
-                border-radius: 15px;
-                font-size: 13px;
-                font-family: sans-serif;
-                white-space: nowrap;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-                position: relative;
-            }
+/* El Globo de Texto con Animación */
+.radio-hint-bubble {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-family: sans-serif;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: relative;
+    pointer-events: none;
+    
+    /* Configuración de la animación: 135s total, infinito */
+    animation: bubbleCycle 135s infinite;
+}
 
-            /* Flecha del globo*/
-            .radio-hint-bubble::after {
-                content: '';
-                position: absolute;
-                bottom: -6px;
-                left: 15px;
-                border-left: 6px solid transparent;
-                border-right: 6px solid transparent;
-                border-top: 6px solid #333;
-            }
+/* Flecha del globo */
+.radio-hint-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 15px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #333;
+}
 
-            /* Botón de Play */
-            .btn-play-floating {
-                width: 55px;
-                height: 55px;
-                background-color: #94c4c4;
-                border-radius: 50%;
-                border: none;
-                cursor: pointer;
-                box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: transform 0.2s;
-                margin-left: 5px;
-            }
+/* Definición de la animación */
+@keyframes bubbleCycle {
+    /* De 0% a 11.1% (son 15 segundos) está visible */
+    0%, 11.1% { 
+        opacity: 1; 
+        visibility: visible; 
+    }
+    /* De 11.2% a 100% (son 120 segundos) está oculto */
+    11.2%, 100% { 
+        opacity: 0; 
+        visibility: hidden; 
+    }
+}
 
-            .btn-play-floating:hover {
-                transform: scale(1.05);
-                background-color: #5fb3e0;
-            }
+/* Botón de Play (Sin cambios) */
+.btn-play-floating {
+    width: 55px;
+    height: 55px;
+    background-color: #94c4c4;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+    margin-left: 5px;
+}
 
-            .btn-play-floating svg {
-                width: 22px;
-                height: 22px;
-                fill: #333;
-            }
+.btn-play-floating:hover {
+    transform: scale(1.05);
+    background-color: #5fb3e0;
+}
+
+.btn-play-floating svg {
+    width: 22px;
+    height: 22px;
+    fill: #333;
+}
+
+/* ========================================================
+   5. COMPONENTE POPUP CUADRADO (Estética Élite UX/UI)
+   ======================================================== */
+.global-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65); /* Opacidad oscura controlada que cubre la web */
+    backdrop-filter: blur(5px); /* Efecto esmerilado premium sobre el fondo */
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 1000000; /* Prioridad absoluta de superposición */
+    display: none; /* Administrado dinámicamente por la máquina JS */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Estado activo gatillado por Javascript */
+.global-popup-overlay.popup-visible {
+    opacity: 1;
+}
+
+.popup-square-box {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px; /* Tamaño optimizado para la retícula de escritorio */
+    aspect-ratio: 1 / 1; /* Forzado geométrico: Altura igual al ancho automáticamente */
+    position: relative;
+    border-radius: 14px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transform: scale(0.92) translateY(15px);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); /* Efecto elástico sutil */
+}
+
+.global-popup-overlay.popup-visible .popup-square-box {
+    transform: scale(1) translateY(0);
+}
+
+/* Elemento de escape rápido (Cerrar X) */
+.popup-close-trigger {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(0, 0, 0, 0.45);
+    border: none;
+    color: #ffffff;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    line-height: 1;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.popup-close-trigger:hover {
+    background-color: #ff3333;
+    transform: scale(1.08) rotate(90deg);
+}
+
+/* Envoltura interna del flujo del layout */
+.popup-layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Contenedor responsivo de la imagen */
+.popup-media-container {
+    flex: 1; /* Absorbe dinámicamente todo el espacio restante conservando la proporción cuadrada */
+    width: 100%;
+    background-color: #f7f9fa;
+    overflow: hidden;
+    position: relative;
+}
+.popup-media-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorte inteligente al centro de la imagen cargada */
+    display: block;
+}
+
+/* Área baja del botón */
+.popup-action-footer {
+    padding: 20px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Botón de conversión con color de identidad dinámico */
+.popup-redirect-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--hover-color, #5fb3e0); /* Enlace exacto a tu token de diseño existente */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    box-shadow: 0 5px 15px rgba(95, 179, 224, 0.3);
+    font-family: system-ui, -apple-system, sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+.popup-redirect-btn:hover {
+    filter: brightness(0.95); /* Modificación armónica del tono sin romper la variable */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(95, 179, 224, 0.45);
+}
+
+/* ========================================================
+   MÓVILES (Responsividad y compresión adaptativa)
+   ======================================================== */
+@media (max-width: 480px) {
+    .popup-square-box {
+        max-width: 315px; /* Reducción de escala simétrica protegiendo el aspect-ratio */
+    }
+    .popup-action-footer {
+        padding: 15px;
+    }
+    .popup-redirect-btn {
+        padding: 12px 15px;
+        font-size: 0.85rem;
+        border-radius: 6px;
+    }
+    .popup-close-trigger {
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 1.3rem;
+    }
+}

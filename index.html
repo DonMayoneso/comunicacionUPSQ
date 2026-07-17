@@ -36,57 +36,16 @@
         </div>
     </header>
     
-    <nav>
-        <div class="navbar">
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link dropdown-toggle">COMUNICACIÓN UPSQ</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="index.html" class="dropdown-item">Carrera de Comunicación</a></li>
-                        <li><a href="comunicacionupsq/sobre-nosotros.html" class="dropdown-item">Sobre Nosotros</a></li>
-                        <li><a href="comunicacionupsq/nuestros-docentes.html" class="dropdown-item">Nuestros Docentes</a></li>
-                        <li><a href="comunicacionupsq/estudiantes.html" class="dropdown-item">RugeCom</a></li>
-                        <li><a href="comunicacionupsq/malla-curricular.html" class="dropdown-item">Malla Curricular</a></li>
-                        <li><a href="comunicacionupsq/horarios.html" class="dropdown-item">Horarios</a></li>
-                        <li><a href="comunicacionupsq/tour-virtual.html" class="dropdown-item">Tour Virtual</a></li>
-                    </ul>
-                </li>
-                <!--<li class="nav-item">
-                    <a href="#" class="nav-link dropdown-toggle">PRÁCTICAS Y VINCULACIÓN</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" class="dropdown-item">Vinculación</a></li>
-                        <li><a href="#" class="dropdown-item">Prácticas</a></li>
-                        <li><a href="#" class="dropdown-item">Educación Continua</a></li>
-                    </ul>
-                </li>-->
-                <li class="nav-item">
-                    <a href="infinitodigital/infinito.html" class="nav-link dropdown-toggle">INFINITO DIGITAL</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="infinitodigital/infinito.html" class="dropdown-item">Infinito Digital</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="titulacion/titulacion.html" class="nav-link dropdown-toggle">TITULACIÓN</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="titulacion/titulacion.html?tab=general" class="dropdown-item">Proceso General</a></li>
-                        <li><a href="titulacion/titulacion.html?tab=articulo" class="dropdown-item">Artículo Académico</a></li>
-                        <li><a href="titulacion/titulacion.html?tab=producto" class="dropdown-item">Producto Comunicativo</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link dropdown-toggle">GRADUADOS</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="graduados/graduadosupsq.html" class="dropdown-item">Perfil del Graduado</a></li>
-                        <li><a href="graduados/seguimiento-a-graduados.html" class="dropdown-item">Seguimiento a Graduados</a></li>
-                    </ul>
-                </li>
-                <!--<li class="nav-item">
-                    <a href="#" class="nav-link">OTROS</a>
-                </li>-->
-            </ul>
-            <button class="hamburger">☰</button>
-        </div>
-    </nav>
+    <!-- Navegación -->
+    <div id="navbar-placeholder" data-root="../"></div>
+        <script>
+            fetch(document.getElementById('navbar-placeholder').getAttribute('data-root') + 'navbar.html').then(r => r.text()).then(h => {
+                let c = document.getElementById('navbar-placeholder');
+                c.innerHTML = h.replace(/\{ROOT\}/g, c.getAttribute('data-root'));
+                c.querySelectorAll('script').forEach(s => eval(s.innerText));
+            });
+        </script>
+
 
     <main class="main-content">
         <!-- SECCIÓN DE BOTONES -->
@@ -347,6 +306,56 @@
                 </div>
             <!-- Fin Reproductor-->
         </section>
+
+        <!-- Popup extra -->
+<div id="indexPromoPopup" class="global-popup-overlay">
+    <div class="popup-square-box">
+        <button class="popup-close-trigger" id="closePromoPopupBtn" title="Cerrar ventanas">&times;</button>
+        
+        <div class="popup-layout-wrapper">
+            <!-- Espacio dedicado para la imagen promocional -->
+            <div class="popup-media-container">
+                <img id="popupPromoImg" src="assets/horariopromo.jpg" alt="Información Académica Oficial" onerror="this.src='assets/upscomunicacionlogo.png'">
+            </div>
+            <!-- Pie del popup contenedor de la acción principal -->
+            <div class="popup-action-footer">
+                <a href="comunicacionupsq/examenhorarios.html" class="popup-redirect-btn" id="popupActionLink">
+                    Horario de exámenes aquí
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const popupOverlay = document.getElementById('indexPromoPopup');
+        const closeBtn = document.getElementById('closePromoPopupBtn');
+        // CONTROLADOR DE ESTADOS
+        function showPromoPopup() {
+            if (popupOverlay) {
+                popupOverlay.style.display = 'flex';
+                setTimeout(() => popupOverlay.classList.add('popup-visible'), 15);
+            }
+        }
+        function hidePromoPopup() {
+            if (popupOverlay) {
+                popupOverlay.classList.remove('popup-visible');
+                setTimeout(() => popupOverlay.style.display = 'none', 300);
+            }
+        }
+        setTimeout(showPromoPopup, 1000);
+        if (closeBtn) {
+            closeBtn.addEventListener('click', hidePromoPopup);
+        }
+        popupOverlay.addEventListener('click', (event) => {
+            if (event.target === popupOverlay) {
+                hidePromoPopup();
+            }
+        });
+        window.openWebCraftPopup = showPromoPopup;
+        window.closeWebCraftPopup = hidePromoPopup;
+    });
+    </script>
     </main>
 
 <footer class="main-footer">

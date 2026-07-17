@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinito Radio - Señal Digital</title>
+    <link rel="icon" href="../assets/isotipoups.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="radioinfinito.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo-container">
+                <div class="logo-combined"><img src="../assets/upscomunicacionlogo.png" alt="UPS Comunicación"></div>
+                <div class="logo-single"><img src="../assets/logocomunicacion.png" alt="Comunicación"></div>
+            </a>
+            <div class="isotipo-ups"><img src="../assets/logo30.png" alt="UPS"></div>
+        </div>
+    </header>
+    
+    <main class="main-content">
+        <!-- Encabezado Infinito Radio con Regresar -->
+<section class="radio-mixer-hero massive-board">
+    <div class="mixer-chassis">
+        
+        <div class="mixer-top-bar">
+            <img src="../assets/radiologo.png" alt="Infinito Radio" class="mixer-logo">
+            <a href="../index.html" class="mixer-return-btn">
+                <i class="fas fa-arrow-left"></i> VOLVER A LA CARRERA
+            </a>
+        </div>
+
+        <div class="master-control-row">
+            
+            <div class="rack-unit tape-rack">
+                <span class="rack-label">REEL-TO-REEL</span>
+                <div class="compact-tape-deck">
+                    <div class="compact-reel left-reel"><div class="reel-hub"></div></div>
+                    <div class="compact-reel right-reel"><div class="reel-hub"></div></div>
+                </div>
+            </div>
+
+            <div class="rack-column">
+                <div class="rack-unit spectrum-rack small-spectrum">
+                    <span class="rack-label">SPECTRUM (LIVE)</span>
+                    <div class="spectrum-display" id="spectrumAnalyzer">
+                        </div>
+                </div>
+                <div class="rack-unit channel-rack">
+                    <span class="rack-label">CHANNEL MIXER</span>
+                    <div class="channel-bank">
+                        <div class="channel-strip">
+                            <div class="fader-wrapper"><input type="range" min="0" max="100" value="85" class="v-fader"></div>
+                            <span class="ch-label">CH1</span>
+                        </div>
+                        <div class="channel-strip">
+                            <div class="fader-wrapper"><input type="range" min="0" max="100" value="60" class="v-fader"></div>
+                            <span class="ch-label">CH2</span>
+                        </div>
+                        <div class="channel-strip">
+                            <div class="fader-wrapper"><input type="range" min="0" max="100" value="75" class="v-fader"></div>
+                            <span class="ch-label">CH3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rack-unit combined-rack">
+                <span class="rack-label">PARAMETRIC EQ & MASTER</span>
+                <div class="combined-content">
+                    
+                    <div class="horizontal-faders-group">
+                        <div class="h-fader-track"><label>LOW</label><input type="range" min="0" max="100" value="65" class="h-fader"></div>
+                        <div class="h-fader-track"><label>L-MID</label><input type="range" min="0" max="100" value="40" class="h-fader"></div>
+                        <div class="h-fader-track"><label>H-MID</label><input type="range" min="0" max="100" value="80" class="h-fader"></div>
+                        <div class="h-fader-track"><label>HIGH</label><input type="range" min="0" max="100" value="70" class="h-fader"></div>
+                    </div>
+
+                    <div class="master-controls-inline">
+                        <div class="switches-group inline-switches">
+                            <div class="switch-container"><input type="checkbox" id="sw1" checked class="metal-switch"><label for="sw1">PWR</label></div>
+                            <div class="switch-container"><input type="checkbox" id="sw2" checked class="metal-switch"><label for="sw2">48V</label></div>
+                        </div>
+                        <div class="channel-strip master-strip inline-master">
+                            <div class="fader-wrapper"><input type="range" min="0" max="100" value="95" class="v-fader master-fader"></div>
+                            <span class="ch-label master-label">MASTER</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="rack-unit db-meter-rack">
+                <span class="rack-label">DECIBEL METER (LIVE)</span>
+                <div class="db-meter-container">
+                    
+                    <div class="vu-dial large-vu">
+                        <div class="vu-scale"></div>
+                        <div class="vu-needle dynamic-needle" id="dbNeedleL"></div>
+                        <div class="vu-needle dynamic-needle needle-r" id="dbNeedleR"></div>
+                    </div>
+                    <div class="db-labels">
+                        <span>LEFT</span><span>RIGHT</span>
+                    </div>
+
+                    <div class="sub-meters-container">
+                        <div class="mini-meter">
+                            <span class="mini-label">MIDS</span>
+                            <div class="mini-vu">
+                                <div class="mini-scale"></div>
+                                <div class="mini-needle" id="dbNeedleMid"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mini-meter">
+                            <span class="mini-label">PEAK</span>
+                            <div class="mini-vu">
+                                <div class="mini-scale scale-red"></div>
+                                <div class="mini-needle needle-peak" id="dbNeedlePeak"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <!-- Reproductor Estático (Sección de destino para scroll) -->
+        <div id="radio-section" class="radio-wrapper">
+            <div class="creative-player-container">
+                <div class="vinyl-button">
+                    <div class="vinyl-grooves"></div>
+                    <div class="vinyl-center">
+                        <svg class="radio-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 10H5C3.89543 10 3 10.8954 3 12V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V12C21 10.8954 20.1046 10 19 10Z"/>
+                            <path d="M6 6L14 2"/>
+                            <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="player-box">
+<div class="cstrEmbed" data-type="newStreamPlayer" data-publicToken="dee69e66-5514-48b1-bfa2-329ee65d3d70" data-theme="light" data-color="FFFFFF" data-channelId="" data-rendered="false">
+<a href="https://www.caster.fm">Shoutcast Hosting</a> <a href="https://www.caster.fm">Stream Hosting</a> <a href="https://www.caster.fm">Radio Server Hosting</a></div>
+<script src="//cdn.cloud.caster.fm//widgets/embed.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección Programas -->
+        <section class="programs-section">
+            <h2 class="section-title">CONOCE NUESTROS PROGRAMAS</h2>
+            <div class="programs-grid" id="programsGrid">
+                <!-- Grid cargado mediante JS -->
+            </div>
+        </section>
+<!-- ==========================================
+         MODAL DE PROGRAMAS (Estilo Tocadiscos / Vinilo)
+         ========================================== -->
+    <div id="programModal" class="program-modal-overlay">
+        <div class="program-modal-content">
+            <button class="close-modal-btn" id="closeModalBtn" title="Cerrar">×</button>
+            <div class="modal-layout">
+                
+                <!-- Columna Izquierda: El Tocadiscos -->
+                <div class="modal-turntable-col">
+                    <div class="vinyl-record" id="modalVinyl">
+                        <div class="vinyl-grooves"></div>
+                        <!-- El centro del vinilo cuyo color cambiará dinámicamente -->
+                        <div class="vinyl-center" id="modalVinylCenter">
+                            <img id="modalImg" src="" alt="Programa">
+                            <div class="vinyl-hole"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: La Información -->
+                <div class="modal-info-col">
+                    <h2 id="modalTitle" class="modal-title"></h2>
+                    
+                    <div class="modal-meta-grid">
+                        <div class="meta-item" id="modalPresenterContainer">
+                            <span class="meta-label">PRESENTADOR:</span>
+                            <span id="modalPresenter" class="meta-value"></span>
+                        </div>
+                        <div class="meta-item" id="modalDirectorContainer">
+                            <span class="meta-label">DIR. EJECUTIVA:</span>
+                            <span id="modalDirector" class="meta-value"></span>
+                        </div>
+                        <div class="meta-item" id="modalCollabsContainer">
+                            <span class="meta-label">COLABORADORES:</span>
+                            <span id="modalCollabs" class="meta-value"></span>
+                        </div>
+                    </div>
+
+                    <div class="modal-desc-box" id="modalDescContainer">
+                        <span class="meta-label">SINOPSIS:</span>
+                        <p id="modalDesc"></p>
+                    </div>
+
+                    <div id="modalLinkContainer" class="modal-link-container">
+                        <a href="#" target="_blank" id="modalCustomLink" class="custom-action-btn">
+                            <i class="fas fa-play"></i> <span id="modalLinkText">Enlace</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+<footer class="main-footer">
+        <div class="footer-container">
+            
+            <div class="footer-section">
+                <h3>Contáctanos</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Campus el Girón, Ave 12 de Octubre 24-22, Quito 170143</p>
+                    <p>
+                        <i class="fas fa-phone"></i> 
+                        <a href="tel:+59323962900" class="footer-text-link">(+593) 2 3962900</a> ext.: 2126
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/informa.ups" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/carreradecomunicacionupsq/" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/indi_ups" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCJ78UoiJpFfgmJhzejwyEpQ" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Enlaces rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.ups.edu.ec" target="_blank" rel="noopener noreferrer">Universidad Politécnica Salesiana</a></li>
+                    <li><a href="https://www.ups.edu.ec/inscripciones-quito" target="_blank" rel="noopener noreferrer">Admisiones</a></li>
+                    <li><a href="https://avac.ups.edu.ec" target="_blank" rel="noopener noreferrer">AVAC</a></li>
+                    <li><a href="https://bienestar.ups.edu.ec" target="_blank" rel="noopener noreferrer">Bienestar Estudiantil</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Comunicación UPSQ. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" title="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../script.js"></script>
+    <script src="radioinfinito.js"></script>
+</body>
+</html>

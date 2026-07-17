@@ -186,7 +186,7 @@ if (scrollTopBtn) {
         var creativeContainer = document.getElementById("creative-container");
 
         if (!vinylBtn || !playerPanel || !creativeContainer) {
-            console.warn("WebCraft Pro: Los elementos del reproductor de radio no fueron encontrados en esta página.");
+            console.warn("Carrera de Comunicación: Los elementos del reproductor de radio no fueron encontrados en esta página.");
             return;
         }
 
