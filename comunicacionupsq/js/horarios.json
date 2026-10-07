@@ -111,7 +111,7 @@
 
       ],
       "Jueves": [
-        { "horaInicio": "07:00", "horaFin": "10:00", "materia": "NARRATIVAS VISUALES", "profesor": "Johanna Escobar", "aula": "Laboratorio" }
+        { "horaInicio": "10:00", "horaFin": "13:00", "materia": "NARRATIVAS VISUALES", "profesor": "Johanna Escobar", "aula": "Laboratorio" }
       ],
       "Viernes": [
         { "horaInicio": "07:00", "horaFin": "10:00", "materia": "COMUNICACIÓN DE MARKETING Y PUBLICIDAD", "profesor": "Mauro Ruiz", "aula": "Aula B-63" },
@@ -189,7 +189,7 @@
       "Lunes": [],
       "Martes": [],
       "Miércoles": [
-          { "horaInicio": "09:00", "horaFin": "12:00", "materia": "INTEGRACIÓN", "profesor": "Diego Cóndor", "aula": "CECASIG" }
+          { "horaInicio": "07:00", "horaFin": "10:00", "materia": "INTEGRACIÓN", "profesor": "Diego Cóndor", "aula": "CECASIG" }
       ],
       "Jueves": [],
       "Viernes": [
