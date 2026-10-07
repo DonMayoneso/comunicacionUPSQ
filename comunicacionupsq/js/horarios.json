@@ -106,15 +106,16 @@
         { "horaInicio": "09:00", "horaFin": "11:00", "materia": "PENSAMIENTO CRÍTICO", "profesor": "", "aula": "Asig. en línea" }
       ],
       "Miércoles": [
-        { "horaInicio": "08:00", "horaFin": "11:00", "materia": "GÉNEROS INFORMATIVOS", "profesor": "Vanegas", "aula": "CECASIG" }
+        { "horaInicio": "08:00", "horaFin": "11:00", "materia": "GÉNEROS INFORMATIVOS", "profesor": "Vanegas", "aula": "CECASIG" },
+        { "horaInicio": "11:00", "horaFin": "12:00", "materia": "PRACTICAS AL SERVICIO COMUNITARIO", "profesor": "Grace Benalcazar", "aula": "" }
+
       ],
       "Jueves": [
-        { "horaInicio": "07:00", "horaFin": "10:00", "materia": "NARRATIVAS VISUALES", "profesor": "Johanna Escobar", "aula": "Laboratorio" },
-        { "horaInicio": "10:00", "horaFin": "13:00", "materia": "PRACTICAS AL SERVICIO COMUNITARIO", "profesor": "Grace Benalcazar", "aula": "" }
+        { "horaInicio": "07:00", "horaFin": "10:00", "materia": "NARRATIVAS VISUALES", "profesor": "Johanna Escobar", "aula": "Laboratorio" }
       ],
       "Viernes": [
         { "horaInicio": "07:00", "horaFin": "10:00", "materia": "COMUNICACIÓN DE MARKETING Y PUBLICIDAD", "profesor": "Mauro Ruiz", "aula": "Aula B-63" },
-        { "horaInicio": "10:00", "horaFin": "12:00", "materia": "PRACTICAS AL SERVICIO COMUNITARIO", "profesor": "Grace Benalcazar", "aula": "" }
+        { "horaInicio": "11:00", "horaFin": "12:00", "materia": "PRACTICAS AL SERVICIO COMUNITARIO", "profesor": "Grace Benalcazar", "aula": "" }
       ]
     }
   },
@@ -149,6 +150,7 @@
       ],
       "Miércoles": [
         { "horaInicio": "07:00", "horaFin": "09:00", "materia": "DISEÑO DEL PROYECTO DE INVESTIGACIÓN", "profesor": "Nina Aguiar", "aula": "Cecasig" },
+        { "horaInicio": "09:00", "horaFin": "10:00", "materia": "COMUNCACIÓN EN CRISIS Y MANEJO DE CONFLICTO", "profesor": "Mauro Ruiz", "aula": "B7" },
         { "horaInicio": "10:00", "horaFin": "13:00", "materia": "NARRATIVAS AUDIOVISUALES", "profesor": "Cristina Naranjo", "aula": "Laboratorio" }
       ],
       "Jueves": [
@@ -157,7 +159,6 @@
       ],
       "Viernes": [
         { "horaInicio": "07:00", "horaFin": "09:00", "materia": "NARRATIVAS AUDIOVISUALES", "profesor": "Cristina Naranjo", "aula": "Laboratorio" },
-        { "horaInicio": "09:00", "horaFin": "10:00", "materia": "COMUNCACIÓN EN CRISIS Y MANEJO DE CONFLICTO", "profesor": "Mauro Ruiz", "aula": "Laboratorio" },
         { "horaInicio": "10:00", "horaFin": "11:00", "materia": "PRACTICAS PRE PROFESIONALES", "profesor": "Armando Grijalva", "aula": "" }
       ]
     }
@@ -173,11 +174,12 @@
         { "horaInicio": "10:00", "horaFin": "11:00", "materia": "EDUCOMUNICACIÓN", "profesor": "Armando Grijalva", "aula": "Aula B-89" }
       ],
       "Miércoles": [
-        { "horaInicio": "07:00", "horaFin": "09:00", "materia": "Prácticas Preprofesionales", "profesor": "Mauro Ruiz", "aula": "" },
         { "horaInicio": "10:00", "horaFin": "13:00", "materia": "PERIODISMO DIGITAL", "profesor": "Patricio Rosas", "aula": "en línea" }
       ],
       "Jueves": [
-        { "horaInicio": "07:00", "horaFin": "10:00", "materia": "INTEGRACIÓN", "profesor": "Nina Aguiar", "aula": "CECASIG" }
+        { "horaInicio": "07:00", "horaFin": "10:00", "materia": "INTEGRACIÓN", "profesor": "Nina Aguiar", "aula": "CECASIG" },
+        { "horaInicio": "10:00", "horaFin": "12:00", "materia": "Prácticas Preprofesionales", "profesor": "Mauro Ruiz", "aula": "" }
+
       ],
       "Viernes": [
         { "horaInicio": "07:00", "horaFin": "09:00", "materia": "NARRATIVAS HIPERMEDIALES", "profesor": "Johanna Escobar", "aula": "Laboratorio" }
